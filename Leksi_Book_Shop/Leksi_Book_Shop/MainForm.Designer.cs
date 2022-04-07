@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.customerTxtBox = new System.Windows.Forms.TextBox();
+            this.timeMskdTxtBox = new System.Windows.Forms.MaskedTextBox();
+            this.nameSurnameTxttBox = new System.Windows.Forms.TextBox();
             this.totalPriceLabel = new System.Windows.Forms.Label();
             this.payButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.currentOrderDataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.nameSurnameTxttBox = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.booksButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.dailyTotalButton = new System.Windows.Forms.Button();
@@ -45,8 +45,10 @@
             this.employeesButton = new System.Windows.Forms.Button();
             this.customerButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.searchCustomerButton = new System.Windows.Forms.Button();
+            this.orderNoTxtBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentOrderDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -58,17 +60,51 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.orderNoTxtBox);
+            this.panel2.Controls.Add(this.searchCustomerButton);
+            this.panel2.Controls.Add(this.customerTxtBox);
+            this.panel2.Controls.Add(this.timeMskdTxtBox);
             this.panel2.Controls.Add(this.nameSurnameTxttBox);
             this.panel2.Controls.Add(this.totalPriceLabel);
             this.panel2.Controls.Add(this.payButton);
             this.panel2.Controls.Add(this.deleteButton);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.currentOrderDataGridView);
             this.panel2.Location = new System.Drawing.Point(277, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 635);
             this.panel2.TabIndex = 2;
+            // 
+            // customerTxtBox
+            // 
+            this.customerTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.customerTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerTxtBox.Location = new System.Drawing.Point(617, 34);
+            this.customerTxtBox.Name = "customerTxtBox";
+            this.customerTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.customerTxtBox.TabIndex = 6;
+            // 
+            // timeMskdTxtBox
+            // 
+            this.timeMskdTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.timeMskdTxtBox.Enabled = false;
+            this.timeMskdTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeMskdTxtBox.Location = new System.Drawing.Point(56, 34);
+            this.timeMskdTxtBox.Mask = "00/00/0000 90:00";
+            this.timeMskdTxtBox.Name = "timeMskdTxtBox";
+            this.timeMskdTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.timeMskdTxtBox.TabIndex = 5;
+            this.timeMskdTxtBox.ValidatingType = typeof(System.DateTime);
+            // 
+            // nameSurnameTxttBox
+            // 
+            this.nameSurnameTxttBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.nameSurnameTxttBox.Enabled = false;
+            this.nameSurnameTxttBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameSurnameTxttBox.Location = new System.Drawing.Point(49, 94);
+            this.nameSurnameTxttBox.Name = "nameSurnameTxttBox";
+            this.nameSurnameTxttBox.ReadOnly = true;
+            this.nameSurnameTxttBox.Size = new System.Drawing.Size(835, 41);
+            this.nameSurnameTxttBox.TabIndex = 4;
             // 
             // totalPriceLabel
             // 
@@ -102,15 +138,15 @@
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // currentOrderDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(836, 355);
-            this.dataGridView1.TabIndex = 0;
+            this.currentOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.currentOrderDataGridView.Location = new System.Drawing.Point(45, 151);
+            this.currentOrderDataGridView.Name = "currentOrderDataGridView";
+            this.currentOrderDataGridView.RowHeadersWidth = 51;
+            this.currentOrderDataGridView.RowTemplate.Height = 24;
+            this.currentOrderDataGridView.Size = new System.Drawing.Size(836, 381);
+            this.currentOrderDataGridView.TabIndex = 0;
             // 
             // panel1
             // 
@@ -130,38 +166,6 @@
             this.panel1.Size = new System.Drawing.Size(282, 635);
             this.panel1.TabIndex = 3;
             // 
-            // nameSurnameTxttBox
-            // 
-            this.nameSurnameTxttBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.nameSurnameTxttBox.Enabled = false;
-            this.nameSurnameTxttBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameSurnameTxttBox.Location = new System.Drawing.Point(46, 119);
-            this.nameSurnameTxttBox.Name = "nameSurnameTxttBox";
-            this.nameSurnameTxttBox.ReadOnly = true;
-            this.nameSurnameTxttBox.Size = new System.Drawing.Size(835, 41);
-            this.nameSurnameTxttBox.TabIndex = 4;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.maskedTextBox1.Enabled = false;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(46, 56);
-            this.maskedTextBox1.Mask = "00/00/0000 90:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(214, 41);
-            this.maskedTextBox1.TabIndex = 5;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(605, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 41);
-            this.textBox1.TabIndex = 6;
-            // 
             // booksButton
             // 
             this.booksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -170,6 +174,7 @@
             this.booksButton.FlatAppearance.BorderSize = 0;
             this.booksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.booksButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.booksButton.Image = ((System.Drawing.Image)(resources.GetObject("booksButton.Image")));
             this.booksButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.booksButton.Location = new System.Drawing.Point(20, 310);
             this.booksButton.Name = "booksButton";
@@ -187,6 +192,7 @@
             this.logoutButton.FlatAppearance.BorderSize = 0;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutButton.Location = new System.Drawing.Point(20, 538);
             this.logoutButton.Name = "logoutButton";
@@ -205,6 +211,7 @@
             this.dailyTotalButton.FlatAppearance.BorderSize = 0;
             this.dailyTotalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dailyTotalButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dailyTotalButton.Image = ((System.Drawing.Image)(resources.GetObject("dailyTotalButton.Image")));
             this.dailyTotalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dailyTotalButton.Location = new System.Drawing.Point(20, 462);
             this.dailyTotalButton.Name = "dailyTotalButton";
@@ -221,6 +228,7 @@
             this.mailButton.FlatAppearance.BorderSize = 0;
             this.mailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mailButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailButton.Image = ((System.Drawing.Image)(resources.GetObject("mailButton.Image")));
             this.mailButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mailButton.Location = new System.Drawing.Point(20, 386);
             this.mailButton.Name = "mailButton";
@@ -237,6 +245,7 @@
             this.employeesButton.FlatAppearance.BorderSize = 0;
             this.employeesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeesButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeesButton.Image = ((System.Drawing.Image)(resources.GetObject("employeesButton.Image")));
             this.employeesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.employeesButton.Location = new System.Drawing.Point(20, 234);
             this.employeesButton.Name = "employeesButton";
@@ -255,6 +264,7 @@
             this.customerButton.FlatAppearance.BorderSize = 0;
             this.customerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerButton.Image = ((System.Drawing.Image)(resources.GetObject("customerButton.Image")));
             this.customerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.customerButton.Location = new System.Drawing.Point(20, 160);
             this.customerButton.Name = "customerButton";
@@ -275,6 +285,28 @@
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
+            // searchCustomerButton
+            // 
+            this.searchCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.searchCustomerButton.FlatAppearance.BorderSize = 0;
+            this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
+            this.searchCustomerButton.Location = new System.Drawing.Point(832, 29);
+            this.searchCustomerButton.Name = "searchCustomerButton";
+            this.searchCustomerButton.Size = new System.Drawing.Size(58, 46);
+            this.searchCustomerButton.TabIndex = 7;
+            this.searchCustomerButton.UseVisualStyleBackColor = false;
+            // 
+            // orderNoTxtBox
+            // 
+            this.orderNoTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.orderNoTxtBox.Enabled = false;
+            this.orderNoTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderNoTxtBox.Location = new System.Drawing.Point(338, 34);
+            this.orderNoTxtBox.Name = "orderNoTxtBox";
+            this.orderNoTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.orderNoTxtBox.TabIndex = 8;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,7 +323,7 @@
             this.Text = "MainForm";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentOrderDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
@@ -312,11 +344,13 @@
         private System.Windows.Forms.Button customerButton;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView currentOrderDataGridView;
         private System.Windows.Forms.Label totalPriceLabel;
         private System.Windows.Forms.Button payButton;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox timeMskdTxtBox;
         private System.Windows.Forms.TextBox nameSurnameTxttBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox customerTxtBox;
+        private System.Windows.Forms.Button searchCustomerButton;
+        private System.Windows.Forms.TextBox orderNoTxtBox;
     }
 }
