@@ -13,7 +13,7 @@ namespace Leksi_Book_Shop
     public partial class LogiForm : Form
     {
        // user_Form userAccess = new user_Form();
-       // MainForm main;
+      
         public LogiForm()
         {
             InitializeComponent();
@@ -22,8 +22,7 @@ namespace Leksi_Book_Shop
         private void loginButton_Click(object sender, EventArgs e)
         {
 
-            Main_Form main_Form = new Main_Form();
-            main_Form.ShowDialog(); 
+           
          /*   User current = new User();
             bool exist = false;
             foreach (var users in userAccess.userAccess)

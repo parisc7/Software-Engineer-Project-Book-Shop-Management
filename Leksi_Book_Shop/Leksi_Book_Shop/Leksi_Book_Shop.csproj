@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +78,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Book_List_Form.cs">
+    <Compile Include="BookList_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Book_List_Form.Designer.cs">
-      <DependentUpon>Book_List_Form.cs</DependentUpon>
+    <Compile Include="BookList_Form.Designer.cs">
+      <DependentUpon>BookList_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Splash_Screen.cs">
       <SubType>Form</SubType>
@@ -86,17 +92,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User_Form.Designer.cs">
-      <DependentUpon>User_Form.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogiForm.resx">
       <DependentUpon>LogiForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Book_List_Form.resx">
-      <DependentUpon>Book_List_Form.cs</DependentUpon>
+    <EmbeddedResource Include="BookList_Form.resx">
+      <DependentUpon>BookList_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
@@ -105,9 +108,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User_Form.resx">
-      <DependentUpon>User_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

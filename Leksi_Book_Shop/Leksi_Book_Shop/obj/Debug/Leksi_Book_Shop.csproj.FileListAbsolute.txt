@@ -24,4 +24,6 @@ C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Boo
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.CoreCompileInputs.cache
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
-C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Main_Form.resources
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Resources.Book_List_Form.resources
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Book_List_Database.mdf
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Book_List_Database_log.ldf
