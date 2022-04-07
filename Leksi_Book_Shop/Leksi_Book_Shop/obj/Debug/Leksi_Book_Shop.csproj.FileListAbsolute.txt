@@ -1,0 +1,13 @@
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.AssemblyReference.cache
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.SuggestedBindingRedirects.cache
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Splash_Screen.resources
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.GenerateResource.cache
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Leksi_Book_Shop.exe.config
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Leksi_Book_Shop.exe
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Leksi_Book_Shop.pdb
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Properties.Resources.resources
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.CoreCompileInputs.cache
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.LogiForm.resources
+D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.User_Form.resources
