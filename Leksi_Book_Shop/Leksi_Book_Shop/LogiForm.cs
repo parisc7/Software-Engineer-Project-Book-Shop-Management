@@ -21,7 +21,8 @@ namespace Leksi_Book_Shop
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
+            MainForm main = new MainForm();
+            main.ShowDialog();
            
          /*   User current = new User();
             bool exist = false;
