@@ -145,6 +145,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Book_List_Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\find%281%29.png" />
     <None Include="Resources\money.png" />
     <None Include="Resources\target.png" />
     <None Include="Resources\customer%281%29.png" />
