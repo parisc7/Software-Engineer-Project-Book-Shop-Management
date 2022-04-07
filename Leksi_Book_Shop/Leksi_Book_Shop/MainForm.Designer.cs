@@ -30,14 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.booksButton = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.dailyTotalButton = new System.Windows.Forms.Button();
+            this.mailButton = new System.Windows.Forms.Button();
+            this.employeesButton = new System.Windows.Forms.Button();
+            this.customerButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.payButton = new System.Windows.Forms.Button();
+            this.totalPriceLabel = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -49,10 +55,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.totalPriceLabel);
+            this.panel2.Controls.Add(this.payButton);
+            this.panel2.Controls.Add(this.deleteButton);
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(277, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 635);
             this.panel2.TabIndex = 2;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Location = new System.Drawing.Point(46, 563);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(152, 46);
+            this.deleteButton.TabIndex = 1;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(45, 177);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(836, 355);
+            this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -60,116 +91,124 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.booksButton);
+            this.panel1.Controls.Add(this.logoutButton);
+            this.panel1.Controls.Add(this.dailyTotalButton);
+            this.panel1.Controls.Add(this.mailButton);
+            this.panel1.Controls.Add(this.employeesButton);
+            this.panel1.Controls.Add(this.customerButton);
             this.panel1.Controls.Add(this.pictureBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 635);
             this.panel1.TabIndex = 3;
             // 
-            // button3
+            // booksButton
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::Leksi_Book_Shop.Properties.Resources.books;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(20, 310);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(239, 70);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.booksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.booksButton.AutoSize = true;
+            this.booksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.booksButton.FlatAppearance.BorderSize = 0;
+            this.booksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.booksButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.booksButton.Image = global::Leksi_Book_Shop.Properties.Resources.books;
+            this.booksButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.booksButton.Location = new System.Drawing.Point(20, 310);
+            this.booksButton.Name = "booksButton";
+            this.booksButton.Size = new System.Drawing.Size(239, 70);
+            this.booksButton.TabIndex = 5;
+            this.booksButton.Text = "Books";
+            this.booksButton.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // logoutButton
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.AutoSize = true;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = global::Leksi_Book_Shop.Properties.Resources.logout;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(20, 538);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(239, 70);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
+            this.logoutButton.AutoSize = true;
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.logoutButton.FlatAppearance.BorderSize = 0;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Image = global::Leksi_Book_Shop.Properties.Resources.logout;
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.Location = new System.Drawing.Point(20, 538);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(239, 70);
+            this.logoutButton.TabIndex = 8;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // button5
+            // dailyTotalButton
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dailyTotalButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::Leksi_Book_Shop.Properties.Resources.money;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(20, 462);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(239, 70);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
+            this.dailyTotalButton.AutoSize = true;
+            this.dailyTotalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.dailyTotalButton.FlatAppearance.BorderSize = 0;
+            this.dailyTotalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dailyTotalButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dailyTotalButton.Image = global::Leksi_Book_Shop.Properties.Resources.money;
+            this.dailyTotalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dailyTotalButton.Location = new System.Drawing.Point(20, 462);
+            this.dailyTotalButton.Name = "dailyTotalButton";
+            this.dailyTotalButton.Size = new System.Drawing.Size(239, 70);
+            this.dailyTotalButton.TabIndex = 7;
+            this.dailyTotalButton.Text = "      Daily total";
+            this.dailyTotalButton.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // mailButton
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::Leksi_Book_Shop.Properties.Resources.email;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(20, 386);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(239, 70);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.mailButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mailButton.AutoSize = true;
+            this.mailButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.mailButton.FlatAppearance.BorderSize = 0;
+            this.mailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mailButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailButton.Image = global::Leksi_Book_Shop.Properties.Resources.email;
+            this.mailButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mailButton.Location = new System.Drawing.Point(20, 386);
+            this.mailButton.Name = "mailButton";
+            this.mailButton.Size = new System.Drawing.Size(239, 70);
+            this.mailButton.TabIndex = 6;
+            this.mailButton.Text = "E-mail";
+            this.mailButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // employeesButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::Leksi_Book_Shop.Properties.Resources.customer_1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(20, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(239, 70);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.employeesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.employeesButton.AutoSize = true;
+            this.employeesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.employeesButton.FlatAppearance.BorderSize = 0;
+            this.employeesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeesButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeesButton.Image = global::Leksi_Book_Shop.Properties.Resources.customer_1_;
+            this.employeesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.employeesButton.Location = new System.Drawing.Point(20, 234);
+            this.employeesButton.Name = "employeesButton";
+            this.employeesButton.Size = new System.Drawing.Size(239, 70);
+            this.employeesButton.TabIndex = 4;
+            this.employeesButton.Text = "Employees";
+            this.employeesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.employeesButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // customerButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.customerButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Leksi_Book_Shop.Properties.Resources.target;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(20, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 70);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.customerButton.AutoSize = true;
+            this.customerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.customerButton.FlatAppearance.BorderSize = 0;
+            this.customerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerButton.Image = global::Leksi_Book_Shop.Properties.Resources.target;
+            this.customerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customerButton.Location = new System.Drawing.Point(20, 160);
+            this.customerButton.Name = "customerButton";
+            this.customerButton.Size = new System.Drawing.Size(239, 70);
+            this.customerButton.TabIndex = 3;
+            this.customerButton.Text = "     Customer";
+            this.customerButton.UseVisualStyleBackColor = false;
             // 
             // pictureBox
             // 
@@ -182,6 +221,27 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
+            // 
+            // payButton
+            // 
+            this.payButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.payButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payButton.Location = new System.Drawing.Point(265, 563);
+            this.payButton.Name = "payButton";
+            this.payButton.Size = new System.Drawing.Size(152, 46);
+            this.payButton.TabIndex = 2;
+            this.payButton.Text = "Pay";
+            this.payButton.UseVisualStyleBackColor = false;
+            // 
+            // totalPriceLabel
+            // 
+            this.totalPriceLabel.AutoSize = true;
+            this.totalPriceLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPriceLabel.Location = new System.Drawing.Point(695, 569);
+            this.totalPriceLabel.Name = "totalPriceLabel";
+            this.totalPriceLabel.Size = new System.Drawing.Size(99, 34);
+            this.totalPriceLabel.TabIndex = 3;
+            this.totalPriceLabel.Text = "label1";
             // 
             // MainForm
             // 
@@ -197,7 +257,9 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
@@ -210,12 +272,16 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button booksButton;
+        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button dailyTotalButton;
+        private System.Windows.Forms.Button mailButton;
+        private System.Windows.Forms.Button employeesButton;
+        private System.Windows.Forms.Button customerButton;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label totalPriceLabel;
+        private System.Windows.Forms.Button payButton;
     }
 }

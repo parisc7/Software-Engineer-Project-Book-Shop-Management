@@ -16,5 +16,12 @@ namespace Leksi_Book_Shop
         {
             InitializeComponent();
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
