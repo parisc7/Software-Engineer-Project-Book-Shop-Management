@@ -11,3 +11,16 @@ D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
 D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
 D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.LogiForm.resources
 D:\CODING TRYALS\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.User_Form.resources
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Leksi_Book_Shop.exe.config
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Leksi_Book_Shop.exe
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Leksi_Book_Shop.pdb
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.AssemblyReference.cache
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.LogiForm.resources
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Splash_Screen.resources
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Properties.Resources.resources
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.User_Form.resources
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.GenerateResource.cache
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.CoreCompileInputs.cache
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
+C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
