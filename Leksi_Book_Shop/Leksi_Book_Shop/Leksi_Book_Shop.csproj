@@ -52,6 +52,12 @@
     <Compile Include="LogiForm.Designer.cs">
       <DependentUpon>LogiForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="LogiForm.resx">
       <DependentUpon>LogiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
@@ -100,6 +109,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\32699924_1831793590217341_7194637504375422976_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\value.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
