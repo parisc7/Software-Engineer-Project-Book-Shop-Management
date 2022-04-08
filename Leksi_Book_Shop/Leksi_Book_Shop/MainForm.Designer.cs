@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.orderNoTxtBox = new System.Windows.Forms.TextBox();
             this.customerTxtBox = new System.Windows.Forms.TextBox();
             this.timeMskdTxtBox = new System.Windows.Forms.MaskedTextBox();
             this.nameSurnameTxttBox = new System.Windows.Forms.TextBox();
@@ -45,12 +46,13 @@
             this.employeesButton = new System.Windows.Forms.Button();
             this.customerButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.companieLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.searchCustomerButton = new System.Windows.Forms.Button();
-            this.orderNoTxtBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentOrderDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -60,6 +62,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.companieLogoPictureBox);
             this.panel2.Controls.Add(this.orderNoTxtBox);
             this.panel2.Controls.Add(this.searchCustomerButton);
             this.panel2.Controls.Add(this.customerTxtBox);
@@ -71,8 +74,18 @@
             this.panel2.Controls.Add(this.currentOrderDataGridView);
             this.panel2.Location = new System.Drawing.Point(277, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(909, 635);
+            this.panel2.Size = new System.Drawing.Size(915, 641);
             this.panel2.TabIndex = 2;
+            // 
+            // orderNoTxtBox
+            // 
+            this.orderNoTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.orderNoTxtBox.Enabled = false;
+            this.orderNoTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderNoTxtBox.Location = new System.Drawing.Point(338, 34);
+            this.orderNoTxtBox.Name = "orderNoTxtBox";
+            this.orderNoTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.orderNoTxtBox.TabIndex = 8;
             // 
             // customerTxtBox
             // 
@@ -110,7 +123,7 @@
             // 
             this.totalPriceLabel.AutoSize = true;
             this.totalPriceLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLabel.Location = new System.Drawing.Point(695, 569);
+            this.totalPriceLabel.Location = new System.Drawing.Point(689, 570);
             this.totalPriceLabel.Name = "totalPriceLabel";
             this.totalPriceLabel.Size = new System.Drawing.Size(99, 34);
             this.totalPriceLabel.TabIndex = 3;
@@ -182,6 +195,7 @@
             this.booksButton.TabIndex = 5;
             this.booksButton.Text = "Books";
             this.booksButton.UseVisualStyleBackColor = false;
+            this.booksButton.Click += new System.EventHandler(this.booksButton_Click);
             // 
             // logoutButton
             // 
@@ -285,6 +299,17 @@
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
+            // companieLogoPictureBox
+            // 
+            this.companieLogoPictureBox.Image = global::Leksi_Book_Shop.Properties.Resources.Softtsing;
+            this.companieLogoPictureBox.Location = new System.Drawing.Point(832, 615);
+            this.companieLogoPictureBox.Name = "companieLogoPictureBox";
+            this.companieLogoPictureBox.Size = new System.Drawing.Size(80, 23);
+            this.companieLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.companieLogoPictureBox.TabIndex = 9;
+            this.companieLogoPictureBox.TabStop = false;
+            this.companieLogoPictureBox.Click += new System.EventHandler(this.companieLogoPictureBox_Click);
+            // 
             // searchCustomerButton
             // 
             this.searchCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -296,16 +321,6 @@
             this.searchCustomerButton.Size = new System.Drawing.Size(58, 46);
             this.searchCustomerButton.TabIndex = 7;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // orderNoTxtBox
-            // 
-            this.orderNoTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.orderNoTxtBox.Enabled = false;
-            this.orderNoTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderNoTxtBox.Location = new System.Drawing.Point(338, 34);
-            this.orderNoTxtBox.Name = "orderNoTxtBox";
-            this.orderNoTxtBox.Size = new System.Drawing.Size(207, 41);
-            this.orderNoTxtBox.TabIndex = 8;
             // 
             // MainForm
             // 
@@ -327,6 +342,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +368,6 @@
         private System.Windows.Forms.TextBox customerTxtBox;
         private System.Windows.Forms.Button searchCustomerButton;
         private System.Windows.Forms.TextBox orderNoTxtBox;
+        private System.Windows.Forms.PictureBox companieLogoPictureBox;
     }
 }

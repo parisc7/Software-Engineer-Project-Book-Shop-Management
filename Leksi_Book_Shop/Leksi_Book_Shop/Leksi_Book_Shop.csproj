@@ -61,6 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book_List.Designer.cs">
+      <DependentUpon>Book_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company.Designer.cs">
+      <DependentUpon>Company.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,12 +90,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="BookList_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BookList_Form.Designer.cs">
-      <DependentUpon>BookList_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Splash_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,14 +98,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Book_List.resx">
+      <DependentUpon>Book_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company.resx">
+      <DependentUpon>Company.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogiForm.resx">
       <DependentUpon>LogiForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BookList_Form.resx">
-      <DependentUpon>BookList_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash_Screen.resx">
       <DependentUpon>Splash_Screen.cs</DependentUpon>
@@ -145,6 +154,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Book_List_Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Softtsing.png" />
     <None Include="Resources\find%281%29.png" />
     <None Include="Resources\target.png" />
     <None Include="Resources\customer%281%29.png" />

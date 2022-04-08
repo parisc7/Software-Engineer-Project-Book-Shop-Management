@@ -26,4 +26,5 @@ C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Boo
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Book_List_Database.mdf
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Book_List_Database_log.ldf
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.MainForm.resources
-C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Resources.BookList_Form.resources
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Book_List.resources
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Company.resources

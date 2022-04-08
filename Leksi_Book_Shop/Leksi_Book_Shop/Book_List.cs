@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Leksi_Book_Shop.Resources
+namespace Leksi_Book_Shop
 {
-    public partial class BookList_Form : Form
+    public partial class Book_List : Form
     {
-        public BookList_Form()
+        public Book_List()
         {
             InitializeComponent();
         }
 
-        private void Book_List_Form_Load(object sender, EventArgs e)
+        private void closeBookListButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
