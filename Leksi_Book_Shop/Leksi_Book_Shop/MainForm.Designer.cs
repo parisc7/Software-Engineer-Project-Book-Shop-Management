@@ -74,7 +74,7 @@
             this.panel2.Controls.Add(this.currentOrderDataGridView);
             this.panel2.Location = new System.Drawing.Point(277, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(915, 641);
+            this.panel2.Size = new System.Drawing.Size(909, 635);
             this.panel2.TabIndex = 2;
             // 
             // orderNoTxtBox
@@ -302,7 +302,7 @@
             // companieLogoPictureBox
             // 
             this.companieLogoPictureBox.Image = global::Leksi_Book_Shop.Properties.Resources.Softtsing;
-            this.companieLogoPictureBox.Location = new System.Drawing.Point(832, 615);
+            this.companieLogoPictureBox.Location = new System.Drawing.Point(810, 599);
             this.companieLogoPictureBox.Name = "companieLogoPictureBox";
             this.companieLogoPictureBox.Size = new System.Drawing.Size(80, 23);
             this.companieLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -333,6 +333,7 @@
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

@@ -35,5 +35,6 @@ namespace Leksi_Book_Shop
             Company company = new Company();
             company.ShowDialog();  
         }
+
     }
 }

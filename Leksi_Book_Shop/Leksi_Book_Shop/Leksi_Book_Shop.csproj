@@ -47,6 +47,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LEKSI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Leksi_Book_Shop.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -154,6 +160,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Book_List_Database.mdf</DependentUpon>
     </Content>
+    <Content Include="LEKSI.ico" />
     <None Include="Resources\Softtsing.png" />
     <None Include="Resources\find%281%29.png" />
     <None Include="Resources\target.png" />
