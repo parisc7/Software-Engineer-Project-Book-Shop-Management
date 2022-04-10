@@ -36,5 +36,12 @@ namespace Leksi_Book_Shop
             company.ShowDialog();  
         }
 
+        private void mailButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MailForm mailForm = new MailForm();
+            mailForm.ShowDialog();
+            this.ShowDialog();
+        }
     }
 }

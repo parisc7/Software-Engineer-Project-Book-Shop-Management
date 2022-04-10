@@ -250,6 +250,7 @@
             this.mailButton.TabIndex = 6;
             this.mailButton.Text = "E-mail";
             this.mailButton.UseVisualStyleBackColor = false;
+            this.mailButton.Click += new System.EventHandler(this.mailButton_Click);
             // 
             // employeesButton
             // 

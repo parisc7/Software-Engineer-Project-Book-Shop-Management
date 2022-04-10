@@ -32,10 +32,10 @@
             this.bookListPanel = new System.Windows.Forms.Panel();
             this.closeBookListButton = new System.Windows.Forms.Button();
             this.deleteBookListButton = new System.Windows.Forms.Button();
-            this.updateBookListButton = new System.Windows.Forms.Button();
-            this.addBookListButton = new System.Windows.Forms.Button();
             this.bookListGroupBox = new System.Windows.Forms.GroupBox();
             this.bookListDataGridView = new System.Windows.Forms.DataGridView();
+            this.addBookListButton = new System.Windows.Forms.Button();
+            this.updateBookListButton = new System.Windows.Forms.Button();
             this.bookListPanel.SuspendLayout();
             this.bookListGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookListDataGridView)).BeginInit();
@@ -76,26 +76,6 @@
             this.deleteBookListButton.Text = "&Delete";
             this.deleteBookListButton.UseVisualStyleBackColor = false;
             // 
-            // updateBookListButton
-            // 
-            this.updateBookListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.updateBookListButton.Location = new System.Drawing.Point(257, 482);
-            this.updateBookListButton.Name = "updateBookListButton";
-            this.updateBookListButton.Size = new System.Drawing.Size(135, 44);
-            this.updateBookListButton.TabIndex = 2;
-            this.updateBookListButton.Text = "&Update";
-            this.updateBookListButton.UseVisualStyleBackColor = false;
-            // 
-            // addBookListButton
-            // 
-            this.addBookListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.addBookListButton.Location = new System.Drawing.Point(16, 482);
-            this.addBookListButton.Name = "addBookListButton";
-            this.addBookListButton.Size = new System.Drawing.Size(135, 44);
-            this.addBookListButton.TabIndex = 2;
-            this.addBookListButton.Text = "&Add";
-            this.addBookListButton.UseVisualStyleBackColor = false;
-            // 
             // bookListGroupBox
             // 
             this.bookListGroupBox.Controls.Add(this.bookListDataGridView);
@@ -117,6 +97,26 @@
             this.bookListDataGridView.RowHeadersWidth = 51;
             this.bookListDataGridView.Size = new System.Drawing.Size(875, 423);
             this.bookListDataGridView.TabIndex = 0;
+            // 
+            // addBookListButton
+            // 
+            this.addBookListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.addBookListButton.Location = new System.Drawing.Point(16, 482);
+            this.addBookListButton.Name = "addBookListButton";
+            this.addBookListButton.Size = new System.Drawing.Size(135, 44);
+            this.addBookListButton.TabIndex = 2;
+            this.addBookListButton.Text = "&Add";
+            this.addBookListButton.UseVisualStyleBackColor = false;
+            // 
+            // updateBookListButton
+            // 
+            this.updateBookListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.updateBookListButton.Location = new System.Drawing.Point(257, 482);
+            this.updateBookListButton.Name = "updateBookListButton";
+            this.updateBookListButton.Size = new System.Drawing.Size(135, 44);
+            this.updateBookListButton.TabIndex = 2;
+            this.updateBookListButton.Text = "&Update";
+            this.updateBookListButton.UseVisualStyleBackColor = false;
             // 
             // Book_List
             // 
