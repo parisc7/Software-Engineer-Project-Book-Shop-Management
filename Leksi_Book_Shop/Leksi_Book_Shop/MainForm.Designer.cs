@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.companieLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.orderNoTxtBox = new System.Windows.Forms.TextBox();
+            this.searchCustomerButton = new System.Windows.Forms.Button();
             this.customerTxtBox = new System.Windows.Forms.TextBox();
             this.timeMskdTxtBox = new System.Windows.Forms.MaskedTextBox();
             this.nameSurnameTxttBox = new System.Windows.Forms.TextBox();
@@ -46,13 +48,11 @@
             this.employeesButton = new System.Windows.Forms.Button();
             this.customerButton = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.companieLogoPictureBox = new System.Windows.Forms.PictureBox();
-            this.searchCustomerButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentOrderDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -77,6 +77,17 @@
             this.panel2.Size = new System.Drawing.Size(909, 635);
             this.panel2.TabIndex = 2;
             // 
+            // companieLogoPictureBox
+            // 
+            this.companieLogoPictureBox.Image = global::Leksi_Book_Shop.Properties.Resources.Softtsing;
+            this.companieLogoPictureBox.Location = new System.Drawing.Point(810, 599);
+            this.companieLogoPictureBox.Name = "companieLogoPictureBox";
+            this.companieLogoPictureBox.Size = new System.Drawing.Size(80, 23);
+            this.companieLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.companieLogoPictureBox.TabIndex = 9;
+            this.companieLogoPictureBox.TabStop = false;
+            this.companieLogoPictureBox.Click += new System.EventHandler(this.companieLogoPictureBox_Click);
+            // 
             // orderNoTxtBox
             // 
             this.orderNoTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -86,6 +97,18 @@
             this.orderNoTxtBox.Name = "orderNoTxtBox";
             this.orderNoTxtBox.Size = new System.Drawing.Size(207, 41);
             this.orderNoTxtBox.TabIndex = 8;
+            // 
+            // searchCustomerButton
+            // 
+            this.searchCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.searchCustomerButton.FlatAppearance.BorderSize = 0;
+            this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
+            this.searchCustomerButton.Location = new System.Drawing.Point(832, 29);
+            this.searchCustomerButton.Name = "searchCustomerButton";
+            this.searchCustomerButton.Size = new System.Drawing.Size(58, 46);
+            this.searchCustomerButton.TabIndex = 7;
+            this.searchCustomerButton.UseVisualStyleBackColor = false;
             // 
             // customerTxtBox
             // 
@@ -287,6 +310,7 @@
             this.customerButton.TabIndex = 3;
             this.customerButton.Text = "     Customer";
             this.customerButton.UseVisualStyleBackColor = false;
+            this.customerButton.Click += new System.EventHandler(this.customerButton_Click);
             // 
             // pictureBox
             // 
@@ -299,29 +323,6 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
-            // 
-            // companieLogoPictureBox
-            // 
-            this.companieLogoPictureBox.Image = global::Leksi_Book_Shop.Properties.Resources.Softtsing;
-            this.companieLogoPictureBox.Location = new System.Drawing.Point(810, 599);
-            this.companieLogoPictureBox.Name = "companieLogoPictureBox";
-            this.companieLogoPictureBox.Size = new System.Drawing.Size(80, 23);
-            this.companieLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.companieLogoPictureBox.TabIndex = 9;
-            this.companieLogoPictureBox.TabStop = false;
-            this.companieLogoPictureBox.Click += new System.EventHandler(this.companieLogoPictureBox_Click);
-            // 
-            // searchCustomerButton
-            // 
-            this.searchCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.searchCustomerButton.FlatAppearance.BorderSize = 0;
-            this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(832, 29);
-            this.searchCustomerButton.Name = "searchCustomerButton";
-            this.searchCustomerButton.Size = new System.Drawing.Size(58, 46);
-            this.searchCustomerButton.TabIndex = 7;
-            this.searchCustomerButton.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -340,11 +341,11 @@
             this.Text = "MainForm";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentOrderDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

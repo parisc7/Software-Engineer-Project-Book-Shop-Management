@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Leksi_Book_Shop
 {
-    public partial class Book_List : Form
+    public partial class BookForm : Form
     {
-        public Book_List()
+        public BookForm()
         {
             InitializeComponent();
         }

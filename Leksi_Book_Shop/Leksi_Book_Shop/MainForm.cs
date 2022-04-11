@@ -12,7 +12,10 @@ namespace Leksi_Book_Shop
 {
     public partial class MainForm : Form
     {
-        Book_List books= new Book_List();  
+        BookForm books= new BookForm();
+        CustomerForm customers= new CustomerForm();  
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -42,6 +45,13 @@ namespace Leksi_Book_Shop
             MailForm mailForm = new MailForm();
             mailForm.ShowDialog();
             this.ShowDialog();
+        }
+
+        private void customerButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            customers.ShowDialog();
+            this.Show();
         }
     }
 }

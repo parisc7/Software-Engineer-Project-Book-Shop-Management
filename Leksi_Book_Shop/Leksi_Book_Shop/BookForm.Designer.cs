@@ -1,6 +1,6 @@
 ﻿namespace Leksi_Book_Shop
 {
-    partial class Book_List
+    partial class BookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Book_List));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
             this.closeBookListButton = new System.Windows.Forms.Button();
             this.deleteBookListButton = new System.Windows.Forms.Button();

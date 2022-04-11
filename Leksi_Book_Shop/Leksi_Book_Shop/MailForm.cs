@@ -24,11 +24,11 @@ namespace Leksi_Book_Shop
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            message.From.Add(new MailboxAddress("Giorgos software", "giorgos14kyperounta@gmail.com"));
+            //message.From.Add(new MailboxAddress("Βιβλιοπωλείο λέξη", "giorgos14kyperounta@gmail.com"));
 
-            message.To.Add(MailboxAddress.Parse("giorgos18hadjimichael@gmail.com"));
+            //message.To.Add(MailboxAddress.Parse("giorgos18hadjimichael@gmail.com"));
 
-            message.Subject = "Subject from C#";
+            message.Subject = "INFO";
 
             message.Body = new TextPart("plain")
             {
@@ -42,7 +42,7 @@ namespace Leksi_Book_Shop
             {
                 client.Connect("smtp.gmail.com", 465, true);
                 
-                client.Authenticate("giorgos14kyperounta@gmail.com","96849547");
+                //client.Authenticate("giorgos14kyperounta@gmail.com","96849547");
                 client.Send(message);
 
                 MessageBox.Show("Email sent!", "SUCCESS!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
