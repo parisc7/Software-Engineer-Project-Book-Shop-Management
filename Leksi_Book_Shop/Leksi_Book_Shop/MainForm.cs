@@ -15,15 +15,22 @@ namespace Leksi_Book_Shop
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
 
-
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void logoutButton_Click(object sender, EventArgs e)
+        private void companieLogoPictureBox_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Company company = new Company();
+            company.ShowDialog();
+        }
+
+        private void customerButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            customers.ShowDialog();
+            this.Show();
         }
 
         private void booksButton_Click(object sender, EventArgs e)
@@ -31,12 +38,6 @@ namespace Leksi_Book_Shop
             this.Hide();
             books.ShowDialog();
             this.Show();    
-        }
-
-        private void companieLogoPictureBox_Click(object sender, EventArgs e)
-        {
-            Company company = new Company();
-            company.ShowDialog();  
         }
 
         private void mailButton_Click(object sender, EventArgs e)
@@ -47,11 +48,9 @@ namespace Leksi_Book_Shop
             this.ShowDialog();
         }
 
-        private void customerButton_Click(object sender, EventArgs e)
+        private void logoutButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            customers.ShowDialog();
-            this.Show();
+            this.Close();
         }
     }
 }

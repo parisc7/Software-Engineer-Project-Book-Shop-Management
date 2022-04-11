@@ -160,7 +160,7 @@
             this.payButton.Name = "payButton";
             this.payButton.Size = new System.Drawing.Size(152, 46);
             this.payButton.TabIndex = 2;
-            this.payButton.Text = "Pay";
+            this.payButton.Text = "&Pay";
             this.payButton.UseVisualStyleBackColor = false;
             // 
             // deleteButton
@@ -171,7 +171,7 @@
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(152, 46);
             this.deleteButton.TabIndex = 1;
-            this.deleteButton.Text = "Delete";
+            this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
             // 
             // currentOrderDataGridView
