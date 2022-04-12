@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,8 @@ namespace Leksi_Book_Shop
         {
             // TODO: This line of code loads data into the 'lexi_bookshopDataSet.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter.Fill(this.lexi_bookshopDataSet.Customer);
-
+            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Customer");
+            DataTable
         }
     }
 }
