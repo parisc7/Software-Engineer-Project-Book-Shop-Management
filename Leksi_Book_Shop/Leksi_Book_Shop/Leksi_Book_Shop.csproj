@@ -122,6 +122,11 @@
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="lexi_bookshopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lexi_bookshopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +187,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="lexi_bookshopDataSet.xsc">
+      <DependentUpon>lexi_bookshopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lexi_bookshopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lexi_bookshopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lexi_bookshopDataSet.xss">
+      <DependentUpon>lexi_bookshopDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -213,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LEKSI.ico" />
+    <Content Include="lexi_bookshop.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Softtsing.png" />
     <None Include="Resources\find%281%29.png" />
     <None Include="Resources\target.png" />

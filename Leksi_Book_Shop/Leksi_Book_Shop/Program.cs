@@ -16,9 +16,8 @@ namespace Leksi_Book_Shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Splash_Screen());
-            //Application.Run(new MainForm());
-            Application.Run(new CustomerForm());
+           // Application.Run(new Splash_Screen());
+            Application.Run(new MainForm());
         }
     }
 }
