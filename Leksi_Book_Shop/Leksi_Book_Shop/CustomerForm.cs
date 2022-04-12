@@ -21,20 +21,5 @@ namespace Leksi_Book_Shop
         {
             this.Close();
         }
-
-        private void customerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customerBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.lexi_bookshopDataSet);
-
-        }
-
-        private void CustomerForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'lexi_bookshopDataSet.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.lexi_bookshopDataSet.Customer);
-
-        }
     }
 }
