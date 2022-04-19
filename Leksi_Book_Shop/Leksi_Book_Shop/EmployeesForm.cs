@@ -16,5 +16,20 @@ namespace Leksi_Book_Shop
         {
             InitializeComponent();
         }
+
+        private void eMPLOYEESBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.eMPLOYEESBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.lexi_BookshopDataSet);
+
+        }
+
+        private void EmployeesForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
+            //this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
+
+        }
     }
 }

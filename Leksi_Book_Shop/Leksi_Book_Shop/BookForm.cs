@@ -21,5 +21,12 @@ namespace Leksi_Book_Shop
         {
             this.Close();
         }
+
+        private void BookForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
+           // this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
+
+        }
     }
 }

@@ -52,5 +52,12 @@ namespace Leksi_Book_Shop
         {
             this.Close();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.ORDER' table. You can move, or remove it, as needed.
+            this.oRDERTableAdapter.Fill(this.lexi_BookshopDataSet.ORDER);
+
+        }
     }
 }
