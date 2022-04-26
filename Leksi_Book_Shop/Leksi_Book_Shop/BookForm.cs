@@ -14,6 +14,10 @@ namespace Leksi_Book_Shop
 {
     public partial class BookForm : Form
     {
+        SqlConnection conn = new SqlConnection();
+        SqlCommand command = new SqlCommand();
+
+
         public BookForm()
         {
             InitializeComponent();
@@ -30,11 +34,11 @@ namespace Leksi_Book_Shop
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
             this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
 
-            SqlConnection conn = new SqlConnection();
+            
             conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
 
 
-            SqlCommand command = new SqlCommand();
+            
             command.Connection = conn;
             command.CommandText = "SELECT * FROM BOOKS";
 
@@ -55,13 +59,14 @@ namespace Leksi_Book_Shop
             try
             {
                 conn.Open();
-                string query = "insert into BOOKS values(' "+iSBNDataGridViewTextBoxColumn
+                command = new SqlCommand("UPDATE BOOKS SET ISBN=@a1, AUTHORS=@a2",conn);
+                command.Parameters.Add("a1");
                 conn.Close();
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-  */         
+         */  
         }
 
         private void bookListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
