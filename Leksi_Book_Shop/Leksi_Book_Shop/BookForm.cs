@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Leksi_Book_Shop
 {
@@ -22,11 +23,30 @@ namespace Leksi_Book_Shop
             this.Close();
         }
 
+      //  SqlConnection conn = new SqlConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+
         private void BookForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
-           // this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
+            this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
 
+        }
+
+        private void updateBookListButton_Click(object sender, EventArgs e)
+        {
+            
+
+/*
+            try
+            {
+                conn.Open();
+                string query = "insert into BOOKS values(' "+iSBNDataGridViewTextBoxColumn
+                conn.Close();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+  */         
         }
     }
 }
