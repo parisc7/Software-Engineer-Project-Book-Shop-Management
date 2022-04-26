@@ -27,7 +27,7 @@ namespace Leksi_Book_Shop
         private void BookForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
-            //this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
+            this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
 
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = @"Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";

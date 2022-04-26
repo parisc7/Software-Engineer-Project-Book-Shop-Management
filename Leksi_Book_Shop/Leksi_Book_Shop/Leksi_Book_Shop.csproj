@@ -29,7 +29,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -119,6 +119,9 @@
     </Compile>
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lexi_BookshopDataSet.cs">
+      <DependentUpon>Lexi_BookshopDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Lexi_BookshopDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
