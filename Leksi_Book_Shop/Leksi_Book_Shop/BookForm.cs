@@ -23,13 +23,27 @@ namespace Leksi_Book_Shop
             this.Close();
         }
 
-      //  SqlConnection conn = new SqlConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
-
+      //  
         private void BookForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
-            this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
+            //this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
 
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = @"Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+
+
+            SqlCommand command = new SqlCommand();
+            command.Connection = conn;
+            command.CommandText = "SELECT * FROM BOOKS";
+
+            DataTable data = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            adapter.Fill(data);
+
+            bookListDataGridView.DataSource = data;
         }
 
         private void updateBookListButton_Click(object sender, EventArgs e)
@@ -47,6 +61,11 @@ namespace Leksi_Book_Shop
                 MessageBox.Show(ex.Message);
             }
   */         
+        }
+
+        private void bookListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

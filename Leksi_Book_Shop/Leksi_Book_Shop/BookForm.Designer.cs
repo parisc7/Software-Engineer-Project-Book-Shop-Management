@@ -125,6 +125,7 @@
             this.bookListDataGridView.RowHeadersWidth = 51;
             this.bookListDataGridView.Size = new System.Drawing.Size(767, 345);
             this.bookListDataGridView.TabIndex = 0;
+            this.bookListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookListDataGridView_CellContentClick);
             // 
             // iSBNDataGridViewTextBoxColumn
             // 
