@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace Leksi_Book_Shop
 {
@@ -30,7 +31,7 @@ namespace Leksi_Book_Shop
             this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
 
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
 
 
             SqlCommand command = new SqlCommand();
