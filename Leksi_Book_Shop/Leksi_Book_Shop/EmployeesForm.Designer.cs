@@ -29,87 +29,140 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label eMPLOYEE_IDLabel;
+            System.Windows.Forms.Label fNAMELabel;
+            System.Windows.Forms.Label lNAMELabel;
+            System.Windows.Forms.Label pHONELabel;
+            System.Windows.Forms.Label uSERNAMELabel;
+            System.Windows.Forms.Label pASSWORDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
-            this.customerTab = new System.Windows.Forms.TabControl();
-            this.addTab = new System.Windows.Forms.TabPage();
+            this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
-            this.addCustomerButton = new System.Windows.Forms.Button();
-            this.closeAddCustomerButton = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lNAMETextBox = new System.Windows.Forms.TextBox();
+            this.fNAMETextBox = new System.Windows.Forms.TextBox();
+            this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
+            this.uSERNAMETextBox = new System.Windows.Forms.TextBox();
+            this.pASSWORDTextBox = new System.Windows.Forms.TextBox();
+            this.addButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.customerDataGridView = new System.Windows.Forms.DataGridView();
             this.searchCustomerButton = new System.Windows.Forms.Button();
-            this.customerTxtBox = new System.Windows.Forms.TextBox();
-            this.closeFindCustomerButton = new System.Windows.Forms.Button();
-            this.deleteCustomerButton = new System.Windows.Forms.Button();
-            this.updateCustomerButton = new System.Windows.Forms.Button();
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
-            this.eMPLOYEESBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.eMPLOYEESBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.eMPLOYEESDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeTableButton = new System.Windows.Forms.Button();
+            this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
+            fNAMELabel = new System.Windows.Forms.Label();
+            lNAMELabel = new System.Windows.Forms.Label();
+            pHONELabel = new System.Windows.Forms.Label();
+            uSERNAMELabel = new System.Windows.Forms.Label();
+            pASSWORDLabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
-            this.customerTab.SuspendLayout();
-            this.addTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingNavigator)).BeginInit();
-            this.eMPLOYEESBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // eMPLOYEE_IDLabel
+            // 
+            eMPLOYEE_IDLabel.AutoSize = true;
+            eMPLOYEE_IDLabel.Location = new System.Drawing.Point(40, 36);
+            eMPLOYEE_IDLabel.Name = "eMPLOYEE_IDLabel";
+            eMPLOYEE_IDLabel.Size = new System.Drawing.Size(199, 34);
+            eMPLOYEE_IDLabel.TabIndex = 35;
+            eMPLOYEE_IDLabel.Text = "EMPLOYEE ID:";
+            // 
+            // fNAMELabel
+            // 
+            fNAMELabel.AutoSize = true;
+            fNAMELabel.Location = new System.Drawing.Point(513, 36);
+            fNAMELabel.Name = "fNAMELabel";
+            fNAMELabel.Size = new System.Drawing.Size(164, 34);
+            fNAMELabel.TabIndex = 37;
+            fNAMELabel.Text = "First Name:";
+            // 
+            // lNAMELabel
+            // 
+            lNAMELabel.AutoSize = true;
+            lNAMELabel.Location = new System.Drawing.Point(952, 36);
+            lNAMELabel.Name = "lNAMELabel";
+            lNAMELabel.Size = new System.Drawing.Size(141, 34);
+            lNAMELabel.TabIndex = 39;
+            lNAMELabel.Text = "Surname:";
+            // 
+            // pHONELabel
+            // 
+            pHONELabel.AutoSize = true;
+            pHONELabel.Location = new System.Drawing.Point(40, 116);
+            pHONELabel.Name = "pHONELabel";
+            pHONELabel.Size = new System.Drawing.Size(109, 34);
+            pHONELabel.TabIndex = 41;
+            pHONELabel.Text = "Phone:";
+            // 
+            // uSERNAMELabel
+            // 
+            uSERNAMELabel.AutoSize = true;
+            uSERNAMELabel.Location = new System.Drawing.Point(488, 116);
+            uSERNAMELabel.Name = "uSERNAMELabel";
+            uSERNAMELabel.Size = new System.Drawing.Size(167, 34);
+            uSERNAMELabel.TabIndex = 43;
+            uSERNAMELabel.Text = "USERNAME:";
+            // 
+            // pASSWORDLabel
+            // 
+            pASSWORDLabel.AutoSize = true;
+            pASSWORDLabel.Location = new System.Drawing.Point(932, 117);
+            pASSWORDLabel.Name = "pASSWORDLabel";
+            pASSWORDLabel.Size = new System.Drawing.Size(177, 34);
+            pASSWORDLabel.TabIndex = 45;
+            pASSWORDLabel.Text = "PASSWORD:";
             // 
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.bookListPanel.Controls.Add(this.customerTab);
+            this.bookListPanel.Controls.Add(this.timeTableButton);
+            this.bookListPanel.Controls.Add(this.pHONETextBox);
+            this.bookListPanel.Controls.Add(this.lNAMETextBox);
+            this.bookListPanel.Controls.Add(this.fNAMETextBox);
+            this.bookListPanel.Controls.Add(eMPLOYEE_IDLabel);
+            this.bookListPanel.Controls.Add(this.eMPLOYEE_IDTextBox);
+            this.bookListPanel.Controls.Add(fNAMELabel);
+            this.bookListPanel.Controls.Add(lNAMELabel);
+            this.bookListPanel.Controls.Add(pHONELabel);
+            this.bookListPanel.Controls.Add(uSERNAMELabel);
+            this.bookListPanel.Controls.Add(this.uSERNAMETextBox);
+            this.bookListPanel.Controls.Add(pASSWORDLabel);
+            this.bookListPanel.Controls.Add(this.pASSWORDTextBox);
+            this.bookListPanel.Controls.Add(this.addButton);
+            this.bookListPanel.Controls.Add(this.updateButton);
+            this.bookListPanel.Controls.Add(this.deleteButton);
+            this.bookListPanel.Controls.Add(this.closeButton);
+            this.bookListPanel.Controls.Add(this.customerDataGridView);
+            this.bookListPanel.Controls.Add(this.searchCustomerButton);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookListPanel.Location = new System.Drawing.Point(9, 10);
-            this.bookListPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.bookListPanel.Location = new System.Drawing.Point(12, 12);
+            this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bookListPanel.Name = "bookListPanel";
-            this.bookListPanel.Size = new System.Drawing.Size(944, 522);
+            this.bookListPanel.Size = new System.Drawing.Size(1489, 794);
             this.bookListPanel.TabIndex = 3;
             // 
-            // customerTab
+            // pHONETextBox
             // 
-            this.customerTab.Controls.Add(this.addTab);
-            this.customerTab.Controls.Add(this.tabPage2);
-            this.customerTab.Location = new System.Drawing.Point(10, 3);
-            this.customerTab.Margin = new System.Windows.Forms.Padding(2);
-            this.customerTab.Name = "customerTab";
-            this.customerTab.SelectedIndex = 0;
-            this.customerTab.Size = new System.Drawing.Size(923, 506);
-            this.customerTab.TabIndex = 0;
-            // 
-            // addTab
-            // 
-            this.addTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.addTab.Controls.Add(this.addCustomerButton);
-            this.addTab.Controls.Add(this.closeAddCustomerButton);
-            this.addTab.Location = new System.Drawing.Point(4, 34);
-            this.addTab.Margin = new System.Windows.Forms.Padding(2);
-            this.addTab.Name = "addTab";
-            this.addTab.Padding = new System.Windows.Forms.Padding(2);
-            this.addTab.Size = new System.Drawing.Size(915, 468);
-            this.addTab.TabIndex = 0;
-            this.addTab.Text = "ADD";
+            this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PHONE", true));
+            this.pHONETextBox.Location = new System.Drawing.Point(155, 110);
+            this.pHONETextBox.Name = "pHONETextBox";
+            this.pHONETextBox.Size = new System.Drawing.Size(242, 41);
+            this.pHONETextBox.TabIndex = 42;
+            this.pHONETextBox.Text = " ";
             // 
             // eMPLOYEESBindingSource
             // 
@@ -121,46 +174,115 @@
             this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
             this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // addCustomerButton
+            // lNAMETextBox
             // 
-            this.addCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.addCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addCustomerButton.Location = new System.Drawing.Point(743, 402);
-            this.addCustomerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.addCustomerButton.Name = "addCustomerButton";
-            this.addCustomerButton.Size = new System.Drawing.Size(101, 36);
-            this.addCustomerButton.TabIndex = 10;
-            this.addCustomerButton.Text = "&ADD";
-            this.addCustomerButton.UseVisualStyleBackColor = false;
+            this.lNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LNAME", true));
+            this.lNAMETextBox.Location = new System.Drawing.Point(1099, 29);
+            this.lNAMETextBox.Name = "lNAMETextBox";
+            this.lNAMETextBox.Size = new System.Drawing.Size(328, 41);
+            this.lNAMETextBox.TabIndex = 40;
             // 
-            // closeAddCustomerButton
+            // fNAMETextBox
             // 
-            this.closeAddCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.closeAddCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeAddCustomerButton.Location = new System.Drawing.Point(569, 402);
-            this.closeAddCustomerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.closeAddCustomerButton.Name = "closeAddCustomerButton";
-            this.closeAddCustomerButton.Size = new System.Drawing.Size(101, 36);
-            this.closeAddCustomerButton.TabIndex = 9;
-            this.closeAddCustomerButton.Text = "&Close";
-            this.closeAddCustomerButton.UseVisualStyleBackColor = false;
+            this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FNAME", true));
+            this.fNAMETextBox.Location = new System.Drawing.Point(683, 33);
+            this.fNAMETextBox.Name = "fNAMETextBox";
+            this.fNAMETextBox.Size = new System.Drawing.Size(214, 41);
+            this.fNAMETextBox.TabIndex = 38;
             // 
-            // tabPage2
+            // eMPLOYEE_IDTextBox
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.tabPage2.Controls.Add(this.eMPLOYEESDataGridView);
-            this.tabPage2.Controls.Add(this.searchCustomerButton);
-            this.tabPage2.Controls.Add(this.customerTxtBox);
-            this.tabPage2.Controls.Add(this.closeFindCustomerButton);
-            this.tabPage2.Controls.Add(this.deleteCustomerButton);
-            this.tabPage2.Controls.Add(this.updateCustomerButton);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(915, 468);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "FIND";
+            this.eMPLOYEE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "EMPLOYEE_ID", true));
+            this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(245, 33);
+            this.eMPLOYEE_IDTextBox.Name = "eMPLOYEE_IDTextBox";
+            this.eMPLOYEE_IDTextBox.ReadOnly = true;
+            this.eMPLOYEE_IDTextBox.Size = new System.Drawing.Size(217, 41);
+            this.eMPLOYEE_IDTextBox.TabIndex = 36;
+            // 
+            // uSERNAMETextBox
+            // 
+            this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
+            this.uSERNAMETextBox.Location = new System.Drawing.Point(661, 113);
+            this.uSERNAMETextBox.Name = "uSERNAMETextBox";
+            this.uSERNAMETextBox.Size = new System.Drawing.Size(236, 41);
+            this.uSERNAMETextBox.TabIndex = 44;
+            // 
+            // pASSWORDTextBox
+            // 
+            this.pASSWORDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PASSWORD", true));
+            this.pASSWORDTextBox.Location = new System.Drawing.Point(1115, 113);
+            this.pASSWORDTextBox.Name = "pASSWORDTextBox";
+            this.pASSWORDTextBox.Size = new System.Drawing.Size(230, 41);
+            this.pASSWORDTextBox.TabIndex = 46;
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Location = new System.Drawing.Point(46, 719);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(191, 55);
+            this.addButton.TabIndex = 35;
+            this.addButton.Text = "&Add";
+            this.addButton.UseVisualStyleBackColor = false;
+            // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Location = new System.Drawing.Point(850, 719);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(191, 55);
+            this.updateButton.TabIndex = 34;
+            this.updateButton.Text = "&Update";
+            this.updateButton.UseVisualStyleBackColor = false;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Location = new System.Drawing.Point(440, 719);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(191, 55);
+            this.deleteButton.TabIndex = 33;
+            this.deleteButton.Text = "&Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Location = new System.Drawing.Point(1236, 719);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(191, 55);
+            this.closeButton.TabIndex = 32;
+            this.closeButton.Text = "&Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            // 
+            // customerDataGridView
+            // 
+            this.customerDataGridView.AutoGenerateColumns = false;
+            this.customerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eMPLOYEEIDDataGridViewTextBoxColumn,
+            this.fNAMEDataGridViewTextBoxColumn,
+            this.lNAMEDataGridViewTextBoxColumn,
+            this.pHONEDataGridViewTextBoxColumn,
+            this.uSERNAMEDataGridViewTextBoxColumn,
+            this.pASSWORDDataGridViewTextBoxColumn});
+            this.customerDataGridView.DataSource = this.eMPLOYEESBindingSource;
+            this.customerDataGridView.Location = new System.Drawing.Point(46, 204);
+            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerDataGridView.Name = "customerDataGridView";
+            this.customerDataGridView.RowHeadersWidth = 51;
+            this.customerDataGridView.RowTemplate.Height = 24;
+            this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
+            this.customerDataGridView.TabIndex = 30;
             // 
             // searchCustomerButton
             // 
@@ -168,59 +290,12 @@
             this.searchCustomerButton.FlatAppearance.BorderSize = 0;
             this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(723, 16);
-            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.searchCustomerButton.Location = new System.Drawing.Point(403, 109);
+            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchCustomerButton.Name = "searchCustomerButton";
-            this.searchCustomerButton.Size = new System.Drawing.Size(44, 37);
+            this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
             this.searchCustomerButton.TabIndex = 11;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // customerTxtBox
-            // 
-            this.customerTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.customerTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerTxtBox.Location = new System.Drawing.Point(172, 19);
-            this.customerTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.customerTxtBox.Name = "customerTxtBox";
-            this.customerTxtBox.Size = new System.Drawing.Size(506, 34);
-            this.customerTxtBox.TabIndex = 10;
-            // 
-            // closeFindCustomerButton
-            // 
-            this.closeFindCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.closeFindCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeFindCustomerButton.Location = new System.Drawing.Point(714, 417);
-            this.closeFindCustomerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.closeFindCustomerButton.Name = "closeFindCustomerButton";
-            this.closeFindCustomerButton.Size = new System.Drawing.Size(101, 36);
-            this.closeFindCustomerButton.TabIndex = 8;
-            this.closeFindCustomerButton.Text = "&Close";
-            this.closeFindCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // deleteCustomerButton
-            // 
-            this.deleteCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.deleteCustomerButton.FlatAppearance.BorderSize = 0;
-            this.deleteCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteCustomerButton.Location = new System.Drawing.Point(398, 417);
-            this.deleteCustomerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteCustomerButton.Name = "deleteCustomerButton";
-            this.deleteCustomerButton.Size = new System.Drawing.Size(101, 36);
-            this.deleteCustomerButton.TabIndex = 5;
-            this.deleteCustomerButton.Text = "&Delete";
-            this.deleteCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // updateCustomerButton
-            // 
-            this.updateCustomerButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.updateCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateCustomerButton.Location = new System.Drawing.Point(82, 417);
-            this.updateCustomerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.updateCustomerButton.Name = "updateCustomerButton";
-            this.updateCustomerButton.Size = new System.Drawing.Size(113, 36);
-            this.updateCustomerButton.TabIndex = 7;
-            this.updateCustomerButton.Text = "&Update";
-            this.updateCustomerButton.UseVisualStyleBackColor = false;
             // 
             // eMPLOYEESTableAdapter
             // 
@@ -237,252 +312,113 @@
             this.tableAdapterManager.TIMETABLETableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // eMPLOYEESBindingNavigator
+            // timeTableButton
             // 
-            this.eMPLOYEESBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.eMPLOYEESBindingNavigator.BindingSource = this.eMPLOYEESBindingSource;
-            this.eMPLOYEESBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.eMPLOYEESBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.eMPLOYEESBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.eMPLOYEESBindingNavigatorSaveItem});
-            this.eMPLOYEESBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.eMPLOYEESBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.eMPLOYEESBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.eMPLOYEESBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.eMPLOYEESBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.eMPLOYEESBindingNavigator.Name = "eMPLOYEESBindingNavigator";
-            this.eMPLOYEESBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.eMPLOYEESBindingNavigator.Size = new System.Drawing.Size(962, 25);
-            this.eMPLOYEESBindingNavigator.TabIndex = 4;
-            this.eMPLOYEESBindingNavigator.Text = "bindingNavigator1";
+            this.timeTableButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.timeTableButton.FlatAppearance.BorderSize = 0;
+            this.timeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeTableButton.Image = ((System.Drawing.Image)(resources.GetObject("timeTableButton.Image")));
+            this.timeTableButton.Location = new System.Drawing.Point(1360, 110);
+            this.timeTableButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTableButton.Name = "timeTableButton";
+            this.timeTableButton.Size = new System.Drawing.Size(67, 48);
+            this.timeTableButton.TabIndex = 47;
+            this.timeTableButton.UseVisualStyleBackColor = false;
             // 
-            // bindingNavigatorAddNewItem
+            // eMPLOYEEIDDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.DataPropertyName = "EMPLOYEE_ID";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.HeaderText = "EMPLOYEE_ID";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.Name = "eMPLOYEEIDDataGridViewTextBoxColumn";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.Width = 250;
             // 
-            // bindingNavigatorCountItem
+            // fNAMEDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.fNAMEDataGridViewTextBoxColumn.DataPropertyName = "FNAME";
+            this.fNAMEDataGridViewTextBoxColumn.HeaderText = "FNAME";
+            this.fNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fNAMEDataGridViewTextBoxColumn.Name = "fNAMEDataGridViewTextBoxColumn";
+            this.fNAMEDataGridViewTextBoxColumn.Width = 215;
             // 
-            // bindingNavigatorDeleteItem
+            // lNAMEDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.lNAMEDataGridViewTextBoxColumn.DataPropertyName = "LNAME";
+            this.lNAMEDataGridViewTextBoxColumn.HeaderText = "LNAME";
+            this.lNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lNAMEDataGridViewTextBoxColumn.Name = "lNAMEDataGridViewTextBoxColumn";
+            this.lNAMEDataGridViewTextBoxColumn.Width = 222;
             // 
-            // bindingNavigatorMoveFirstItem
+            // pHONEDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.pHONEDataGridViewTextBoxColumn.DataPropertyName = "PHONE";
+            this.pHONEDataGridViewTextBoxColumn.HeaderText = "PHONE";
+            this.pHONEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pHONEDataGridViewTextBoxColumn.Name = "pHONEDataGridViewTextBoxColumn";
+            this.pHONEDataGridViewTextBoxColumn.Width = 200;
             // 
-            // bindingNavigatorMovePreviousItem
+            // uSERNAMEDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.uSERNAMEDataGridViewTextBoxColumn.DataPropertyName = "USERNAME";
+            this.uSERNAMEDataGridViewTextBoxColumn.HeaderText = "USERNAME";
+            this.uSERNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.uSERNAMEDataGridViewTextBoxColumn.Name = "uSERNAMEDataGridViewTextBoxColumn";
+            this.uSERNAMEDataGridViewTextBoxColumn.Width = 220;
             // 
-            // bindingNavigatorSeparator
+            // pASSWORDDataGridViewTextBoxColumn
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // eMPLOYEESBindingNavigatorSaveItem
-            // 
-            this.eMPLOYEESBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.eMPLOYEESBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("eMPLOYEESBindingNavigatorSaveItem.Image")));
-            this.eMPLOYEESBindingNavigatorSaveItem.Name = "eMPLOYEESBindingNavigatorSaveItem";
-            this.eMPLOYEESBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.eMPLOYEESBindingNavigatorSaveItem.Text = "Save Data";
-            this.eMPLOYEESBindingNavigatorSaveItem.Click += new System.EventHandler(this.eMPLOYEESBindingNavigatorSaveItem_Click);
-            // 
-            // eMPLOYEESDataGridView
-            // 
-            this.eMPLOYEESDataGridView.AutoGenerateColumns = false;
-            this.eMPLOYEESDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.eMPLOYEESDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.eMPLOYEESDataGridView.DataSource = this.eMPLOYEESBindingSource;
-            this.eMPLOYEESDataGridView.Location = new System.Drawing.Point(10, 58);
-            this.eMPLOYEESDataGridView.Name = "eMPLOYEESDataGridView";
-            this.eMPLOYEESDataGridView.Size = new System.Drawing.Size(894, 354);
-            this.eMPLOYEESDataGridView.TabIndex = 12;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "EMPLOYEE_ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "EMPLOYEE_ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 170;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FNAME";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FNAME";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "LNAME";
-            this.dataGridViewTextBoxColumn3.HeaderText = "LNAME";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PHONE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "PHONE";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "USERNAME";
-            this.dataGridViewTextBoxColumn5.HeaderText = "USERNAME";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PASSWORD";
-            this.dataGridViewTextBoxColumn6.HeaderText = "PASSWORD";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 150;
+            this.pASSWORDDataGridViewTextBoxColumn.DataPropertyName = "PASSWORD";
+            this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
+            this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
+            this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
             // 
             // EmployeesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(29)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(962, 542);
-            this.Controls.Add(this.eMPLOYEESBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(1510, 816);
             this.Controls.Add(this.bookListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EmployeesForm";
             this.Text = "EmploymentsForm";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
             this.bookListPanel.ResumeLayout(false);
-            this.customerTab.ResumeLayout(false);
-            this.addTab.ResumeLayout(false);
+            this.bookListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingNavigator)).EndInit();
-            this.eMPLOYEESBindingNavigator.ResumeLayout(false);
-            this.eMPLOYEESBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel bookListPanel;
-        private System.Windows.Forms.TabControl customerTab;
-        private System.Windows.Forms.TabPage addTab;
-        private System.Windows.Forms.Button addCustomerButton;
-        private System.Windows.Forms.Button closeAddCustomerButton;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button searchCustomerButton;
-        private System.Windows.Forms.TextBox customerTxtBox;
-        private System.Windows.Forms.Button closeFindCustomerButton;
-        private System.Windows.Forms.Button deleteCustomerButton;
-        private System.Windows.Forms.Button updateCustomerButton;
         private Lexi_BookshopDataSet lexi_BookshopDataSet;
         private System.Windows.Forms.BindingSource eMPLOYEESBindingSource;
         private Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter eMPLOYEESTableAdapter;
         private Lexi_BookshopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator eMPLOYEESBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton eMPLOYEESBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView eMPLOYEESDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView customerDataGridView;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.TextBox eMPLOYEE_IDTextBox;
+        private System.Windows.Forms.TextBox fNAMETextBox;
+        private System.Windows.Forms.TextBox lNAMETextBox;
+        private System.Windows.Forms.TextBox pHONETextBox;
+        private System.Windows.Forms.TextBox uSERNAMETextBox;
+        private System.Windows.Forms.TextBox pASSWORDTextBox;
+        private System.Windows.Forms.Button timeTableButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eMPLOYEEIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pHONEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uSERNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pASSWORDDataGridViewTextBoxColumn;
     }
 }

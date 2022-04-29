@@ -37,14 +37,8 @@
             System.Windows.Forms.Label fNAMELabel;
             System.Windows.Forms.Label cLIENT_IDLabel;
             this.bookListPanel = new System.Windows.Forms.Panel();
-            this.cLIENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
             this.closeButton = new System.Windows.Forms.Button();
             this.searchCustomerButton = new System.Windows.Forms.Button();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
-            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
-            this.cLIENTSTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.CLIENTSTableAdapter();
             this.deleteButton = new System.Windows.Forms.Button();
             this.aDDRESSTextBox = new System.Windows.Forms.TextBox();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
@@ -53,14 +47,20 @@
             this.fNAMETextBox = new System.Windows.Forms.TextBox();
             this.cLIENT_IDTextBox = new System.Windows.Forms.TextBox();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.cLIENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
             this.cLIENTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aDDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updateButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
+            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
+            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
+            this.cLIENTSTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.CLIENTSTableAdapter();
             aDDRESSLabel = new System.Windows.Forms.Label();
             pHONELabel = new System.Windows.Forms.Label();
             eMAILLabel = new System.Windows.Forms.Label();
@@ -68,10 +68,10 @@
             fNAMELabel = new System.Windows.Forms.Label();
             cLIENT_IDLabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // bookListPanel
@@ -102,16 +102,6 @@
             this.bookListPanel.Size = new System.Drawing.Size(1486, 794);
             this.bookListPanel.TabIndex = 2;
             // 
-            // cLIENTSBindingSource
-            // 
-            this.cLIENTSBindingSource.DataMember = "CLIENTS";
-            this.cLIENTSBindingSource.DataSource = this.lexi_BookshopDataSet;
-            // 
-            // lexi_BookshopDataSet
-            // 
-            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
-            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -137,30 +127,6 @@
             this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
             this.searchCustomerButton.TabIndex = 11;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.lexi_BookshopDataSet;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BOOKSTableAdapter = null;
-            this.tableAdapterManager.CLIENTSTableAdapter = this.cLIENTSTableAdapter;
-            this.tableAdapterManager.EMPLOYEESTableAdapter = this.eMPLOYEESTableAdapter;
-            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
-            this.tableAdapterManager.ORDERTableAdapter = null;
-            this.tableAdapterManager.TIMETABLETableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // cLIENTSTableAdapter
-            // 
-            this.cLIENTSTableAdapter.ClearBeforeFill = true;
             // 
             // deleteButton
             // 
@@ -285,6 +251,7 @@
             this.cLIENT_IDTextBox.Location = new System.Drawing.Point(199, 37);
             this.cLIENT_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cLIENT_IDTextBox.Name = "cLIENT_IDTextBox";
+            this.cLIENT_IDTextBox.ReadOnly = true;
             this.cLIENT_IDTextBox.Size = new System.Drawing.Size(203, 41);
             this.cLIENT_IDTextBox.TabIndex = 19;
             // 
@@ -308,6 +275,40 @@
             this.customerDataGridView.RowTemplate.Height = 24;
             this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.customerDataGridView.TabIndex = 29;
+            // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Location = new System.Drawing.Point(855, 709);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(191, 55);
+            this.updateButton.TabIndex = 30;
+            this.updateButton.Text = "&Update";
+            this.updateButton.UseVisualStyleBackColor = false;
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Location = new System.Drawing.Point(51, 709);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(191, 55);
+            this.addButton.TabIndex = 31;
+            this.addButton.Text = "&Add";
+            this.addButton.UseVisualStyleBackColor = false;
+            // 
+            // cLIENTSBindingSource
+            // 
+            this.cLIENTSBindingSource.DataMember = "CLIENTS";
+            this.cLIENTSBindingSource.DataSource = this.lexi_BookshopDataSet;
+            // 
+            // lexi_BookshopDataSet
+            // 
+            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
+            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cLIENTIDDataGridViewTextBoxColumn
             // 
@@ -357,36 +358,36 @@
             this.aDDRESSDataGridViewTextBoxColumn.Name = "aDDRESSDataGridViewTextBoxColumn";
             this.aDDRESSDataGridViewTextBoxColumn.Width = 342;
             // 
-            // updateButton
+            // eMPLOYEESBindingSource
             // 
-            this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateButton.Location = new System.Drawing.Point(855, 709);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(191, 55);
-            this.updateButton.TabIndex = 30;
-            this.updateButton.Text = "&Update";
-            this.updateButton.UseVisualStyleBackColor = false;
+            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
+            this.eMPLOYEESBindingSource.DataSource = this.lexi_BookshopDataSet;
             // 
-            // addButton
+            // eMPLOYEESTableAdapter
             // 
-            this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Location = new System.Drawing.Point(51, 709);
-            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(191, 55);
-            this.addButton.TabIndex = 31;
-            this.addButton.Text = "&Add";
-            this.addButton.UseVisualStyleBackColor = false;
+            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BOOKSTableAdapter = null;
+            this.tableAdapterManager.CLIENTSTableAdapter = this.cLIENTSTableAdapter;
+            this.tableAdapterManager.EMPLOYEESTableAdapter = this.eMPLOYEESTableAdapter;
+            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
+            this.tableAdapterManager.ORDERTableAdapter = null;
+            this.tableAdapterManager.TIMETABLETableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cLIENTSTableAdapter
+            // 
+            this.cLIENTSTableAdapter.ClearBeforeFill = true;
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(29)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1208, 653);
+            this.ClientSize = new System.Drawing.Size(1510, 817);
             this.Controls.Add(this.bookListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -395,10 +396,10 @@
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.bookListPanel.ResumeLayout(false);
             this.bookListPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

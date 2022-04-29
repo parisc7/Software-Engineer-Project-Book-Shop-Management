@@ -950,10 +950,10 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTSRow AddCLIENTSRow(int CLIENT_ID, string FNAME, string LNAME, string EMAIL, int PHONE, string ADDRESS) {
+            public CLIENTSRow AddCLIENTSRow(string FNAME, string LNAME, string EMAIL, int PHONE, string ADDRESS) {
                 CLIENTSRow rowCLIENTSRow = ((CLIENTSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        CLIENT_ID,
+                        null,
                         FNAME,
                         LNAME,
                         EMAIL,
@@ -1013,11 +1013,19 @@ namespace Leksi_Book_Shop {
                 base.Columns.Add(this.columnADDRESS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCLIENT_ID}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnPHONE}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnEMAIL}, false));
+                this.columnCLIENT_ID.AutoIncrement = true;
+                this.columnCLIENT_ID.AutoIncrementSeed = 1;
                 this.columnCLIENT_ID.AllowDBNull = false;
                 this.columnCLIENT_ID.Unique = true;
                 this.columnFNAME.MaxLength = 20;
                 this.columnLNAME.MaxLength = 50;
+                this.columnEMAIL.Unique = true;
                 this.columnEMAIL.MaxLength = 50;
+                this.columnPHONE.Unique = true;
                 this.columnADDRESS.MaxLength = 50;
             }
             
@@ -1282,10 +1290,10 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EMPLOYEESRow AddEMPLOYEESRow(int EMPLOYEE_ID, string FNAME, string LNAME, int PHONE, string USERNAME, string PASSWORD) {
+            public EMPLOYEESRow AddEMPLOYEESRow(string FNAME, string LNAME, int PHONE, string USERNAME, string PASSWORD) {
                 EMPLOYEESRow rowEMPLOYEESRow = ((EMPLOYEESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        EMPLOYEE_ID,
+                        null,
                         FNAME,
                         LNAME,
                         PHONE,
@@ -1345,11 +1353,22 @@ namespace Leksi_Book_Shop {
                 base.Columns.Add(this.columnPASSWORD);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEMPLOYEE_ID}, true));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnPHONE}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
+                                this.columnUSERNAME}, false));
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint4", new global::System.Data.DataColumn[] {
+                                this.columnPASSWORD}, false));
+                this.columnEMPLOYEE_ID.AutoIncrement = true;
+                this.columnEMPLOYEE_ID.AutoIncrementSeed = 1;
                 this.columnEMPLOYEE_ID.AllowDBNull = false;
                 this.columnEMPLOYEE_ID.Unique = true;
                 this.columnFNAME.MaxLength = 20;
                 this.columnLNAME.MaxLength = 50;
+                this.columnPHONE.Unique = true;
+                this.columnUSERNAME.Unique = true;
                 this.columnUSERNAME.MaxLength = 20;
+                this.columnPASSWORD.Unique = true;
                 this.columnPASSWORD.MaxLength = 50;
             }
             
@@ -1897,10 +1916,10 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ORDER_LISTRow AddORDER_LISTRow(int ORDER_ID, int PRICE, int QUANTITY, CLIENTSRow parentCLIENTSRowByORDER_LISTFK1, EMPLOYEESRow parentEMPLOYEESRowByORDER_LISTFK2) {
+            public ORDER_LISTRow AddORDER_LISTRow(int PRICE, int QUANTITY, CLIENTSRow parentCLIENTSRowByORDER_LISTFK1, EMPLOYEESRow parentEMPLOYEESRowByORDER_LISTFK2) {
                 ORDER_LISTRow rowORDER_LISTRow = ((ORDER_LISTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ORDER_ID,
+                        null,
                         PRICE,
                         QUANTITY,
                         null,
@@ -1962,6 +1981,8 @@ namespace Leksi_Book_Shop {
                 base.Columns.Add(this.columnEMPLOYEE_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnORDER_ID}, true));
+                this.columnORDER_ID.AutoIncrement = true;
+                this.columnORDER_ID.AutoIncrementSeed = 1;
                 this.columnORDER_ID.AllowDBNull = false;
                 this.columnORDER_ID.Unique = true;
             }
