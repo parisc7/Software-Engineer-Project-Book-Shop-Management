@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             System.Windows.Forms.Label aDDRESSLabel;
             System.Windows.Forms.Label pHONELabel;
             System.Windows.Forms.Label eMAILLabel;
             System.Windows.Forms.Label lNAMELabel;
             System.Windows.Forms.Label fNAMELabel;
             System.Windows.Forms.Label cLIENT_IDLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
-            this.closeButton = new System.Windows.Forms.Button();
-            this.searchCustomerButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.aDDRESSTextBox = new System.Windows.Forms.TextBox();
-            this.pHONETextBox = new System.Windows.Forms.TextBox();
-            this.eMAILTextBox = new System.Windows.Forms.TextBox();
-            this.lNAMETextBox = new System.Windows.Forms.TextBox();
-            this.fNAMETextBox = new System.Windows.Forms.TextBox();
-            this.cLIENT_IDTextBox = new System.Windows.Forms.TextBox();
-            this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.updateButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.cLIENTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
+            this.aDDRESSTextBox = new System.Windows.Forms.TextBox();
+            this.fNAMETextBox = new System.Windows.Forms.TextBox();
+            this.searchCustomerButton = new System.Windows.Forms.Button();
+            this.customerDataGridView = new System.Windows.Forms.DataGridView();
             this.cLIENTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aDDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMAILTextBox = new System.Windows.Forms.TextBox();
+            this.lNAMETextBox = new System.Windows.Forms.TextBox();
+            this.cLIENT_IDTextBox = new System.Windows.Forms.TextBox();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
@@ -68,11 +68,71 @@
             fNAMELabel = new System.Windows.Forms.Label();
             cLIENT_IDLabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // aDDRESSLabel
+            // 
+            aDDRESSLabel.AutoSize = true;
+            aDDRESSLabel.Location = new System.Drawing.Point(954, 101);
+            aDDRESSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            aDDRESSLabel.Name = "aDDRESSLabel";
+            aDDRESSLabel.Size = new System.Drawing.Size(129, 34);
+            aDDRESSLabel.TabIndex = 26;
+            aDDRESSLabel.Text = "Address:";
+            // 
+            // pHONELabel
+            // 
+            pHONELabel.AutoSize = true;
+            pHONELabel.Location = new System.Drawing.Point(45, 104);
+            pHONELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pHONELabel.Name = "pHONELabel";
+            pHONELabel.Size = new System.Drawing.Size(109, 34);
+            pHONELabel.TabIndex = 24;
+            pHONELabel.Text = "Phone:";
+            // 
+            // eMAILLabel
+            // 
+            eMAILLabel.AutoSize = true;
+            eMAILLabel.Location = new System.Drawing.Point(455, 98);
+            eMAILLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            eMAILLabel.Name = "eMAILLabel";
+            eMAILLabel.Size = new System.Drawing.Size(103, 34);
+            eMAILLabel.TabIndex = 22;
+            eMAILLabel.Text = "E-Mail:";
+            // 
+            // lNAMELabel
+            // 
+            lNAMELabel.AutoSize = true;
+            lNAMELabel.Location = new System.Drawing.Point(954, 40);
+            lNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lNAMELabel.Name = "lNAMELabel";
+            lNAMELabel.Size = new System.Drawing.Size(141, 34);
+            lNAMELabel.TabIndex = 20;
+            lNAMELabel.Text = "Surname:";
+            // 
+            // fNAMELabel
+            // 
+            fNAMELabel.AutoSize = true;
+            fNAMELabel.Location = new System.Drawing.Point(455, 37);
+            fNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            fNAMELabel.Name = "fNAMELabel";
+            fNAMELabel.Size = new System.Drawing.Size(164, 34);
+            fNAMELabel.TabIndex = 18;
+            fNAMELabel.Text = "First Name:";
+            // 
+            // cLIENT_IDLabel
+            // 
+            cLIENT_IDLabel.AutoSize = true;
+            cLIENT_IDLabel.Location = new System.Drawing.Point(45, 37);
+            cLIENT_IDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            cLIENT_IDLabel.Name = "cLIENT_IDLabel";
+            cLIENT_IDLabel.Size = new System.Drawing.Size(146, 34);
+            cLIENT_IDLabel.TabIndex = 17;
+            cLIENT_IDLabel.Text = "CLIENT ID:";
             // 
             // bookListPanel
             // 
@@ -102,18 +162,66 @@
             this.bookListPanel.Size = new System.Drawing.Size(1486, 794);
             this.bookListPanel.TabIndex = 2;
             // 
-            // closeButton
+            // addButton
             // 
-            this.closeButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(1241, 709);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(191, 55);
-            this.closeButton.TabIndex = 9;
-            this.closeButton.Text = "&Close";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeAddCustomerButton_Click);
+            this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Location = new System.Drawing.Point(51, 709);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(191, 55);
+            this.addButton.TabIndex = 31;
+            this.addButton.Text = "&Add";
+            this.addButton.UseVisualStyleBackColor = false;
+            // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Location = new System.Drawing.Point(855, 709);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(191, 55);
+            this.updateButton.TabIndex = 30;
+            this.updateButton.Text = "&Update";
+            this.updateButton.UseVisualStyleBackColor = false;
+            // 
+            // pHONETextBox
+            // 
+            this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "PHONE", true));
+            this.pHONETextBox.Location = new System.Drawing.Point(158, 101);
+            this.pHONETextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.pHONETextBox.Name = "pHONETextBox";
+            this.pHONETextBox.Size = new System.Drawing.Size(203, 41);
+            this.pHONETextBox.TabIndex = 27;
+            // 
+            // cLIENTSBindingSource
+            // 
+            this.cLIENTSBindingSource.DataMember = "CLIENTS";
+            this.cLIENTSBindingSource.DataSource = this.lexi_BookshopDataSet;
+            // 
+            // lexi_BookshopDataSet
+            // 
+            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
+            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aDDRESSTextBox
+            // 
+            this.aDDRESSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "ADDRESS", true));
+            this.aDDRESSTextBox.Location = new System.Drawing.Point(1102, 101);
+            this.aDDRESSTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.aDDRESSTextBox.Name = "aDDRESSTextBox";
+            this.aDDRESSTextBox.Size = new System.Drawing.Size(330, 41);
+            this.aDDRESSTextBox.TabIndex = 28;
+            // 
+            // fNAMETextBox
+            // 
+            this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "FNAME", true));
+            this.fNAMETextBox.Location = new System.Drawing.Point(627, 37);
+            this.fNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.fNAMETextBox.Name = "fNAMETextBox";
+            this.fNAMETextBox.Size = new System.Drawing.Size(319, 41);
+            this.fNAMETextBox.TabIndex = 21;
             // 
             // searchCustomerButton
             // 
@@ -127,133 +235,6 @@
             this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
             this.searchCustomerButton.TabIndex = 11;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Location = new System.Drawing.Point(445, 709);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(191, 55);
-            this.deleteButton.TabIndex = 11;
-            this.deleteButton.Text = "&Delete";
-            this.deleteButton.UseVisualStyleBackColor = false;
-            // 
-            // aDDRESSLabel
-            // 
-            aDDRESSLabel.AutoSize = true;
-            aDDRESSLabel.Location = new System.Drawing.Point(954, 101);
-            aDDRESSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            aDDRESSLabel.Name = "aDDRESSLabel";
-            aDDRESSLabel.Size = new System.Drawing.Size(129, 34);
-            aDDRESSLabel.TabIndex = 26;
-            aDDRESSLabel.Text = "Address:";
-            // 
-            // aDDRESSTextBox
-            // 
-            this.aDDRESSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "ADDRESS", true));
-            this.aDDRESSTextBox.Location = new System.Drawing.Point(1102, 101);
-            this.aDDRESSTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.aDDRESSTextBox.Name = "aDDRESSTextBox";
-            this.aDDRESSTextBox.Size = new System.Drawing.Size(330, 41);
-            this.aDDRESSTextBox.TabIndex = 28;
-            // 
-            // pHONELabel
-            // 
-            pHONELabel.AutoSize = true;
-            pHONELabel.Location = new System.Drawing.Point(45, 104);
-            pHONELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            pHONELabel.Name = "pHONELabel";
-            pHONELabel.Size = new System.Drawing.Size(109, 34);
-            pHONELabel.TabIndex = 24;
-            pHONELabel.Text = "Phone:";
-            // 
-            // pHONETextBox
-            // 
-            this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "PHONE", true));
-            this.pHONETextBox.Location = new System.Drawing.Point(158, 101);
-            this.pHONETextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.pHONETextBox.Name = "pHONETextBox";
-            this.pHONETextBox.Size = new System.Drawing.Size(203, 41);
-            this.pHONETextBox.TabIndex = 27;
-            // 
-            // eMAILLabel
-            // 
-            eMAILLabel.AutoSize = true;
-            eMAILLabel.Location = new System.Drawing.Point(455, 98);
-            eMAILLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            eMAILLabel.Name = "eMAILLabel";
-            eMAILLabel.Size = new System.Drawing.Size(103, 34);
-            eMAILLabel.TabIndex = 22;
-            eMAILLabel.Text = "E-Mail:";
-            // 
-            // eMAILTextBox
-            // 
-            this.eMAILTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "EMAIL", true));
-            this.eMAILTextBox.Location = new System.Drawing.Point(558, 98);
-            this.eMAILTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.eMAILTextBox.Name = "eMAILTextBox";
-            this.eMAILTextBox.Size = new System.Drawing.Size(388, 41);
-            this.eMAILTextBox.TabIndex = 25;
-            // 
-            // lNAMELabel
-            // 
-            lNAMELabel.AutoSize = true;
-            lNAMELabel.Location = new System.Drawing.Point(954, 40);
-            lNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lNAMELabel.Name = "lNAMELabel";
-            lNAMELabel.Size = new System.Drawing.Size(141, 34);
-            lNAMELabel.TabIndex = 20;
-            lNAMELabel.Text = "Surname:";
-            // 
-            // lNAMETextBox
-            // 
-            this.lNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "LNAME", true));
-            this.lNAMETextBox.Location = new System.Drawing.Point(1122, 33);
-            this.lNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.lNAMETextBox.Name = "lNAMETextBox";
-            this.lNAMETextBox.Size = new System.Drawing.Size(310, 41);
-            this.lNAMETextBox.TabIndex = 23;
-            // 
-            // fNAMELabel
-            // 
-            fNAMELabel.AutoSize = true;
-            fNAMELabel.Location = new System.Drawing.Point(455, 37);
-            fNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            fNAMELabel.Name = "fNAMELabel";
-            fNAMELabel.Size = new System.Drawing.Size(164, 34);
-            fNAMELabel.TabIndex = 18;
-            fNAMELabel.Text = "First Name:";
-            // 
-            // fNAMETextBox
-            // 
-            this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "FNAME", true));
-            this.fNAMETextBox.Location = new System.Drawing.Point(627, 37);
-            this.fNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.fNAMETextBox.Name = "fNAMETextBox";
-            this.fNAMETextBox.Size = new System.Drawing.Size(319, 41);
-            this.fNAMETextBox.TabIndex = 21;
-            // 
-            // cLIENT_IDLabel
-            // 
-            cLIENT_IDLabel.AutoSize = true;
-            cLIENT_IDLabel.Location = new System.Drawing.Point(45, 37);
-            cLIENT_IDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            cLIENT_IDLabel.Name = "cLIENT_IDLabel";
-            cLIENT_IDLabel.Size = new System.Drawing.Size(146, 34);
-            cLIENT_IDLabel.TabIndex = 17;
-            cLIENT_IDLabel.Text = "CLIENT ID:";
-            // 
-            // cLIENT_IDTextBox
-            // 
-            this.cLIENT_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "CLIENT_ID", true));
-            this.cLIENT_IDTextBox.Location = new System.Drawing.Point(199, 37);
-            this.cLIENT_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.cLIENT_IDTextBox.Name = "cLIENT_IDTextBox";
-            this.cLIENT_IDTextBox.ReadOnly = true;
-            this.cLIENT_IDTextBox.Size = new System.Drawing.Size(203, 41);
-            this.cLIENT_IDTextBox.TabIndex = 19;
             // 
             // customerDataGridView
             // 
@@ -275,40 +256,6 @@
             this.customerDataGridView.RowTemplate.Height = 24;
             this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.customerDataGridView.TabIndex = 29;
-            // 
-            // updateButton
-            // 
-            this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateButton.Location = new System.Drawing.Point(855, 709);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(191, 55);
-            this.updateButton.TabIndex = 30;
-            this.updateButton.Text = "&Update";
-            this.updateButton.UseVisualStyleBackColor = false;
-            // 
-            // addButton
-            // 
-            this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Location = new System.Drawing.Point(51, 709);
-            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(191, 55);
-            this.addButton.TabIndex = 31;
-            this.addButton.Text = "&Add";
-            this.addButton.UseVisualStyleBackColor = false;
-            // 
-            // cLIENTSBindingSource
-            // 
-            this.cLIENTSBindingSource.DataMember = "CLIENTS";
-            this.cLIENTSBindingSource.DataSource = this.lexi_BookshopDataSet;
-            // 
-            // lexi_BookshopDataSet
-            // 
-            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
-            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cLIENTIDDataGridViewTextBoxColumn
             // 
@@ -358,6 +305,59 @@
             this.aDDRESSDataGridViewTextBoxColumn.Name = "aDDRESSDataGridViewTextBoxColumn";
             this.aDDRESSDataGridViewTextBoxColumn.Width = 342;
             // 
+            // eMAILTextBox
+            // 
+            this.eMAILTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "EMAIL", true));
+            this.eMAILTextBox.Location = new System.Drawing.Point(558, 98);
+            this.eMAILTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.eMAILTextBox.Name = "eMAILTextBox";
+            this.eMAILTextBox.Size = new System.Drawing.Size(388, 41);
+            this.eMAILTextBox.TabIndex = 25;
+            // 
+            // lNAMETextBox
+            // 
+            this.lNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "LNAME", true));
+            this.lNAMETextBox.Location = new System.Drawing.Point(1122, 33);
+            this.lNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.lNAMETextBox.Name = "lNAMETextBox";
+            this.lNAMETextBox.Size = new System.Drawing.Size(310, 41);
+            this.lNAMETextBox.TabIndex = 23;
+            // 
+            // cLIENT_IDTextBox
+            // 
+            this.cLIENT_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "CLIENT_ID", true));
+            this.cLIENT_IDTextBox.Location = new System.Drawing.Point(199, 37);
+            this.cLIENT_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cLIENT_IDTextBox.Name = "cLIENT_IDTextBox";
+            this.cLIENT_IDTextBox.ReadOnly = true;
+            this.cLIENT_IDTextBox.Size = new System.Drawing.Size(203, 41);
+            this.cLIENT_IDTextBox.TabIndex = 19;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Location = new System.Drawing.Point(445, 709);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(191, 55);
+            this.deleteButton.TabIndex = 11;
+            this.deleteButton.Text = "&Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Location = new System.Drawing.Point(1241, 709);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(191, 55);
+            this.closeButton.TabIndex = 9;
+            this.closeButton.Text = "&Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeAddCustomerButton_Click);
+            // 
             // eMPLOYEESBindingSource
             // 
             this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
@@ -396,9 +396,9 @@
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.bookListPanel.ResumeLayout(false);
             this.bookListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             this.ResumeLayout(false);
 
