@@ -37,6 +37,7 @@
             System.Windows.Forms.Label pASSWORDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
+            this.timeTableButton = new System.Windows.Forms.Button();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
@@ -50,16 +51,15 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.searchCustomerButton = new System.Windows.Forms.Button();
-            this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
-            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
-            this.timeTableButton = new System.Windows.Forms.Button();
             this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchCustomerButton = new System.Windows.Forms.Button();
+            this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
+            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
             fNAMELabel = new System.Windows.Forms.Label();
             lNAMELabel = new System.Windows.Forms.Label();
@@ -154,6 +154,19 @@
             this.bookListPanel.Name = "bookListPanel";
             this.bookListPanel.Size = new System.Drawing.Size(1489, 794);
             this.bookListPanel.TabIndex = 3;
+            // 
+            // timeTableButton
+            // 
+            this.timeTableButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.timeTableButton.FlatAppearance.BorderSize = 0;
+            this.timeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeTableButton.Image = ((System.Drawing.Image)(resources.GetObject("timeTableButton.Image")));
+            this.timeTableButton.Location = new System.Drawing.Point(1360, 110);
+            this.timeTableButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTableButton.Name = "timeTableButton";
+            this.timeTableButton.Size = new System.Drawing.Size(67, 48);
+            this.timeTableButton.TabIndex = 47;
+            this.timeTableButton.UseVisualStyleBackColor = false;
             // 
             // pHONETextBox
             // 
@@ -284,47 +297,6 @@
             this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.customerDataGridView.TabIndex = 30;
             // 
-            // searchCustomerButton
-            // 
-            this.searchCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.searchCustomerButton.FlatAppearance.BorderSize = 0;
-            this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(403, 109);
-            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchCustomerButton.Name = "searchCustomerButton";
-            this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
-            this.searchCustomerButton.TabIndex = 11;
-            this.searchCustomerButton.UseVisualStyleBackColor = false;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BOOKSTableAdapter = null;
-            this.tableAdapterManager.CLIENTSTableAdapter = null;
-            this.tableAdapterManager.EMPLOYEESTableAdapter = this.eMPLOYEESTableAdapter;
-            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
-            this.tableAdapterManager.ORDERTableAdapter = null;
-            this.tableAdapterManager.TIMETABLETableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // timeTableButton
-            // 
-            this.timeTableButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.timeTableButton.FlatAppearance.BorderSize = 0;
-            this.timeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timeTableButton.Image = ((System.Drawing.Image)(resources.GetObject("timeTableButton.Image")));
-            this.timeTableButton.Location = new System.Drawing.Point(1360, 110);
-            this.timeTableButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.timeTableButton.Name = "timeTableButton";
-            this.timeTableButton.Size = new System.Drawing.Size(67, 48);
-            this.timeTableButton.TabIndex = 47;
-            this.timeTableButton.UseVisualStyleBackColor = false;
-            // 
             // eMPLOYEEIDDataGridViewTextBoxColumn
             // 
             this.eMPLOYEEIDDataGridViewTextBoxColumn.DataPropertyName = "EMPLOYEE_ID";
@@ -372,6 +344,34 @@
             this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
             this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // searchCustomerButton
+            // 
+            this.searchCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.searchCustomerButton.FlatAppearance.BorderSize = 0;
+            this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
+            this.searchCustomerButton.Location = new System.Drawing.Point(403, 109);
+            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchCustomerButton.Name = "searchCustomerButton";
+            this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
+            this.searchCustomerButton.TabIndex = 11;
+            this.searchCustomerButton.UseVisualStyleBackColor = false;
+            // 
+            // eMPLOYEESTableAdapter
+            // 
+            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BOOKSTableAdapter = null;
+            this.tableAdapterManager.CLIENTSTableAdapter = null;
+            this.tableAdapterManager.EMPLOYEESTableAdapter = this.eMPLOYEESTableAdapter;
+            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
+            this.tableAdapterManager.ORDERTableAdapter = null;
+            this.tableAdapterManager.TIMETABLETableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // EmployeesForm
             // 
