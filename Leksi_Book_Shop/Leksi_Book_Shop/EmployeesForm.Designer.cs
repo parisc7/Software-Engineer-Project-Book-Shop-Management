@@ -75,54 +75,60 @@
             // eMPLOYEE_IDLabel
             // 
             eMPLOYEE_IDLabel.AutoSize = true;
-            eMPLOYEE_IDLabel.Location = new System.Drawing.Point(40, 36);
+            eMPLOYEE_IDLabel.Location = new System.Drawing.Point(30, 29);
+            eMPLOYEE_IDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             eMPLOYEE_IDLabel.Name = "eMPLOYEE_IDLabel";
-            eMPLOYEE_IDLabel.Size = new System.Drawing.Size(199, 34);
+            eMPLOYEE_IDLabel.Size = new System.Drawing.Size(161, 25);
             eMPLOYEE_IDLabel.TabIndex = 35;
             eMPLOYEE_IDLabel.Text = "EMPLOYEE ID:";
             // 
             // fNAMELabel
             // 
             fNAMELabel.AutoSize = true;
-            fNAMELabel.Location = new System.Drawing.Point(513, 36);
+            fNAMELabel.Location = new System.Drawing.Point(385, 29);
+            fNAMELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             fNAMELabel.Name = "fNAMELabel";
-            fNAMELabel.Size = new System.Drawing.Size(164, 34);
+            fNAMELabel.Size = new System.Drawing.Size(130, 25);
             fNAMELabel.TabIndex = 37;
             fNAMELabel.Text = "First Name:";
             // 
             // lNAMELabel
             // 
             lNAMELabel.AutoSize = true;
-            lNAMELabel.Location = new System.Drawing.Point(952, 36);
+            lNAMELabel.Location = new System.Drawing.Point(714, 29);
+            lNAMELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lNAMELabel.Name = "lNAMELabel";
-            lNAMELabel.Size = new System.Drawing.Size(141, 34);
+            lNAMELabel.Size = new System.Drawing.Size(113, 25);
             lNAMELabel.TabIndex = 39;
             lNAMELabel.Text = "Surname:";
             // 
             // pHONELabel
             // 
             pHONELabel.AutoSize = true;
-            pHONELabel.Location = new System.Drawing.Point(40, 116);
+            pHONELabel.Location = new System.Drawing.Point(30, 94);
+            pHONELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pHONELabel.Name = "pHONELabel";
-            pHONELabel.Size = new System.Drawing.Size(109, 34);
+            pHONELabel.Size = new System.Drawing.Size(85, 25);
             pHONELabel.TabIndex = 41;
             pHONELabel.Text = "Phone:";
             // 
             // uSERNAMELabel
             // 
             uSERNAMELabel.AutoSize = true;
-            uSERNAMELabel.Location = new System.Drawing.Point(488, 116);
+            uSERNAMELabel.Location = new System.Drawing.Point(366, 94);
+            uSERNAMELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             uSERNAMELabel.Name = "uSERNAMELabel";
-            uSERNAMELabel.Size = new System.Drawing.Size(167, 34);
+            uSERNAMELabel.Size = new System.Drawing.Size(137, 25);
             uSERNAMELabel.TabIndex = 43;
             uSERNAMELabel.Text = "USERNAME:";
             // 
             // pASSWORDLabel
             // 
             pASSWORDLabel.AutoSize = true;
-            pASSWORDLabel.Location = new System.Drawing.Point(932, 117);
+            pASSWORDLabel.Location = new System.Drawing.Point(699, 95);
+            pASSWORDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pASSWORDLabel.Name = "pASSWORDLabel";
-            pASSWORDLabel.Size = new System.Drawing.Size(177, 34);
+            pASSWORDLabel.Size = new System.Drawing.Size(141, 25);
             pASSWORDLabel.TabIndex = 45;
             pASSWORDLabel.Text = "PASSWORD:";
             // 
@@ -149,10 +155,10 @@
             this.bookListPanel.Controls.Add(this.customerDataGridView);
             this.bookListPanel.Controls.Add(this.searchCustomerButton);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookListPanel.Location = new System.Drawing.Point(12, 12);
-            this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bookListPanel.Location = new System.Drawing.Point(9, 10);
+            this.bookListPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bookListPanel.Name = "bookListPanel";
-            this.bookListPanel.Size = new System.Drawing.Size(1489, 794);
+            this.bookListPanel.Size = new System.Drawing.Size(1117, 645);
             this.bookListPanel.TabIndex = 3;
             // 
             // timeTableButton
@@ -161,10 +167,10 @@
             this.timeTableButton.FlatAppearance.BorderSize = 0;
             this.timeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.timeTableButton.Image = ((System.Drawing.Image)(resources.GetObject("timeTableButton.Image")));
-            this.timeTableButton.Location = new System.Drawing.Point(1360, 110);
-            this.timeTableButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTableButton.Location = new System.Drawing.Point(1020, 89);
+            this.timeTableButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.timeTableButton.Name = "timeTableButton";
-            this.timeTableButton.Size = new System.Drawing.Size(67, 48);
+            this.timeTableButton.Size = new System.Drawing.Size(50, 39);
             this.timeTableButton.TabIndex = 47;
             this.timeTableButton.UseVisualStyleBackColor = false;
             this.timeTableButton.Click += new System.EventHandler(this.timeTableButton_Click);
@@ -172,9 +178,10 @@
             // pHONETextBox
             // 
             this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PHONE", true));
-            this.pHONETextBox.Location = new System.Drawing.Point(155, 110);
+            this.pHONETextBox.Location = new System.Drawing.Point(116, 89);
+            this.pHONETextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pHONETextBox.Name = "pHONETextBox";
-            this.pHONETextBox.Size = new System.Drawing.Size(242, 41);
+            this.pHONETextBox.Size = new System.Drawing.Size(182, 34);
             this.pHONETextBox.TabIndex = 42;
             this.pHONETextBox.Text = " ";
             // 
@@ -191,52 +198,57 @@
             // lNAMETextBox
             // 
             this.lNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LNAME", true));
-            this.lNAMETextBox.Location = new System.Drawing.Point(1099, 29);
+            this.lNAMETextBox.Location = new System.Drawing.Point(824, 24);
+            this.lNAMETextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lNAMETextBox.Name = "lNAMETextBox";
-            this.lNAMETextBox.Size = new System.Drawing.Size(328, 41);
+            this.lNAMETextBox.Size = new System.Drawing.Size(247, 34);
             this.lNAMETextBox.TabIndex = 40;
             // 
             // fNAMETextBox
             // 
             this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FNAME", true));
-            this.fNAMETextBox.Location = new System.Drawing.Point(683, 33);
+            this.fNAMETextBox.Location = new System.Drawing.Point(512, 27);
+            this.fNAMETextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fNAMETextBox.Name = "fNAMETextBox";
-            this.fNAMETextBox.Size = new System.Drawing.Size(214, 41);
+            this.fNAMETextBox.Size = new System.Drawing.Size(162, 34);
             this.fNAMETextBox.TabIndex = 38;
             // 
             // eMPLOYEE_IDTextBox
             // 
             this.eMPLOYEE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "EMPLOYEE_ID", true));
-            this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(245, 33);
+            this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(184, 27);
+            this.eMPLOYEE_IDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.eMPLOYEE_IDTextBox.Name = "eMPLOYEE_IDTextBox";
             this.eMPLOYEE_IDTextBox.ReadOnly = true;
-            this.eMPLOYEE_IDTextBox.Size = new System.Drawing.Size(217, 41);
+            this.eMPLOYEE_IDTextBox.Size = new System.Drawing.Size(164, 34);
             this.eMPLOYEE_IDTextBox.TabIndex = 36;
             // 
             // uSERNAMETextBox
             // 
             this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
-            this.uSERNAMETextBox.Location = new System.Drawing.Point(661, 113);
+            this.uSERNAMETextBox.Location = new System.Drawing.Point(496, 92);
+            this.uSERNAMETextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uSERNAMETextBox.Name = "uSERNAMETextBox";
-            this.uSERNAMETextBox.Size = new System.Drawing.Size(236, 41);
+            this.uSERNAMETextBox.Size = new System.Drawing.Size(178, 34);
             this.uSERNAMETextBox.TabIndex = 44;
             // 
             // pASSWORDTextBox
             // 
             this.pASSWORDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PASSWORD", true));
-            this.pASSWORDTextBox.Location = new System.Drawing.Point(1115, 113);
+            this.pASSWORDTextBox.Location = new System.Drawing.Point(836, 92);
+            this.pASSWORDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pASSWORDTextBox.Name = "pASSWORDTextBox";
-            this.pASSWORDTextBox.Size = new System.Drawing.Size(230, 41);
+            this.pASSWORDTextBox.Size = new System.Drawing.Size(174, 34);
             this.pASSWORDTextBox.TabIndex = 46;
             // 
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Location = new System.Drawing.Point(46, 719);
-            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addButton.Location = new System.Drawing.Point(35, 584);
+            this.addButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(191, 55);
+            this.addButton.Size = new System.Drawing.Size(143, 45);
             this.addButton.TabIndex = 35;
             this.addButton.Text = "&Add";
             this.addButton.UseVisualStyleBackColor = false;
@@ -245,10 +257,10 @@
             // 
             this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateButton.Location = new System.Drawing.Point(850, 719);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateButton.Location = new System.Drawing.Point(638, 584);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(191, 55);
+            this.updateButton.Size = new System.Drawing.Size(143, 45);
             this.updateButton.TabIndex = 34;
             this.updateButton.Text = "&Update";
             this.updateButton.UseVisualStyleBackColor = false;
@@ -257,10 +269,10 @@
             // 
             this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Location = new System.Drawing.Point(440, 719);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteButton.Location = new System.Drawing.Point(318, 584);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(191, 55);
+            this.deleteButton.Size = new System.Drawing.Size(143, 45);
             this.deleteButton.TabIndex = 33;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
@@ -269,10 +281,10 @@
             // 
             this.closeButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(1236, 719);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeButton.Location = new System.Drawing.Point(927, 584);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(191, 55);
+            this.closeButton.Size = new System.Drawing.Size(143, 45);
             this.closeButton.TabIndex = 32;
             this.closeButton.Text = "&Close";
             this.closeButton.UseVisualStyleBackColor = false;
@@ -290,12 +302,12 @@
             this.uSERNAMEDataGridViewTextBoxColumn,
             this.pASSWORDDataGridViewTextBoxColumn});
             this.customerDataGridView.DataSource = this.eMPLOYEESBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(46, 204);
-            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerDataGridView.Location = new System.Drawing.Point(34, 166);
+            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.RowHeadersWidth = 51;
             this.customerDataGridView.RowTemplate.Height = 24;
-            this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
+            this.customerDataGridView.Size = new System.Drawing.Size(1036, 408);
             this.customerDataGridView.TabIndex = 30;
             // 
             // eMPLOYEEIDDataGridViewTextBoxColumn
@@ -352,10 +364,10 @@
             this.searchCustomerButton.FlatAppearance.BorderSize = 0;
             this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(403, 109);
-            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchCustomerButton.Location = new System.Drawing.Point(302, 89);
+            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchCustomerButton.Name = "searchCustomerButton";
-            this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
+            this.searchCustomerButton.Size = new System.Drawing.Size(44, 37);
             this.searchCustomerButton.TabIndex = 11;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
             // 
@@ -376,13 +388,13 @@
             // 
             // EmployeesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(29)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1510, 816);
+            this.ClientSize = new System.Drawing.Size(1132, 663);
             this.Controls.Add(this.bookListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmployeesForm";
             this.Text = "EmploymentsForm";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);

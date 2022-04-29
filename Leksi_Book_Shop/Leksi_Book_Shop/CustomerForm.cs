@@ -41,7 +41,7 @@ namespace Leksi_Book_Shop
             this.cLIENTSTableAdapter.Fill(this.lexi_BookshopDataSet.CLIENTS);
 
 
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
 
             command.Connection = conn;
             command.CommandText = "SELECT * FROM CLIENTS";
@@ -66,11 +66,41 @@ namespace Leksi_Book_Shop
             command.Parameters.Add("a5", aDDRESSTextBox.Text);
             command.ExecuteNonQuery();
             //conn.Close();
+            MessageBox.Show("Record Updated");
         }
 
         private void closeAddCustomerButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            conn = new SqlConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+
+            conn.Open();
+            command = new SqlCommand("INSERT INTO CLIENTS (FNAME,LNAME,EMAIL,PHONE,ADDRESS) values (@FNAME,@LNAME,@EMAIL,@PHONE,@ADDRESS)", conn);
+            command.Parameters.Add("@FNAME", fNAMETextBox.Text);
+            command.Parameters.Add("@LNAME", lNAMETextBox.Text);
+            command.Parameters.Add("@EMAIL", eMAILTextBox.Text);
+            command.Parameters.Add("@PHONE", pHONETextBox.Text);
+            command.Parameters.Add("@ADDRESS", aDDRESSTextBox.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Record Added");
+
+
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            var item = customerDataGridView.SelectedRows;
+
+            if (item == null)
+                return;
+
+            customerDataGridView.Rows.Remove(item);
+
+            
         }
     }
 }
