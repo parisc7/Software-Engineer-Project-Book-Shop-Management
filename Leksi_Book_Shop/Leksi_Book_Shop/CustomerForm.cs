@@ -41,7 +41,7 @@ namespace Leksi_Book_Shop
             this.cLIENTSTableAdapter.Fill(this.lexi_BookshopDataSet.CLIENTS);
 
 
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
 
             command.Connection = conn;
             command.CommandText = "SELECT * FROM CLIENTS";

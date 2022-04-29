@@ -23,10 +23,7 @@ C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Boo
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.CoreCompileInputs.cache
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
-C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Book_List_Database.mdf
-C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Book_List_Database_log.ldf
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.MainForm.resources
-C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Book_List.resources
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.Company.resources
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.MailForm.resources
 C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\BouncyCastle.Crypto.dll
@@ -88,3 +85,7 @@ C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Lek
 C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.csproj.CopyComplete
 C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
 C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\Lexi_Bookshop.accdb
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.BookForm.resources
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.CustomerForm.resources
+C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.EmployeesForm.resources
