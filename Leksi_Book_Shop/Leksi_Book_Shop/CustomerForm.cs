@@ -98,7 +98,7 @@ namespace Leksi_Book_Shop
             if (item == null)
                 return;
 
-            customerDataGridView.Rows.Remove(item);
+           // customerDataGridView.Rows.Remove(item);
 
             
         }
