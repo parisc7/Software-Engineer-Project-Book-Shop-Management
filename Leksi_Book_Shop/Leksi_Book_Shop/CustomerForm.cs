@@ -13,7 +13,7 @@ namespace Leksi_Book_Shop
 {
     public partial class CustomerForm : Form
     {
-        SqlConnection conn = new SqlConnection();
+        SqlConnection conn = new SqlConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\giorgos\Desktop\trial1\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         SqlCommand command = new SqlCommand();
 
 
@@ -76,9 +76,21 @@ namespace Leksi_Book_Shop
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            conn = new SqlConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+            try
+            {
+                conn.Open();
+                string query = "insert into CLIENTS values('" + fNAMETextBox.Text+"','"+ lNAMETextBox.Text + "','" + eMAILTextBox.Text + "','" + pHONETextBox.Text + "','" + aDDRESSTextBox.Text+"')";
+                SqlCommand cmd = new SqlCommand(query,conn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Client ADDED Successfully");
+                conn.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
 
-            conn.Open();
+            /*conn.Open();
             command = new SqlCommand("INSERT INTO CLIENTS (FNAME,LNAME,EMAIL,PHONE,ADDRESS) values (@FNAME,@LNAME,@EMAIL,@PHONE,@ADDRESS)", conn);
             command.Parameters.Add("@FNAME", fNAMETextBox.Text);
             command.Parameters.Add("@LNAME", lNAMETextBox.Text);
@@ -86,19 +98,19 @@ namespace Leksi_Book_Shop
             command.Parameters.Add("@PHONE", pHONETextBox.Text);
             command.Parameters.Add("@ADDRESS", aDDRESSTextBox.Text);
             command.ExecuteNonQuery();
-            MessageBox.Show("Record Added");
+            MessageBox.Show("Record Added");*/
 
 
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            var item = customerDataGridView.SelectedRows;
+           /* var item = customerDataGridView.SelectedRows;
 
             if (item == null)
                 return;
 
-            customerDataGridView.Rows.Remove(item);
+            customerDataGridView.Rows.Remove(item);*/
 
             
         }

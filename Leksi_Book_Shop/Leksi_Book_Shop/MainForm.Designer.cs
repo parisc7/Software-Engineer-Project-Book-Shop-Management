@@ -41,6 +41,10 @@
             this.payButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.currentOrderDataGridView = new System.Windows.Forms.DataGridView();
+            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qUANTITYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oRDERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,10 +57,6 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.oRDERTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.ORDERTableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
-            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qUANTITYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.companieLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentOrderDataGridView)).BeginInit();
@@ -212,6 +212,38 @@
             this.currentOrderDataGridView.Size = new System.Drawing.Size(836, 382);
             this.currentOrderDataGridView.TabIndex = 0;
             // 
+            // iSBNDataGridViewTextBoxColumn
+            // 
+            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
+            this.iSBNDataGridViewTextBoxColumn.Width = 165;
+            // 
+            // tITLEDataGridViewTextBoxColumn
+            // 
+            this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
+            this.tITLEDataGridViewTextBoxColumn.HeaderText = "TITLE";
+            this.tITLEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
+            this.tITLEDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // pRICEDataGridViewTextBoxColumn
+            // 
+            this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
+            this.pRICEDataGridViewTextBoxColumn.HeaderText = "PRICE";
+            this.pRICEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
+            this.pRICEDataGridViewTextBoxColumn.Width = 165;
+            // 
+            // qUANTITYDataGridViewTextBoxColumn
+            // 
+            this.qUANTITYDataGridViewTextBoxColumn.DataPropertyName = "QUANTITY";
+            this.qUANTITYDataGridViewTextBoxColumn.HeaderText = "QUANTITY";
+            this.qUANTITYDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.qUANTITYDataGridViewTextBoxColumn.Name = "qUANTITYDataGridViewTextBoxColumn";
+            this.qUANTITYDataGridViewTextBoxColumn.Width = 151;
+            // 
             // oRDERBindingSource
             // 
             this.oRDERBindingSource.DataMember = "ORDER";
@@ -297,6 +329,7 @@
             this.dailyTotalButton.Size = new System.Drawing.Size(283, 70);
             this.dailyTotalButton.TabIndex = 7;
             this.dailyTotalButton.Text = "      Daily total";
+            this.dailyTotalButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dailyTotalButton.UseVisualStyleBackColor = false;
             // 
             // mailButton
@@ -384,38 +417,6 @@
             this.tableAdapterManager.ORDERTableAdapter = this.oRDERTableAdapter;
             this.tableAdapterManager.TIMETABLETableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // iSBNDataGridViewTextBoxColumn
-            // 
-            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
-            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
-            this.iSBNDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
-            this.iSBNDataGridViewTextBoxColumn.Width = 165;
-            // 
-            // tITLEDataGridViewTextBoxColumn
-            // 
-            this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
-            this.tITLEDataGridViewTextBoxColumn.HeaderText = "TITLE";
-            this.tITLEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
-            this.tITLEDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // pRICEDataGridViewTextBoxColumn
-            // 
-            this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
-            this.pRICEDataGridViewTextBoxColumn.HeaderText = "PRICE";
-            this.pRICEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
-            this.pRICEDataGridViewTextBoxColumn.Width = 165;
-            // 
-            // qUANTITYDataGridViewTextBoxColumn
-            // 
-            this.qUANTITYDataGridViewTextBoxColumn.DataPropertyName = "QUANTITY";
-            this.qUANTITYDataGridViewTextBoxColumn.HeaderText = "QUANTITY";
-            this.qUANTITYDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.qUANTITYDataGridViewTextBoxColumn.Name = "qUANTITYDataGridViewTextBoxColumn";
-            this.qUANTITYDataGridViewTextBoxColumn.Width = 151;
             // 
             // MainForm
             // 
