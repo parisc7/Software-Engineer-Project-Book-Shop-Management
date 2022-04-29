@@ -167,6 +167,7 @@
             this.timeTableButton.Size = new System.Drawing.Size(67, 48);
             this.timeTableButton.TabIndex = 47;
             this.timeTableButton.UseVisualStyleBackColor = false;
+            this.timeTableButton.Click += new System.EventHandler(this.timeTableButton_Click);
             // 
             // pHONETextBox
             // 

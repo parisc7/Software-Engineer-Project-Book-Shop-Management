@@ -12,7 +12,7 @@ namespace Leksi_Book_Shop
 {
     public partial class TimeTableForm : Form
     {
-        public TimeTableForm()
+        public TimeTableForm(int emplyeeID)
         {
             InitializeComponent();
         }
