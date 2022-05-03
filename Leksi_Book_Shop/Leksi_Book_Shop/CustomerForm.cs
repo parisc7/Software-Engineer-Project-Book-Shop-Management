@@ -60,6 +60,12 @@ namespace Leksi_Book_Shop
             da.Fill(dt);
             cLIENTSBindingSource.DataSource = dt;
             conn.Close();
+            fNAMETextBox.Text = "";
+            lNAMETextBox.Text = "";
+            pHONETextBox.Text = "";
+            eMAILTextBox.Text = "";
+            aDDRESSTextBox.Text = "";
+            cLIENT_IDTextBox.Text = "";
         }
 
         private void updateCustomerButton_Click(object sender, EventArgs e)
