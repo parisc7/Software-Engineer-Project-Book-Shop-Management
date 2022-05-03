@@ -14,8 +14,8 @@ namespace Leksi_Book_Shop
 {
     public partial class BookForm : Form
     {
-        SqlConnection conn = new SqlConnection();
-        SqlCommand command = new SqlCommand();
+        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+        OleDbCommand command = new OleDbCommand();
 
 
         public BookForm()
@@ -42,36 +42,49 @@ namespace Leksi_Book_Shop
             command.Connection = conn;
             command.CommandText = "SELECT * FROM BOOKS";
 
-            DataTable data = new DataTable();
-
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-            adapter.Fill(data);
-
-     //       bookListDataGridView.DataSource = data;
         }
 
-        private void updateBookListButton_Click(object sender, EventArgs e)
+        void fillGrid()
         {
-            
-
-/*
-            try
-            {
-                conn.Open();
-                command = new SqlCommand("UPDATE BOOKS SET ISBN=@a1, AUTHORS=@a2",conn);
-                command.Parameters.Add("a1");
-                conn.Close();
-            }catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-         */  
+            conn.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM BOOKS ORDER BY ISBN", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            bookDataGridView.DataSource = dt;
+            conn.Close();
+           /* fNAMETextBox.Text = "";
+            lNAMETextBox.Text = "";
+            pHONETextBox.Text = "";
+            eMAILTextBox.Text = "";
+            aDDRESSTextBox.Text = "";
+            cLIENT_IDTextBox.Text = "";
+           */
         }
 
-        private void bookListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("Update BOOKS set  AUTHORS'" + aUTHORSTextBox.Text + ",PUBLISHERS=" + pUBLISHERSTextBox.Text + ",TITLE= " + tITLETextBox.Text + ",PYEAR=" + pUBLISHERSTextBox.Text + ",PRICE=" + pUBLISHERSTextBox.Text + "where ISBN= " + pRICETextBox.Text + " ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record UPDATED");
+            fillGrid();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("insert into BOOKS (AUTHORS,,PUBLISHERS,TITLE,PYEAR,PRICE) values ('" +aUTHORSTextBox.Text + "','" + pUBLISHERSTextBox.Text + "','" + tITLETextBox.Text + "','" + pUBLISHERSTextBox.Text + "','" + pRICETextBox.Text + ")", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record ADDED");
+            fillGrid();
         }
     }
 }

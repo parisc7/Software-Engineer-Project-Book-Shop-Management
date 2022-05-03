@@ -71,7 +71,7 @@ namespace Leksi_Book_Shop
         private void updateCustomerButton_Click(object sender, EventArgs e)
          {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("Update CLIENTS set  FNAME'" + fNAMETextBox.Text + ",LNAME=" + lNAMETextBox.Text + ",EMAIL= "+eMAILTextBox.Text+ ",PHONE="+pHONETextBox.Text+",ADDRESS="+aDDRESSTextBox.Text+ "where CLIENT_ID= " + cLIENT_IDTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("Update BOOKS set  FNAME'" + fNAMETextBox.Text + ",LNAME=" + lNAMETextBox.Text + ",EMAIL= "+eMAILTextBox.Text+ ",PHONE="+pHONETextBox.Text+",ADDRESS="+aDDRESSTextBox.Text+ "where CLIENT_ID= " + cLIENT_IDTextBox.Text + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record UPDATED");
