@@ -48,7 +48,7 @@ namespace Leksi_Book_Shop
 
             adapter.Fill(data);
 
-            bookListDataGridView.DataSource = data;
+     //       bookListDataGridView.DataSource = data;
         }
 
         private void updateBookListButton_Click(object sender, EventArgs e)
