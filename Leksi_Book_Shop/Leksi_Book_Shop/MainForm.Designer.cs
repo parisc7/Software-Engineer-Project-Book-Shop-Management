@@ -369,6 +369,7 @@
             this.employeesButton.Text = "Employees";
             this.employeesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.employeesButton.UseVisualStyleBackColor = false;
+            this.employeesButton.Click += new System.EventHandler(this.employeesButton_Click);
             // 
             // customerButton
             // 

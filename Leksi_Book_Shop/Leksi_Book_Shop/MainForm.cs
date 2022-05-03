@@ -59,5 +59,10 @@ namespace Leksi_Book_Shop
             this.oRDERTableAdapter.Fill(this.lexi_BookshopDataSet.ORDER);
 
         }
+
+        private void employeesButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

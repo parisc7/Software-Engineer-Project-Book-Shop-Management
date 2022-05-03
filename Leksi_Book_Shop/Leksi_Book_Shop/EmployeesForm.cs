@@ -7,34 +7,86 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.OleDb;
 
 namespace Leksi_Book_Shop
 {
     public partial class EmployeesForm : Form
     {
+        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+        OleDbCommand command = new OleDbCommand();
+
         public EmployeesForm()
         {
             InitializeComponent();
         }
 
-        private void eMPLOYEESBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        void fillGrid()
         {
-            this.Validate();
-            this.eMPLOYEESBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.lexi_BookshopDataSet);
-
+            conn.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            eMPLOYEESBindingSource.DataSource = dt; 
+            conn.Close();
+            fNAMETextBox.Text = "";
+            lNAMETextBox.Text = "";
+            pHONETextBox.Text = "";
+            pASSWORDTextBox.Text = "";
+            uSERNAMETextBox.Text = "";
+            eMPLOYEE_IDTextBox.Text = "";
         }
 
         private void EmployeesForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
-            //this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
+            this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            command.Connection = conn;
+            command.CommandText = "SELECT * FROM CLIENTS";
 
         }
 
         private void timeTableButton_Click(object sender, EventArgs e)
         {
+            int employee_Id=0;
+            TimeTableForm time = new TimeTableForm(employee_Id);
+        }
 
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (FNAME,LNAME,PHONE,USERNAME,PASSWORD) values ('" + fNAMETextBox.Text + "','" + lNAMETextBox.Text + "'," + pHONETextBox.Text + ",'" + uSERNAMETextBox.Text + "','" + pASSWORDTextBox.Text + "')", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record ADDED");
+            fillGrid();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM CLIENTS WHERE CLIENT_ID=" + eMPLOYEE_IDTextBox + " ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record DELETED");
+            fillGrid();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FNAME'" + fNAMETextBox.Text + "',LNAME='" + lNAMETextBox.Text + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='" + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record UPDATED");
+            fillGrid();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -24,32 +24,14 @@ namespace Leksi_Book_Shop
             InitializeComponent();
         }
 
-        private void closeCustomerButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void eMPLOYEESBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.eMPLOYEESBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.lexi_BookshopDataSet);
-
-        }
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.CLIENTS' table. You can move, or remove it, as needed.
             this.cLIENTSTableAdapter.Fill(this.lexi_BookshopDataSet.CLIENTS);
-
-
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
-
             command.Connection = conn;
             command.CommandText = "SELECT * FROM CLIENTS";
-           
-
-
         }
 
         void fillGrid()
@@ -68,15 +50,15 @@ namespace Leksi_Book_Shop
             cLIENT_IDTextBox.Text = "";
         }
 
-        private void updateCustomerButton_Click(object sender, EventArgs e)
+        private void updateButton_Click(object sender, EventArgs e)
          {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("Update BOOKS set  FNAME'" + fNAMETextBox.Text + ",LNAME=" + lNAMETextBox.Text + ",EMAIL= "+eMAILTextBox.Text+ ",PHONE="+pHONETextBox.Text+",ADDRESS="+aDDRESSTextBox.Text+ "where CLIENT_ID= " + cLIENT_IDTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FNAME'" + fNAMETextBox.Text + ",LNAME=" + lNAMETextBox.Text + ",EMAIL= "+eMAILTextBox.Text+ ",PHONE="+pHONETextBox.Text+",ADDRESS="+aDDRESSTextBox.Text+ "where CLIENT_ID= " + cLIENT_IDTextBox.Text + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record UPDATED");
             fillGrid();
-         }
+        }
 
 
          private void addButton_Click(object sender, EventArgs e)
@@ -88,7 +70,7 @@ namespace Leksi_Book_Shop
             MessageBox.Show("Record ADDED");
             fillGrid();
 
-        }
+         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
