@@ -12,7 +12,7 @@ namespace Leksi_Book_Shop
 {
     public partial class LoginForm : Form
     {
-        EmployeesForm employeesForm = new EmployeesForm();
+        EmployeesForm employees= new EmployeesForm();
         Employee admin = new Employee(0, null, null, 0, "admin", "admin");
         MainForm main;
 
@@ -32,26 +32,29 @@ namespace Leksi_Book_Shop
             {
                 if (passwordTxt.Text == admin.Password)
                 {
+                    current=admin;
                     Admin = true;
                     exist = true;
                 }
             }
-            /*
-            foreach (var users in userAccess.userAccess)
+            
+            foreach (var employee in employees.EmployeesList)
             {
-                if (users.username == usernameTxt.Text)
+                if (employee.Username == usernameTxt.Text)
                 {
-                    if (users.password == passwordTxt.Text)
+                    if (employee.Password == passwordTxt.Text)
                     {
-                        current.Copy(users);
+                        current.Copy(employee);
+                        Admin = false;
+                        exist = true;
                         break;
                     }
                 }
                 else
                 {
-                    exist = true;
+                    exist = false;
                 }
-            }*/
+            }
 
             if (exist)
             {

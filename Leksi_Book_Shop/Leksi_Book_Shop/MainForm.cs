@@ -14,6 +14,7 @@ namespace Leksi_Book_Shop
     {
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
+        EmployeesForm employees= new EmployeesForm();
 
         public MainForm(bool admin)
         {
@@ -24,7 +25,12 @@ namespace Leksi_Book_Shop
                 employeesButton.Visible = false;
             }
         }
-
+        private void employeesButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            employees.ShowDialog();
+            this.Show();
+        }
         private void companieLogoPictureBox_Click(object sender, EventArgs e)
         {
             Company company = new Company();
@@ -50,7 +56,7 @@ namespace Leksi_Book_Shop
             this.Hide();
             MailForm mailForm = new MailForm();
             mailForm.ShowDialog();
-            this.ShowDialog();
+            this.Show();
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -65,9 +71,6 @@ namespace Leksi_Book_Shop
 
         }
 
-        private void employeesButton_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -14,6 +14,7 @@ namespace Leksi_Book_Shop
 {
     public partial class EmployeesForm : Form
     {
+        public List<Employee> EmployeesList = new List<Employee>();
         OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
 

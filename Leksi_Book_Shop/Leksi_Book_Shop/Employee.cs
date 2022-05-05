@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leksi_Book_Shop
 {
-    internal class Employee
+    public class Employee
     {
         public int Employee_id { get; set; }
         public string FName { get; set; }
@@ -26,6 +26,16 @@ namespace Leksi_Book_Shop
         }
 
         public Employee() { }
+
+        public void Copy(Employee user)
+        {
+            this.Employee_id = user.Employee_id;
+            this.FName = user.FName;
+            this.LName = user.LName;
+            this.Phone = user.Phone;
+            this.Username = user.Username;
+            this.Password = user.Password;
+        }
 
     }
 }

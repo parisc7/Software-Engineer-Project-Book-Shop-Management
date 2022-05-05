@@ -128,19 +128,19 @@
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.bookListPanel.Controls.Add(this.timeTableButton);
             this.bookListPanel.Controls.Add(this.pHONETextBox);
+            this.bookListPanel.Controls.Add(this.uSERNAMETextBox);
+            this.bookListPanel.Controls.Add(this.pASSWORDTextBox);
             this.bookListPanel.Controls.Add(this.lNAMETextBox);
             this.bookListPanel.Controls.Add(this.fNAMETextBox);
-            this.bookListPanel.Controls.Add(eMPLOYEE_IDLabel);
             this.bookListPanel.Controls.Add(this.eMPLOYEE_IDTextBox);
+            this.bookListPanel.Controls.Add(this.timeTableButton);
+            this.bookListPanel.Controls.Add(eMPLOYEE_IDLabel);
             this.bookListPanel.Controls.Add(fNAMELabel);
             this.bookListPanel.Controls.Add(lNAMELabel);
             this.bookListPanel.Controls.Add(pHONELabel);
             this.bookListPanel.Controls.Add(uSERNAMELabel);
-            this.bookListPanel.Controls.Add(this.uSERNAMETextBox);
             this.bookListPanel.Controls.Add(pASSWORDLabel);
-            this.bookListPanel.Controls.Add(this.pASSWORDTextBox);
             this.bookListPanel.Controls.Add(this.addButton);
             this.bookListPanel.Controls.Add(this.updateButton);
             this.bookListPanel.Controls.Add(this.deleteButton);
@@ -301,6 +301,7 @@
             this.customerDataGridView.Location = new System.Drawing.Point(45, 204);
             this.customerDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customerDataGridView.Name = "customerDataGridView";
+            this.customerDataGridView.ReadOnly = true;
             this.customerDataGridView.RowHeadersWidth = 51;
             this.customerDataGridView.RowTemplate.Height = 24;
             this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
@@ -380,6 +381,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EmployeesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmploymentsForm";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
             this.bookListPanel.ResumeLayout(false);
