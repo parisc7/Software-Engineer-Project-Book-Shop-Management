@@ -12,8 +12,11 @@ namespace Leksi_Book_Shop
 {
     public partial class LoginForm : Form
     {
-       // user_Form userAccess = new user_Form();
-      
+        EmployeesForm employeesForm = new EmployeesForm();
+        Employee admin = new Employee(0, null, null, 0, "admin", "admin");
+        MainForm main;
+
+
         public LoginForm()
         {
             InitializeComponent();
@@ -21,12 +24,19 @@ namespace Leksi_Book_Shop
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            MainForm main = new MainForm();
-            this.Hide();
-            main.ShowDialog();
-           
-         /*   User current = new User();
+            bool Admin=true;
+            Employee current = new Employee();
             bool exist = false;
+
+            if (usernameTxt.Text == admin.Username)
+            {
+                if (passwordTxt.Text == admin.Password)
+                {
+                    Admin = true;
+                    exist = true;
+                }
+            }
+            /*
             foreach (var users in userAccess.userAccess)
             {
                 if (users.username == usernameTxt.Text)
@@ -41,22 +51,21 @@ namespace Leksi_Book_Shop
                 {
                     exist = true;
                 }
-            }
+            }*/
 
             if (exist)
+            {
+                this.Hide();
+                main = new MainForm(Admin);
+                main.ShowDialog();
+                this.Close();
+            }
+            else
             {
                 MessageBox.Show("WRONG USERNAME OR PASSWORD", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernameTxt.Clear();
                 passwordTxt.Clear();
             }
-            else
-            {
-                this.Hide();
-                main = new MainForm(current);
-                main.ShowDialog();
-                this.Close();
-            }
-            */
         }
     }
 }

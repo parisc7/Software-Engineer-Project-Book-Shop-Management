@@ -15,9 +15,14 @@ namespace Leksi_Book_Shop
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
 
-        public MainForm()
+        public MainForm(bool admin)
         {
             InitializeComponent();
+
+            if (admin== false)
+            {
+                employeesButton.Visible = false;
+            }
         }
 
         private void companieLogoPictureBox_Click(object sender, EventArgs e)
