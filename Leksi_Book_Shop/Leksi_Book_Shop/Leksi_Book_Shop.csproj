@@ -105,18 +105,21 @@
     <Compile Include="BookForm.Designer.cs">
       <DependentUpon>BookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Books.cs" />
     <Compile Include="Company.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company.Designer.cs">
       <DependentUpon>Company.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="EmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
