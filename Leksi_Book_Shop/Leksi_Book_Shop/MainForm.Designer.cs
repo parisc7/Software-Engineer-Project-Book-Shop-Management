@@ -92,7 +92,7 @@
             // companieLogoPictureBox
             // 
             this.companieLogoPictureBox.Image = global::Leksi_Book_Shop.Properties.Resources.Softtsing;
-            this.companieLogoPictureBox.Location = new System.Drawing.Point(811, 599);
+            this.companieLogoPictureBox.Location = new System.Drawing.Point(801, 599);
             this.companieLogoPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.companieLogoPictureBox.Name = "companieLogoPictureBox";
             this.companieLogoPictureBox.Size = new System.Drawing.Size(80, 23);
@@ -140,11 +140,11 @@
             this.timeMskdTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.timeMskdTxtBox.Enabled = false;
             this.timeMskdTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeMskdTxtBox.Location = new System.Drawing.Point(56, 34);
+            this.timeMskdTxtBox.Location = new System.Drawing.Point(45, 34);
             this.timeMskdTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.timeMskdTxtBox.Mask = "00/00/0000 90:00";
             this.timeMskdTxtBox.Name = "timeMskdTxtBox";
-            this.timeMskdTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.timeMskdTxtBox.Size = new System.Drawing.Size(218, 41);
             this.timeMskdTxtBox.TabIndex = 5;
             this.timeMskdTxtBox.ValidatingType = typeof(System.DateTime);
             // 
@@ -153,18 +153,18 @@
             this.nameSurnameTxttBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.nameSurnameTxttBox.Enabled = false;
             this.nameSurnameTxttBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameSurnameTxttBox.Location = new System.Drawing.Point(49, 94);
+            this.nameSurnameTxttBox.Location = new System.Drawing.Point(45, 94);
             this.nameSurnameTxttBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameSurnameTxttBox.Name = "nameSurnameTxttBox";
             this.nameSurnameTxttBox.ReadOnly = true;
-            this.nameSurnameTxttBox.Size = new System.Drawing.Size(835, 41);
+            this.nameSurnameTxttBox.Size = new System.Drawing.Size(836, 41);
             this.nameSurnameTxttBox.TabIndex = 4;
             // 
             // totalPriceLabel
             // 
             this.totalPriceLabel.AutoSize = true;
             this.totalPriceLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLabel.Location = new System.Drawing.Point(689, 570);
+            this.totalPriceLabel.Location = new System.Drawing.Point(583, 569);
             this.totalPriceLabel.Name = "totalPriceLabel";
             this.totalPriceLabel.Size = new System.Drawing.Size(99, 34);
             this.totalPriceLabel.TabIndex = 3;
@@ -308,7 +308,7 @@
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(239, 70);
             this.logoutButton.TabIndex = 8;
-            this.logoutButton.Text = "Logout";
+            this.logoutButton.Text = " Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
@@ -328,7 +328,7 @@
             this.dailyTotalButton.Name = "dailyTotalButton";
             this.dailyTotalButton.Size = new System.Drawing.Size(283, 70);
             this.dailyTotalButton.TabIndex = 7;
-            this.dailyTotalButton.Text = "      Daily total";
+            this.dailyTotalButton.Text = "        Daily total";
             this.dailyTotalButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dailyTotalButton.UseVisualStyleBackColor = false;
             // 

@@ -57,7 +57,6 @@
             this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchCustomerButton = new System.Windows.Forms.Button();
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
@@ -84,7 +83,7 @@
             // fNAMELabel
             // 
             fNAMELabel.AutoSize = true;
-            fNAMELabel.Location = new System.Drawing.Point(513, 36);
+            fNAMELabel.Location = new System.Drawing.Point(470, 36);
             fNAMELabel.Name = "fNAMELabel";
             fNAMELabel.Size = new System.Drawing.Size(164, 34);
             fNAMELabel.TabIndex = 37;
@@ -111,7 +110,7 @@
             // uSERNAMELabel
             // 
             uSERNAMELabel.AutoSize = true;
-            uSERNAMELabel.Location = new System.Drawing.Point(488, 116);
+            uSERNAMELabel.Location = new System.Drawing.Point(467, 116);
             uSERNAMELabel.Name = "uSERNAMELabel";
             uSERNAMELabel.Size = new System.Drawing.Size(167, 34);
             uSERNAMELabel.TabIndex = 43;
@@ -147,7 +146,6 @@
             this.bookListPanel.Controls.Add(this.deleteButton);
             this.bookListPanel.Controls.Add(this.closeButton);
             this.bookListPanel.Controls.Add(this.customerDataGridView);
-            this.bookListPanel.Controls.Add(this.searchCustomerButton);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookListPanel.Location = new System.Drawing.Point(12, 12);
             this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -175,7 +173,7 @@
             this.pHONETextBox.Location = new System.Drawing.Point(155, 110);
             this.pHONETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pHONETextBox.Name = "pHONETextBox";
-            this.pHONETextBox.Size = new System.Drawing.Size(241, 41);
+            this.pHONETextBox.Size = new System.Drawing.Size(279, 41);
             this.pHONETextBox.TabIndex = 42;
             this.pHONETextBox.Text = " ";
             // 
@@ -201,10 +199,10 @@
             // fNAMETextBox
             // 
             this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FNAME", true));
-            this.fNAMETextBox.Location = new System.Drawing.Point(683, 33);
+            this.fNAMETextBox.Location = new System.Drawing.Point(640, 33);
             this.fNAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fNAMETextBox.Name = "fNAMETextBox";
-            this.fNAMETextBox.Size = new System.Drawing.Size(215, 41);
+            this.fNAMETextBox.Size = new System.Drawing.Size(306, 41);
             this.fNAMETextBox.TabIndex = 38;
             // 
             // eMPLOYEE_IDTextBox
@@ -220,10 +218,10 @@
             // uSERNAMETextBox
             // 
             this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
-            this.uSERNAMETextBox.Location = new System.Drawing.Point(661, 113);
+            this.uSERNAMETextBox.Location = new System.Drawing.Point(640, 114);
             this.uSERNAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uSERNAMETextBox.Name = "uSERNAMETextBox";
-            this.uSERNAMETextBox.Size = new System.Drawing.Size(236, 41);
+            this.uSERNAMETextBox.Size = new System.Drawing.Size(286, 41);
             this.uSERNAMETextBox.TabIndex = 44;
             // 
             // pASSWORDTextBox
@@ -356,19 +354,6 @@
             this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
             this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
             // 
-            // searchCustomerButton
-            // 
-            this.searchCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.searchCustomerButton.FlatAppearance.BorderSize = 0;
-            this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(403, 110);
-            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchCustomerButton.Name = "searchCustomerButton";
-            this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
-            this.searchCustomerButton.TabIndex = 11;
-            this.searchCustomerButton.UseVisualStyleBackColor = false;
-            // 
             // eMPLOYEESTableAdapter
             // 
             this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
@@ -409,7 +394,6 @@
         #endregion
 
         private System.Windows.Forms.Panel bookListPanel;
-        private System.Windows.Forms.Button searchCustomerButton;
         private Lexi_BookshopDataSet lexi_BookshopDataSet;
         private System.Windows.Forms.BindingSource eMPLOYEESBindingSource;
         private Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter eMPLOYEESTableAdapter;

@@ -73,54 +73,60 @@
             // iSBNLabel
             // 
             iSBNLabel.AutoSize = true;
-            iSBNLabel.Location = new System.Drawing.Point(33, 26);
+            iSBNLabel.Location = new System.Drawing.Point(31, 43);
+            iSBNLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             iSBNLabel.Name = "iSBNLabel";
-            iSBNLabel.Size = new System.Drawing.Size(64, 25);
+            iSBNLabel.Size = new System.Drawing.Size(79, 34);
             iSBNLabel.TabIndex = 39;
             iSBNLabel.Text = "ISBN:";
             // 
             // aUTHORSLabel
             // 
             aUTHORSLabel.AutoSize = true;
-            aUTHORSLabel.Location = new System.Drawing.Point(282, 32);
+            aUTHORSLabel.Location = new System.Drawing.Point(430, 39);
+            aUTHORSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             aUTHORSLabel.Name = "aUTHORSLabel";
-            aUTHORSLabel.Size = new System.Drawing.Size(119, 25);
+            aUTHORSLabel.Size = new System.Drawing.Size(145, 34);
             aUTHORSLabel.TabIndex = 40;
             aUTHORSLabel.Text = "AUTHORS:";
             // 
             // pUBLISHERSLabel
             // 
             pUBLISHERSLabel.AutoSize = true;
-            pUBLISHERSLabel.Location = new System.Drawing.Point(637, 32);
+            pUBLISHERSLabel.Location = new System.Drawing.Point(922, 39);
+            pUBLISHERSLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pUBLISHERSLabel.Name = "pUBLISHERSLabel";
-            pUBLISHERSLabel.Size = new System.Drawing.Size(137, 25);
+            pUBLISHERSLabel.Size = new System.Drawing.Size(170, 34);
             pUBLISHERSLabel.TabIndex = 41;
             pUBLISHERSLabel.Text = "PUBLISHERS:";
             // 
             // tITLELabel
             // 
             tITLELabel.AutoSize = true;
-            tITLELabel.Location = new System.Drawing.Point(33, 94);
+            tITLELabel.Location = new System.Drawing.Point(31, 122);
+            tITLELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tITLELabel.Name = "tITLELabel";
-            tITLELabel.Size = new System.Drawing.Size(68, 25);
+            tITLELabel.Size = new System.Drawing.Size(78, 34);
             tITLELabel.TabIndex = 42;
             tITLELabel.Text = "TITLE:";
             // 
             // pYEARLabel
             // 
             pYEARLabel.AutoSize = true;
-            pYEARLabel.Location = new System.Drawing.Point(332, 103);
+            pYEARLabel.Location = new System.Drawing.Point(736, 119);
+            pYEARLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pYEARLabel.Name = "pYEARLabel";
-            pYEARLabel.Size = new System.Drawing.Size(87, 25);
+            pYEARLabel.Size = new System.Drawing.Size(110, 34);
             pYEARLabel.TabIndex = 43;
             pYEARLabel.Text = "PYEAR:";
             // 
             // pRICELabel
             // 
             pRICELabel.AutoSize = true;
-            pRICELabel.Location = new System.Drawing.Point(800, 103);
+            pRICELabel.Location = new System.Drawing.Point(1148, 119);
+            pRICELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pRICELabel.Name = "pRICELabel";
-            pRICELabel.Size = new System.Drawing.Size(80, 25);
+            pRICELabel.Size = new System.Drawing.Size(100, 34);
             pRICELabel.TabIndex = 44;
             pRICELabel.Text = "PRICE:";
             // 
@@ -145,18 +151,19 @@
             this.bookListPanel.Controls.Add(this.closeButton);
             this.bookListPanel.Controls.Add(this.bookDataGridView);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookListPanel.Location = new System.Drawing.Point(9, 10);
-            this.bookListPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.bookListPanel.Location = new System.Drawing.Point(12, 12);
+            this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bookListPanel.Name = "bookListPanel";
-            this.bookListPanel.Size = new System.Drawing.Size(1113, 649);
+            this.bookListPanel.Size = new System.Drawing.Size(1484, 793);
             this.bookListPanel.TabIndex = 1;
             // 
             // pRICETextBox
             // 
             this.pRICETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "PRICE", true));
-            this.pRICETextBox.Location = new System.Drawing.Point(963, 94);
+            this.pRICETextBox.Location = new System.Drawing.Point(1256, 116);
+            this.pRICETextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pRICETextBox.Name = "pRICETextBox";
-            this.pRICETextBox.Size = new System.Drawing.Size(100, 34);
+            this.pRICETextBox.Size = new System.Drawing.Size(160, 41);
             this.pRICETextBox.TabIndex = 45;
             // 
             // bOOKSBindingSource
@@ -172,51 +179,56 @@
             // pYEARTextBox
             // 
             this.pYEARTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "PYEAR", true));
-            this.pYEARTextBox.Location = new System.Drawing.Point(445, 94);
+            this.pYEARTextBox.Location = new System.Drawing.Point(877, 116);
+            this.pYEARTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pYEARTextBox.Name = "pYEARTextBox";
-            this.pYEARTextBox.Size = new System.Drawing.Size(224, 34);
+            this.pYEARTextBox.Size = new System.Drawing.Size(263, 41);
             this.pYEARTextBox.TabIndex = 44;
             // 
             // tITLETextBox
             // 
             this.tITLETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "TITLE", true));
-            this.tITLETextBox.Location = new System.Drawing.Point(103, 94);
+            this.tITLETextBox.Location = new System.Drawing.Point(130, 119);
+            this.tITLETextBox.Margin = new System.Windows.Forms.Padding(4);
             this.tITLETextBox.Name = "tITLETextBox";
-            this.tITLETextBox.Size = new System.Drawing.Size(197, 34);
+            this.tITLETextBox.Size = new System.Drawing.Size(598, 41);
             this.tITLETextBox.TabIndex = 43;
             // 
             // pUBLISHERSTextBox
             // 
             this.pUBLISHERSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "PUBLISHERS", true));
-            this.pUBLISHERSTextBox.Location = new System.Drawing.Point(805, 29);
+            this.pUBLISHERSTextBox.Location = new System.Drawing.Point(1115, 36);
+            this.pUBLISHERSTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pUBLISHERSTextBox.Name = "pUBLISHERSTextBox";
-            this.pUBLISHERSTextBox.Size = new System.Drawing.Size(259, 34);
+            this.pUBLISHERSTextBox.Size = new System.Drawing.Size(302, 41);
             this.pUBLISHERSTextBox.TabIndex = 42;
             // 
             // aUTHORSTextBox
             // 
             this.aUTHORSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "AUTHORS", true));
-            this.aUTHORSTextBox.Location = new System.Drawing.Point(407, 29);
+            this.aUTHORSTextBox.Location = new System.Drawing.Point(583, 36);
+            this.aUTHORSTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.aUTHORSTextBox.Name = "aUTHORSTextBox";
-            this.aUTHORSTextBox.Size = new System.Drawing.Size(224, 34);
+            this.aUTHORSTextBox.Size = new System.Drawing.Size(331, 41);
             this.aUTHORSTextBox.TabIndex = 41;
             // 
             // iSBNTextBox
             // 
             this.iSBNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bOOKSBindingSource, "ISBN", true));
-            this.iSBNTextBox.Location = new System.Drawing.Point(103, 23);
+            this.iSBNTextBox.Location = new System.Drawing.Point(131, 36);
+            this.iSBNTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.iSBNTextBox.Name = "iSBNTextBox";
-            this.iSBNTextBox.Size = new System.Drawing.Size(100, 34);
+            this.iSBNTextBox.Size = new System.Drawing.Size(291, 41);
             this.iSBNTextBox.TabIndex = 40;
             // 
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Location = new System.Drawing.Point(28, 584);
-            this.addButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton.Location = new System.Drawing.Point(37, 719);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(143, 45);
+            this.addButton.Size = new System.Drawing.Size(191, 55);
             this.addButton.TabIndex = 39;
             this.addButton.Text = "&Add";
             this.addButton.UseVisualStyleBackColor = false;
@@ -226,10 +238,10 @@
             // 
             this.updateButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateButton.Location = new System.Drawing.Point(631, 584);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(2);
+            this.updateButton.Location = new System.Drawing.Point(841, 719);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(143, 45);
+            this.updateButton.Size = new System.Drawing.Size(191, 55);
             this.updateButton.TabIndex = 38;
             this.updateButton.Text = "&Update";
             this.updateButton.UseVisualStyleBackColor = false;
@@ -239,10 +251,10 @@
             // 
             this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Location = new System.Drawing.Point(310, 584);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteButton.Location = new System.Drawing.Point(436, 719);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(143, 45);
+            this.deleteButton.Size = new System.Drawing.Size(191, 55);
             this.deleteButton.TabIndex = 37;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
@@ -251,10 +263,10 @@
             // 
             this.closeButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(920, 584);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.closeButton.Location = new System.Drawing.Point(1227, 719);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(143, 45);
+            this.closeButton.Size = new System.Drawing.Size(191, 55);
             this.closeButton.TabIndex = 36;
             this.closeButton.Text = "&Close";
             this.closeButton.UseVisualStyleBackColor = false;
@@ -273,12 +285,12 @@
             this.pYEARDataGridViewTextBoxColumn,
             this.pRICEDataGridViewTextBoxColumn});
             this.bookDataGridView.DataSource = this.bOOKSBindingSource;
-            this.bookDataGridView.Location = new System.Drawing.Point(28, 162);
-            this.bookDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.bookDataGridView.Location = new System.Drawing.Point(37, 199);
+            this.bookDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.RowHeadersWidth = 51;
             this.bookDataGridView.RowTemplate.Height = 24;
-            this.bookDataGridView.Size = new System.Drawing.Size(1036, 408);
+            this.bookDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.bookDataGridView.TabIndex = 31;
             // 
             // bOOKSTableAdapter
@@ -300,12 +312,15 @@
             // 
             this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
             this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
+            this.iSBNDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
+            this.iSBNDataGridViewTextBoxColumn.Width = 200;
             // 
             // aUTHORSDataGridViewTextBoxColumn
             // 
             this.aUTHORSDataGridViewTextBoxColumn.DataPropertyName = "AUTHORS";
             this.aUTHORSDataGridViewTextBoxColumn.HeaderText = "AUTHORS";
+            this.aUTHORSDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.aUTHORSDataGridViewTextBoxColumn.Name = "aUTHORSDataGridViewTextBoxColumn";
             this.aUTHORSDataGridViewTextBoxColumn.Width = 200;
             // 
@@ -313,38 +328,44 @@
             // 
             this.pUBLISHERSDataGridViewTextBoxColumn.DataPropertyName = "PUBLISHERS";
             this.pUBLISHERSDataGridViewTextBoxColumn.HeaderText = "PUBLISHERS";
+            this.pUBLISHERSDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pUBLISHERSDataGridViewTextBoxColumn.Name = "pUBLISHERSDataGridViewTextBoxColumn";
-            this.pUBLISHERSDataGridViewTextBoxColumn.Width = 200;
+            this.pUBLISHERSDataGridViewTextBoxColumn.Width = 250;
             // 
             // tITLEDataGridViewTextBoxColumn
             // 
             this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
             this.tITLEDataGridViewTextBoxColumn.HeaderText = "TITLE";
+            this.tITLEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
-            this.tITLEDataGridViewTextBoxColumn.Width = 200;
+            this.tITLEDataGridViewTextBoxColumn.Width = 425;
             // 
             // pYEARDataGridViewTextBoxColumn
             // 
             this.pYEARDataGridViewTextBoxColumn.DataPropertyName = "PYEAR";
             this.pYEARDataGridViewTextBoxColumn.HeaderText = "PYEAR";
+            this.pYEARDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pYEARDataGridViewTextBoxColumn.Name = "pYEARDataGridViewTextBoxColumn";
+            this.pYEARDataGridViewTextBoxColumn.Width = 126;
             // 
             // pRICEDataGridViewTextBoxColumn
             // 
             this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
             this.pRICEDataGridViewTextBoxColumn.HeaderText = "PRICE";
+            this.pRICEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
+            this.pRICEDataGridViewTextBoxColumn.Width = 125;
             // 
             // BookForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(29)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1131, 663);
+            this.ClientSize = new System.Drawing.Size(1508, 816);
             this.Controls.Add(this.bookListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BookForm";
             this.Text = "Book_List";
             this.Load += new System.EventHandler(this.BookForm_Load);

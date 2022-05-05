@@ -158,25 +158,6 @@
   <metadata name="eMPLOYEESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>189, 17</value>
   </metadata>
-  <data name="searchCustomerButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALlSURBVFhH7ZdP
-        aM9xGMd//g2zKYU47DAy7eBPDkNy4MIO1MiOitQo4jC7LK62uaBWu0gprHHYXDhgHKzFTlNErBww+VfI
-        NoTXy/atH832+X62/drBu171+/1q3+f5PJ/neT/fZQK1EMpgO2yCUpgOE6oCqIH78AN+wnvoH/r8Ds7D
-        Ohh37YZeeAa1sALyINF82AUt8B2ugFUas6bBGeiDI2DQtdAAt+ERWJHLsBfmwkq4C89hFYxJBn8NBi2G
-        a+AJb8Jx2AeHoQlewhuoAhM9N/R9CUTJsntyg3uvPuw6LIfhNAMOwmc4CzblVXgA2dcVJBvOO7fsntzg
-        jTAVRtNqeAsnwCt5BT4nlex2G87MLbsnDwmeaDN4VWtgP3iAmRCsLrDbLf83+FfZR9IlaIPZ4LVshSA5
-        Ps653XwSbkCMNCg9ohBM5DQESYczAcvfDscgRjal17AB6sCGDNI20NXUQ3DUYuVo7gSb8J4/hMgGsnRT
-        QJNxzmP1CbaAVbSaQXKx6O3aq9aqycSoCHxOCfiMixAkDcQ5roQ98AK8z7Syck8HP2Yew6HBj2Fyq3l6
-        jcQZ1uHSaA6YeDW4D2zqpRAsrdcOdhT1dudYhwuRvdMMnnoWtELwBGTLDedWcxz1dq/FBh1JntzgH8Be
-        qoCvEJr8H9KQXKluNftCb7cqOpyJZL8B2XDeuWX35AY36EfQ1qPl/dkDltB+0Nt1NcfUZAzoqNntNpx3
-        btk9ucH93fcE94F/5zNSy33uSnU7HoB80F51uB1QDstAmbB3btmPgsHdJX53uXVAVBL2gW5mNb6AFakH
-        y67JOOdPwG73pMmde3KDO9ILoBuik1AmorOdApPoBF/NLoCj+vfbj8n0gMHVuCSRRk7FHfDdcZE/oCQJ
-        V/48f5ho/U8i0aRIwsazAR1rg6skiVuQ5r0zWsMlYUU0t42/v+VA2UksBsd3ANZDzmQSlt3AmpX/T7pJ
-        cyrv3LJ7coJnMr8AgyK1Z6qlpCsAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="eMPLOYEESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>189, 17</value>
   </metadata>
@@ -193,7 +174,7 @@
     <value>575, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>26</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
