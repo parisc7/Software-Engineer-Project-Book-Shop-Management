@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Leksi_Book_Shop
 {
-    public partial class LogiForm : Form
+    public partial class LoginForm : Form
     {
        // user_Form userAccess = new user_Form();
       
-        public LogiForm()
+        public LoginForm()
         {
             InitializeComponent();
         }

@@ -30,76 +30,49 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.sendTab = new System.Windows.Forms.TabPage();
             this.sendButton = new System.Windows.Forms.Button();
             this.mailTxtBox = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.exitButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.tabControl.SuspendLayout();
-            this.sendTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.panel1.Controls.Add(this.tabControl);
+            this.panel1.Controls.Add(this.exitButton);
+            this.panel1.Controls.Add(this.sendButton);
+            this.panel1.Controls.Add(this.mailTxtBox);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(926, 535);
             this.panel1.TabIndex = 0;
             // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.sendTab);
-            this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Location = new System.Drawing.Point(3, 0);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(920, 532);
-            this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl.TabIndex = 0;
-            // 
-            // sendTab
-            // 
-            this.sendTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.sendTab.Controls.Add(this.sendButton);
-            this.sendTab.Controls.Add(this.mailTxtBox);
-            this.sendTab.Location = new System.Drawing.Point(4, 42);
-            this.sendTab.Name = "sendTab";
-            this.sendTab.Padding = new System.Windows.Forms.Padding(3);
-            this.sendTab.Size = new System.Drawing.Size(912, 486);
-            this.sendTab.TabIndex = 0;
-            this.sendTab.Text = "Send";
-            // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(734, 428);
+            this.sendButton.Location = new System.Drawing.Point(751, 446);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(137, 42);
-            this.sendButton.TabIndex = 1;
+            this.sendButton.TabIndex = 3;
             this.sendButton.Text = "&SEND >";
             this.sendButton.UseVisualStyleBackColor = true;
-            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // mailTxtBox
             // 
-            this.mailTxtBox.Location = new System.Drawing.Point(28, 51);
+            this.mailTxtBox.Location = new System.Drawing.Point(33, 61);
             this.mailTxtBox.Multiline = true;
             this.mailTxtBox.Name = "mailTxtBox";
             this.mailTxtBox.Size = new System.Drawing.Size(855, 359);
-            this.mailTxtBox.TabIndex = 0;
+            this.mailTxtBox.TabIndex = 2;
             // 
-            // tabPage2
+            // exitButton
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Location = new System.Drawing.Point(4, 42);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(912, 486);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.exitButton.Location = new System.Drawing.Point(33, 446);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(137, 42);
+            this.exitButton.TabIndex = 4;
+            this.exitButton.Text = "&Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // MailForm
             // 
@@ -115,9 +88,7 @@
             this.Name = "MailForm";
             this.Text = "MailForm";
             this.panel1.ResumeLayout(false);
-            this.tabControl.ResumeLayout(false);
-            this.sendTab.ResumeLayout(false);
-            this.sendTab.PerformLayout();
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -125,9 +96,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage sendTab;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.TextBox mailTxtBox;
     }

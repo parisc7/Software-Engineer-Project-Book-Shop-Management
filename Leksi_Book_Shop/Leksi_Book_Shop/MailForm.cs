@@ -60,5 +60,10 @@ namespace Leksi_Book_Shop
                 client.Dispose();
             }
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
