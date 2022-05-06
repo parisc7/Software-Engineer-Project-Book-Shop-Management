@@ -17,6 +17,7 @@ namespace Leksi_Book_Shop
         {
             InitializeComponent();
             timer.Start();
+          
         }
       
         private void timer_Tick(object sender, EventArgs e)

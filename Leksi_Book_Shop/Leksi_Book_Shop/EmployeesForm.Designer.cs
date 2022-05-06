@@ -37,20 +37,20 @@
             System.Windows.Forms.Label pASSWORDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
-            this.timeTableButton = new System.Windows.Forms.Button();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
+            this.uSERNAMETextBox = new System.Windows.Forms.TextBox();
+            this.pASSWORDTextBox = new System.Windows.Forms.TextBox();
             this.lNAMETextBox = new System.Windows.Forms.TextBox();
             this.fNAMETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
-            this.uSERNAMETextBox = new System.Windows.Forms.TextBox();
-            this.pASSWORDTextBox = new System.Windows.Forms.TextBox();
+            this.timeTableButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.customerDataGridView = new System.Windows.Forms.DataGridView();
+            this.employeeDataGridView = new System.Windows.Forms.DataGridView();
             this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +68,7 @@
             this.bookListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // eMPLOYEE_IDLabel
@@ -145,27 +145,13 @@
             this.bookListPanel.Controls.Add(this.updateButton);
             this.bookListPanel.Controls.Add(this.deleteButton);
             this.bookListPanel.Controls.Add(this.closeButton);
-            this.bookListPanel.Controls.Add(this.customerDataGridView);
+            this.bookListPanel.Controls.Add(this.employeeDataGridView);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookListPanel.Location = new System.Drawing.Point(12, 12);
             this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bookListPanel.Name = "bookListPanel";
             this.bookListPanel.Size = new System.Drawing.Size(1489, 794);
             this.bookListPanel.TabIndex = 3;
-            // 
-            // timeTableButton
-            // 
-            this.timeTableButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.timeTableButton.FlatAppearance.BorderSize = 0;
-            this.timeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timeTableButton.Image = ((System.Drawing.Image)(resources.GetObject("timeTableButton.Image")));
-            this.timeTableButton.Location = new System.Drawing.Point(1360, 110);
-            this.timeTableButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.timeTableButton.Name = "timeTableButton";
-            this.timeTableButton.Size = new System.Drawing.Size(67, 48);
-            this.timeTableButton.TabIndex = 47;
-            this.timeTableButton.UseVisualStyleBackColor = false;
-            this.timeTableButton.Click += new System.EventHandler(this.timeTableButton_Click);
             // 
             // pHONETextBox
             // 
@@ -186,6 +172,24 @@
             // 
             this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
             this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uSERNAMETextBox
+            // 
+            this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
+            this.uSERNAMETextBox.Location = new System.Drawing.Point(640, 114);
+            this.uSERNAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uSERNAMETextBox.Name = "uSERNAMETextBox";
+            this.uSERNAMETextBox.Size = new System.Drawing.Size(286, 41);
+            this.uSERNAMETextBox.TabIndex = 44;
+            // 
+            // pASSWORDTextBox
+            // 
+            this.pASSWORDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PASSWORD", true));
+            this.pASSWORDTextBox.Location = new System.Drawing.Point(1115, 113);
+            this.pASSWORDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pASSWORDTextBox.Name = "pASSWORDTextBox";
+            this.pASSWORDTextBox.Size = new System.Drawing.Size(231, 41);
+            this.pASSWORDTextBox.TabIndex = 46;
             // 
             // lNAMETextBox
             // 
@@ -215,23 +219,19 @@
             this.eMPLOYEE_IDTextBox.Size = new System.Drawing.Size(217, 41);
             this.eMPLOYEE_IDTextBox.TabIndex = 36;
             // 
-            // uSERNAMETextBox
+            // timeTableButton
             // 
-            this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
-            this.uSERNAMETextBox.Location = new System.Drawing.Point(640, 114);
-            this.uSERNAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uSERNAMETextBox.Name = "uSERNAMETextBox";
-            this.uSERNAMETextBox.Size = new System.Drawing.Size(286, 41);
-            this.uSERNAMETextBox.TabIndex = 44;
-            // 
-            // pASSWORDTextBox
-            // 
-            this.pASSWORDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PASSWORD", true));
-            this.pASSWORDTextBox.Location = new System.Drawing.Point(1115, 113);
-            this.pASSWORDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pASSWORDTextBox.Name = "pASSWORDTextBox";
-            this.pASSWORDTextBox.Size = new System.Drawing.Size(231, 41);
-            this.pASSWORDTextBox.TabIndex = 46;
+            this.timeTableButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.timeTableButton.FlatAppearance.BorderSize = 0;
+            this.timeTableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeTableButton.Image = ((System.Drawing.Image)(resources.GetObject("timeTableButton.Image")));
+            this.timeTableButton.Location = new System.Drawing.Point(1360, 110);
+            this.timeTableButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTableButton.Name = "timeTableButton";
+            this.timeTableButton.Size = new System.Drawing.Size(67, 48);
+            this.timeTableButton.TabIndex = 47;
+            this.timeTableButton.UseVisualStyleBackColor = false;
+            this.timeTableButton.Click += new System.EventHandler(this.timeTableButton_Click);
             // 
             // addButton
             // 
@@ -285,27 +285,27 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // customerDataGridView
+            // employeeDataGridView
             // 
-            this.customerDataGridView.AutoGenerateColumns = false;
-            this.customerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employeeDataGridView.AutoGenerateColumns = false;
+            this.employeeDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.eMPLOYEEIDDataGridViewTextBoxColumn,
             this.fNAMEDataGridViewTextBoxColumn,
             this.lNAMEDataGridViewTextBoxColumn,
             this.pHONEDataGridViewTextBoxColumn,
             this.uSERNAMEDataGridViewTextBoxColumn,
             this.pASSWORDDataGridViewTextBoxColumn});
-            this.customerDataGridView.DataSource = this.eMPLOYEESBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(45, 204);
-            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customerDataGridView.Name = "customerDataGridView";
-            this.customerDataGridView.ReadOnly = true;
-            this.customerDataGridView.RowHeadersWidth = 51;
-            this.customerDataGridView.RowTemplate.Height = 24;
-            this.customerDataGridView.Size = new System.Drawing.Size(1381, 502);
-            this.customerDataGridView.TabIndex = 30;
+            this.employeeDataGridView.DataSource = this.eMPLOYEESBindingSource;
+            this.employeeDataGridView.Location = new System.Drawing.Point(45, 204);
+            this.employeeDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeDataGridView.Name = "employeeDataGridView";
+            this.employeeDataGridView.ReadOnly = true;
+            this.employeeDataGridView.RowHeadersWidth = 51;
+            this.employeeDataGridView.RowTemplate.Height = 24;
+            this.employeeDataGridView.Size = new System.Drawing.Size(1381, 502);
+            this.employeeDataGridView.TabIndex = 30;
             // 
             // eMPLOYEEIDDataGridViewTextBoxColumn
             // 
@@ -313,6 +313,7 @@
             this.eMPLOYEEIDDataGridViewTextBoxColumn.HeaderText = "EMPLOYEE_ID";
             this.eMPLOYEEIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.eMPLOYEEIDDataGridViewTextBoxColumn.Name = "eMPLOYEEIDDataGridViewTextBoxColumn";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.eMPLOYEEIDDataGridViewTextBoxColumn.Width = 250;
             // 
             // fNAMEDataGridViewTextBoxColumn
@@ -321,6 +322,7 @@
             this.fNAMEDataGridViewTextBoxColumn.HeaderText = "FNAME";
             this.fNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fNAMEDataGridViewTextBoxColumn.Name = "fNAMEDataGridViewTextBoxColumn";
+            this.fNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.fNAMEDataGridViewTextBoxColumn.Width = 215;
             // 
             // lNAMEDataGridViewTextBoxColumn
@@ -329,6 +331,7 @@
             this.lNAMEDataGridViewTextBoxColumn.HeaderText = "LNAME";
             this.lNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lNAMEDataGridViewTextBoxColumn.Name = "lNAMEDataGridViewTextBoxColumn";
+            this.lNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.lNAMEDataGridViewTextBoxColumn.Width = 222;
             // 
             // pHONEDataGridViewTextBoxColumn
@@ -337,6 +340,7 @@
             this.pHONEDataGridViewTextBoxColumn.HeaderText = "PHONE";
             this.pHONEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pHONEDataGridViewTextBoxColumn.Name = "pHONEDataGridViewTextBoxColumn";
+            this.pHONEDataGridViewTextBoxColumn.ReadOnly = true;
             this.pHONEDataGridViewTextBoxColumn.Width = 200;
             // 
             // uSERNAMEDataGridViewTextBoxColumn
@@ -345,6 +349,7 @@
             this.uSERNAMEDataGridViewTextBoxColumn.HeaderText = "USERNAME";
             this.uSERNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.uSERNAMEDataGridViewTextBoxColumn.Name = "uSERNAMEDataGridViewTextBoxColumn";
+            this.uSERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.uSERNAMEDataGridViewTextBoxColumn.Width = 220;
             // 
             // pASSWORDDataGridViewTextBoxColumn
@@ -353,6 +358,7 @@
             this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
             this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
+            this.pASSWORDDataGridViewTextBoxColumn.ReadOnly = true;
             this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
             // 
             // eMPLOYEESTableAdapter
@@ -388,7 +394,7 @@
             this.bookListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,7 +406,7 @@
         private System.Windows.Forms.BindingSource eMPLOYEESBindingSource;
         private Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter eMPLOYEESTableAdapter;
         private Lexi_BookshopDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView customerDataGridView;
+        private System.Windows.Forms.DataGridView employeeDataGridView;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;

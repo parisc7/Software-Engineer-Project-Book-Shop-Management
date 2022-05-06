@@ -20,6 +20,8 @@ namespace Leksi_Book_Shop
         public LoginForm()
         {
             InitializeComponent();
+            employees.Show();
+            employees.Hide();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace Leksi_Book_Shop
                     exist = true;
                 }
             }
-            
+           
             foreach (var employee in employees.EmployeesList)
             {
                 if (employee.Username == usernameTxt.Text)

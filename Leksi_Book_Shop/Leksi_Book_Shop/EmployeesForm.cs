@@ -14,13 +14,15 @@ namespace Leksi_Book_Shop
 {
     public partial class EmployeesForm : Form
     {
-        public List<Employee> EmployeesList = new List<Employee>();
         OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
+        public List<Employee> EmployeesList = new List<Employee>(); 
 
         public EmployeesForm()
         {
+
             InitializeComponent();
+           
         }
 
         void fillGrid()
@@ -38,7 +40,7 @@ namespace Leksi_Book_Shop
             uSERNAMETextBox.Text = "";
             eMPLOYEE_IDTextBox.Text = "";
         }
-
+        
         private void EmployeesForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
@@ -46,7 +48,7 @@ namespace Leksi_Book_Shop
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
             command.CommandText = "SELECT * FROM CLIENTS";
-
+            initializeList();
         }
 
         private void timeTableButton_Click(object sender, EventArgs e)
@@ -88,6 +90,22 @@ namespace Leksi_Book_Shop
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        public void initializeList()
+        {
+            EmployeesList.Clear();
+            for (int i = 0; i < eMPLOYEESBindingSource.Count; i++) 
+            {
+                Employee employee = new Employee();
+                employee.Employee_id = int.Parse(employeeDataGridView.Rows[i].Cells[0].Value.ToString());
+                employee.FName = employeeDataGridView.Rows[i].Cells[1].Value.ToString();
+                employee.LName = employeeDataGridView.Rows[i].Cells[2].Value.ToString();
+                employee.Phone = int.Parse(employeeDataGridView.Rows[i].Cells[3].Value.ToString());
+                employee.Username = employeeDataGridView.Rows[i].Cells[4].Value.ToString();
+                employee.Password = employeeDataGridView.Rows[i].Cells[5].Value.ToString();
+                EmployeesList.Add(employee);
+            }         
         }
     }
 }
