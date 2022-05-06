@@ -15,11 +15,12 @@ namespace Leksi_Book_Shop
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
         EmployeesForm employees= new EmployeesForm();
+        Employee curent=new Employee();
 
-        public MainForm(bool admin)
+        public MainForm(bool admin,Employee employee)
         {
             InitializeComponent();
-
+            curent.Copy(employee);
             if (admin== false)
             {
                 employeesButton.Visible = false;
@@ -71,6 +72,9 @@ namespace Leksi_Book_Shop
 
         }
 
-       
+        private void dailyTotalButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

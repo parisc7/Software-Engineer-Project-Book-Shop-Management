@@ -166,9 +166,8 @@
             this.totalPriceLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPriceLabel.Location = new System.Drawing.Point(583, 569);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(99, 34);
+            this.totalPriceLabel.Size = new System.Drawing.Size(0, 43);
             this.totalPriceLabel.TabIndex = 3;
-            this.totalPriceLabel.Text = "label1";
             // 
             // payButton
             // 
@@ -331,6 +330,7 @@
             this.dailyTotalButton.Text = "        Daily total";
             this.dailyTotalButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dailyTotalButton.UseVisualStyleBackColor = false;
+            this.dailyTotalButton.Click += new System.EventHandler(this.dailyTotalButton_Click);
             // 
             // mailButton
             // 

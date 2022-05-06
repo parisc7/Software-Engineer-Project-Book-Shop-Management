@@ -61,7 +61,7 @@ namespace Leksi_Book_Shop
             if (exist)
             {
                 this.Hide();
-                main = new MainForm(Admin);
+                main = new MainForm(Admin,current);
                 main.ShowDialog();
                 this.Close();
             }
