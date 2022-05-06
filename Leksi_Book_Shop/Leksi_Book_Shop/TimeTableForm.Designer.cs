@@ -32,6 +32,7 @@
             System.Windows.Forms.Label eMPLOYEE_IDLabel;
             System.Windows.Forms.Label pHONELabel;
             System.Windows.Forms.Label fIRSTNAMELabel;
+            System.Windows.Forms.Label lASTNAMELabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeTableForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
             this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
@@ -40,20 +41,22 @@
             this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
-            this.customerDataGridView = new System.Windows.Forms.DataGridView();
+            this.timeTableDataGridView = new System.Windows.Forms.DataGridView();
             this.lOGINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lOGOUTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tIMETABLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tIMETABLETableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TIMETABLETableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
+            this.lASTNAMETextBox = new System.Windows.Forms.TextBox();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
             pHONELabel = new System.Windows.Forms.Label();
             fIRSTNAMELabel = new System.Windows.Forms.Label();
+            lASTNAMELabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeTableDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIMETABLEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +73,7 @@
             // pHONELabel
             // 
             pHONELabel.AutoSize = true;
-            pHONELabel.Location = new System.Drawing.Point(25, 370);
+            pHONELabel.Location = new System.Drawing.Point(25, 391);
             pHONELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pHONELabel.Name = "pHONELabel";
             pHONELabel.Size = new System.Drawing.Size(118, 34);
@@ -89,6 +92,8 @@
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.bookListPanel.Controls.Add(lASTNAMELabel);
+            this.bookListPanel.Controls.Add(this.lASTNAMETextBox);
             this.bookListPanel.Controls.Add(fIRSTNAMELabel);
             this.bookListPanel.Controls.Add(this.fIRSTNAMETextBox);
             this.bookListPanel.Controls.Add(eMPLOYEE_IDLabel);
@@ -96,7 +101,7 @@
             this.bookListPanel.Controls.Add(pHONELabel);
             this.bookListPanel.Controls.Add(this.pHONETextBox);
             this.bookListPanel.Controls.Add(this.closeButton);
-            this.bookListPanel.Controls.Add(this.customerDataGridView);
+            this.bookListPanel.Controls.Add(this.timeTableDataGridView);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookListPanel.Location = new System.Drawing.Point(12, 11);
             this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -137,7 +142,7 @@
             // 
             this.pHONETextBox.BackColor = System.Drawing.SystemColors.Window;
             this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PHONE", true));
-            this.pHONETextBox.Location = new System.Drawing.Point(244, 366);
+            this.pHONETextBox.Location = new System.Drawing.Point(244, 388);
             this.pHONETextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pHONETextBox.Name = "pHONETextBox";
             this.pHONETextBox.ReadOnly = true;
@@ -157,22 +162,22 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // customerDataGridView
+            // timeTableDataGridView
             // 
-            this.customerDataGridView.AutoGenerateColumns = false;
-            this.customerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.timeTableDataGridView.AutoGenerateColumns = false;
+            this.timeTableDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.timeTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.timeTableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lOGINDataGridViewTextBoxColumn,
             this.lOGOUTDataGridViewTextBoxColumn});
-            this.customerDataGridView.DataSource = this.tIMETABLEBindingSource;
-            this.customerDataGridView.Location = new System.Drawing.Point(532, 34);
-            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customerDataGridView.Name = "customerDataGridView";
-            this.customerDataGridView.RowHeadersWidth = 51;
-            this.customerDataGridView.RowTemplate.Height = 24;
-            this.customerDataGridView.Size = new System.Drawing.Size(447, 668);
-            this.customerDataGridView.TabIndex = 30;
+            this.timeTableDataGridView.DataSource = this.tIMETABLEBindingSource;
+            this.timeTableDataGridView.Location = new System.Drawing.Point(532, 34);
+            this.timeTableDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeTableDataGridView.Name = "timeTableDataGridView";
+            this.timeTableDataGridView.RowHeadersWidth = 51;
+            this.timeTableDataGridView.RowTemplate.Height = 24;
+            this.timeTableDataGridView.Size = new System.Drawing.Size(447, 668);
+            this.timeTableDataGridView.TabIndex = 30;
             // 
             // lOGINDataGridViewTextBoxColumn
             // 
@@ -214,6 +219,23 @@
             // 
             this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
             // 
+            // lASTNAMELabel
+            // 
+            lASTNAMELabel.AutoSize = true;
+            lASTNAMELabel.Location = new System.Drawing.Point(25, 313);
+            lASTNAMELabel.Name = "lASTNAMELabel";
+            lASTNAMELabel.Size = new System.Drawing.Size(163, 34);
+            lASTNAMELabel.TabIndex = 40;
+            lASTNAMELabel.Text = "LASTNAME:";
+            // 
+            // lASTNAMETextBox
+            // 
+            this.lASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LASTNAME", true));
+            this.lASTNAMETextBox.Location = new System.Drawing.Point(244, 306);
+            this.lASTNAMETextBox.Name = "lASTNAMETextBox";
+            this.lASTNAMETextBox.Size = new System.Drawing.Size(259, 41);
+            this.lASTNAMETextBox.TabIndex = 41;
+            // 
             // TimeTableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,7 +254,7 @@
             this.bookListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeTableDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIMETABLEBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -242,7 +264,7 @@
 
         private System.Windows.Forms.Panel bookListPanel;
         private System.Windows.Forms.Button closeButton;
-        private System.Windows.Forms.DataGridView customerDataGridView;
+        private System.Windows.Forms.DataGridView timeTableDataGridView;
         private Lexi_BookshopDataSet lexi_BookshopDataSet;
         private System.Windows.Forms.BindingSource tIMETABLEBindingSource;
         private Lexi_BookshopDataSetTableAdapters.TIMETABLETableAdapter tIMETABLETableAdapter;
@@ -254,5 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lOGINDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lOGOUTDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox fIRSTNAMETextBox;
+        private System.Windows.Forms.TextBox lASTNAMETextBox;
     }
 }
