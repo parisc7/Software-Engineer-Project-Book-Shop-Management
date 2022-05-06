@@ -19,7 +19,7 @@ namespace Leksi_Book_Shop
             //Application.Run(new Splash_Screen());
             //Application.Run(new LoginForm());
             //Application.Run(new MainForm(true));
-            Application.Run(new BookForm());
+            //Application.Run(new BookForm());
             //Application.Run(new EmployeesForm());
             // Application.Run(new CustomerForm());
         }

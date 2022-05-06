@@ -100,8 +100,8 @@ namespace Leksi_Book_Shop
             {
                 Employee employee = new Employee();
                 employee.Employee_id = int.Parse(employeeDataGridView.Rows[i].Cells[0].Value.ToString());
-                employee.FName = employeeDataGridView.Rows[i].Cells[1].Value.ToString();
-                employee.LName = employeeDataGridView.Rows[i].Cells[2].Value.ToString();
+                employee.Firstname = employeeDataGridView.Rows[i].Cells[1].Value.ToString();
+                employee.Lastname= employeeDataGridView.Rows[i].Cells[2].Value.ToString();
                 employee.Phone = int.Parse(employeeDataGridView.Rows[i].Cells[3].Value.ToString());
                 employee.Password = employeeDataGridView.Rows[i].Cells[4].Value.ToString();
                 employee.Username = employeeDataGridView.Rows[i].Cells[5].Value.ToString();
