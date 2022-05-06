@@ -16,7 +16,7 @@ namespace Leksi_Book_Shop
     {
         OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
-
+        public List<Customer> CustomerList = new List<Customer>();  
 
 
         public CustomerForm()
@@ -32,6 +32,7 @@ namespace Leksi_Book_Shop
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
             command.CommandText = "SELECT * FROM CLIENTS";
+            initializeList();
         }
 
         void fillGrid()
@@ -42,34 +43,33 @@ namespace Leksi_Book_Shop
             da.Fill(dt);
             cLIENTSBindingSource.DataSource = dt;
             conn.Close();
-            fNAMETextBox.Text = "";
-            lNAMETextBox.Text = "";
+            fIRSTNAMETextBox.Text = "";
+            lASTNAMETextBox.Text = "";
             pHONETextBox.Text = "";
             eMAILTextBox.Text = "";
             aDDRESSTextBox.Text = "";
             cLIENT_IDTextBox.Text = "";
+            pOINTSTextBox.Text = "";
         }
 
         private void updateButton_Click(object sender, EventArgs e)
-         {
-            conn.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FNAME'" + fNAMETextBox.Text + ",LNAME=" + lNAMETextBox.Text + ",EMAIL= "+eMAILTextBox.Text+ ",PHONE="+pHONETextBox.Text+",ADDRESS="+aDDRESSTextBox.Text+ "where CLIENT_ID= " + cLIENT_IDTextBox.Text + " ", conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+        {
+            Customer customer = new Customer(int.Parse(cLIENT_IDTextBox.ToString()), fIRSTNAMETextBox.Text, lASTNAMETextBox.Text,
+                eMAILTextBox.Text, int.Parse(pHONETextBox.ToString()), aDDRESSTextBox.Text, int.Parse(pOINTSTextBox.ToString()));
+            update(customer);
             MessageBox.Show("Record UPDATED");
-            fillGrid();
         }
 
 
          private void addButton_Click(object sender, EventArgs e)
          {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO CLIENTS (FNAME,LNAME,EMAIL,PHONE,ADDRESS) values ('" + fNAMETextBox.Text + "','"   + lNAMETextBox.Text + "','" + eMAILTextBox.Text + "','" + pHONETextBox.Text + "','" + aDDRESSTextBox.Text +  ")", conn);
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO CLIENTS (FIRSTNAME,LASTNAME,EMAIL,PHONE,ADDRESS,POINTS) values ('" + fIRSTNAMETextBox.Text + "','"   + lASTNAMETextBox.Text + "','" + eMAILTextBox.Text + "','" + pHONETextBox.Text + "','" + aDDRESSTextBox.Text +  "',0)", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record ADDED");
             fillGrid();
-
+            initializeList();
          }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -80,11 +80,41 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record DELETED");
             fillGrid();
+            initializeList();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void update(Customer customer)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FIRSTNAME='" + customer.Firstname+ "',LASTNAME='" + customer.Lastname
+                                                + "',EMAIL= '" + customer.Email+ "',PHONE=" + customer.Phone + ",ADDRESS='" + customer.Address 
+                                                + ",POINTS=" + customer.Points + "where CLIENT_ID= " + customer.Customer_id+ " ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            fillGrid();
+            initializeList();
+        }
+
+        public void initializeList()
+        {
+            CustomerList.Clear();
+            for (int i = 0; i < eMPLOYEESBindingSource.Count; i++)
+            {
+                Customer customer= new Customer();
+                customer.Customer_id= int.Parse(customerDataGridView.Rows[i].Cells[0].Value.ToString());
+                customer.Firstname= customerDataGridView.Rows[i].Cells[1].Value.ToString();
+                customer.Lastname= customerDataGridView.Rows[i].Cells[2].Value.ToString();
+                customer.Email= customerDataGridView.Rows[i].Cells[3].Value.ToString();
+                customer.Points= int.Parse(customerDataGridView.Rows[i].Cells[4].Value.ToString());
+                customer.Phone= int.Parse(customerDataGridView.Rows[i].Cells[5].Value.ToString());
+                customer.Address= customerDataGridView.Rows[i].Cells[6].Value.ToString();
+                CustomerList.Add(customer);
+            }
         }
     }
 }

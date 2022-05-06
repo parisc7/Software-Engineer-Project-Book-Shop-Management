@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leksi_Book_Shop
 {
-    internal class Customer
+    public class Customer
     {
         public int Customer_id { get; set; }
         public string Firstname { get; set; }
