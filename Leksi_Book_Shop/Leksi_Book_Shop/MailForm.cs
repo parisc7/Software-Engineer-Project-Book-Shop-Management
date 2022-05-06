@@ -17,48 +17,64 @@ namespace Leksi_Book_Shop
     {
         MimeMessage message = new MimeMessage();
         string emails;
+        CustomerForm customer=new CustomerForm();
+       
+
+
         public MailForm()
         {
             InitializeComponent();
+            customer.Show();
+            customer.Hide();    
         }
 
         private void sendButton_Click(object sender, EventArgs e)
         {
+            //sender (onoma pou emfanizi ,mail pou stelni)
             //message.From.Add(new MailboxAddress("Βιβλιοπωλείο λέξη", "giorgos14kyperounta@gmail.com"));
-
-            //message.To.Add(MailboxAddress.Parse("giorgos18hadjimichael@gmail.com"));
-
-            message.Subject = "INFO";
-
-            message.Body = new TextPart("plain")
+            
+            //resever
+            foreach(var customer in customer.CustomerList)
             {
-                Text = mailTxtBox.Text
-            };
+                message.To.Add(MailboxAddress.Parse(customer.Email));
+                message.Subject = "INFO";
+
+                message.Body = new TextPart("plain")
+                {
+                    Text = mailTxtBox.Text
+                };
 
 
-            SmtpClient client = new SmtpClient();
+                SmtpClient client = new SmtpClient();
 
-            try
-            {
-                client.Connect("smtp.gmail.com", 465, true);
-                
-                //client.Authenticate("giorgos14kyperounta@gmail.com","96849547");
-                client.Send(message);
+                try
+                {
 
-                MessageBox.Show("Email sent!", "SUCCESS!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    client.Connect("smtp.gmail.com", 465, true);
 
+                    //authentication of sender (email tou apostolea, o kodikos tou email tou apostolea)
+                    //client.Authenticate("giorgos14kyperounta@gmail.com", "96849547");
+                    client.Send(message);
+
+                    MessageBox.Show("Email sent!", "SUCCESS!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+                finally
+                {
+                    client.Disconnect(true);
+
+                    client.Dispose();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
 
-            }
-            finally
-            {
-                client.Disconnect(true);
+            
 
-                client.Dispose();
-            }
+            
         }
 
         private void exitButton_Click(object sender, EventArgs e)
