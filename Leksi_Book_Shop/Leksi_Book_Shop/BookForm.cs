@@ -16,32 +16,21 @@ namespace Leksi_Book_Shop
     {
         OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
-
+        public List<Book> BooksList=new List<Book>();
 
         public BookForm()
         {
             InitializeComponent();
         }
 
-        private void closeBookListButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-      //  
         private void BookForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
             this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
-
-            
             conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
-
-
-            
             command.Connection = conn;
             command.CommandText = "SELECT * FROM BOOKS";
-
+            initializeList();
         }
 
         void fillGrid()
@@ -52,16 +41,13 @@ namespace Leksi_Book_Shop
             da.Fill(dt);
             bookDataGridView.DataSource = dt;
             conn.Close();
-           /* fNAMETextBox.Text = "";
-            lNAMETextBox.Text = "";
-            pHONETextBox.Text = "";
-            eMAILTextBox.Text = "";
-            aDDRESSTextBox.Text = "";
-            cLIENT_IDTextBox.Text = "";
-           */
+            iSBNTextBox.Text = "";
+            aUTHORSTextBox.Text = "";
+            pUBLISHERSTextBox.Text = "";
+            tITLETextBox.Text = "";
+            pYEARTextBox.Text = "";
+            pRICETextBox.Text = "";
         }
-
-
         private void updateButton_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -71,7 +57,6 @@ namespace Leksi_Book_Shop
             MessageBox.Show("Record UPDATED");
             fillGrid();
         }
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -85,6 +70,22 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record ADDED");
             fillGrid();
+        }
+
+        public void initializeList()
+        {
+            BooksList.Clear();
+            for (int i = 0; i < bOOKSBindingSource.Count; i++)
+            {
+                Book book = new Book();
+                book.ISBN = int.Parse(bookDataGridView.Rows[i].Cells[0].Value.ToString());
+                book.Authors = bookDataGridView.Rows[i].Cells[1].Value.ToString();
+                book.Publishers = bookDataGridView.Rows[i].Cells[2].Value.ToString();
+                book.Title = bookDataGridView.Rows[i].Cells[3].Value.ToString();
+                book.Pyear = int.Parse(bookDataGridView.Rows[i].Cells[4].Value.ToString());
+                book.Price = double.Parse(bookDataGridView.Rows[i].Cells[5].Value.ToString());
+                BooksList.Add(book);
+            }
         }
     }
 }

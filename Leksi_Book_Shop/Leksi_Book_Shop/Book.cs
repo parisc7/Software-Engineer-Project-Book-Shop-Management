@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Leksi_Book_Shop
 {
-    internal class Books
+    public class Book
     {
         public int ISBN { get; set; }
         public string Authors { get; set; }
         public string Publishers { get; set; }
         public string Title { get; set; }
         public int Pyear { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
 
 
-        public Books(int isbn, string authors, string publishers, string title, int pyear, int price)
+        public Book(int isbn, string authors, string publishers, string title, int pyear, int price)
         {
             ISBN = isbn;
             Authors = authors;
@@ -26,6 +26,6 @@ namespace Leksi_Book_Shop
             Price = price;
         }
 
-        public Books() { }
+        public Book() { }
     }
 }

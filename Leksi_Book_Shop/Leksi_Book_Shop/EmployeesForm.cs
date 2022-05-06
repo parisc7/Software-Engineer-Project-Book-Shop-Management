@@ -20,9 +20,7 @@ namespace Leksi_Book_Shop
 
         public EmployeesForm()
         {
-
-            InitializeComponent();
-           
+            InitializeComponent();  
         }
 
         void fillGrid()
