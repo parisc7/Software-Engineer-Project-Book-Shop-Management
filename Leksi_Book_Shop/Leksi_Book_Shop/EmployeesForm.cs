@@ -37,6 +37,7 @@ namespace Leksi_Book_Shop
             this.Hide();
             TimeTableForm time = new TimeTableForm(curemployee);
             time.ShowDialog();
+            this.Show();
         }       
         
         private void EmployeesForm_Load(object sender, EventArgs e)
