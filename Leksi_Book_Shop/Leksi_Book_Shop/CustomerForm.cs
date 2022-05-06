@@ -25,15 +25,7 @@ namespace Leksi_Book_Shop
         }
 
 
-        private void CustomerForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.CLIENTS' table. You can move, or remove it, as needed.
-            this.cLIENTSTableAdapter.Fill(this.lexi_BookshopDataSet.CLIENTS);
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
-            command.Connection = conn;
-            command.CommandText = "SELECT * FROM CLIENTS";
-            initializeList();
-        }
+       
 
         void fillGrid()
         {
@@ -51,7 +43,15 @@ namespace Leksi_Book_Shop
             cLIENT_IDTextBox.Text = "";
             pOINTSTextBox.Text = "";
         }
-
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.CLIENTS' table. You can move, or remove it, as needed.
+            this.cLIENTSTableAdapter.Fill(this.lexi_BookshopDataSet.CLIENTS);
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            command.Connection = conn;
+            command.CommandText = "SELECT * FROM CLIENTS";
+            initializeList();
+        }
         private void updateButton_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer(int.Parse(cLIENT_IDTextBox.ToString()), fIRSTNAMETextBox.Text, lASTNAMETextBox.Text,
@@ -91,7 +91,7 @@ namespace Leksi_Book_Shop
         public void update(Customer customer)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FIRSTNAME='" + customer.Firstname+ "',LASTNAME='" + customer.Lastname
+            OleDbCommand cmd = new OleDbCommand("UPDATE CLIENTS SET FIRSTNAME='" + customer.Firstname+ "',LASTNAME='" + customer.Lastname
                                                 + "',EMAIL= '" + customer.Email+ "',PHONE=" + customer.Phone + ",ADDRESS='" + customer.Address 
                                                 + ",POINTS=" + customer.Points + "where CLIENT_ID= " + customer.Customer_id+ " ", conn);
             cmd.ExecuteNonQuery();
@@ -103,7 +103,7 @@ namespace Leksi_Book_Shop
         public void initializeList()
         {
             CustomerList.Clear();
-            for (int i = 0; i < eMPLOYEESBindingSource.Count; i++)
+            for (int i = 0; i < cLIENTSBindingSource.Count; i++)
             {
                 Customer customer= new Customer();
                 customer.Customer_id= int.Parse(customerDataGridView.Rows[i].Cells[0].Value.ToString());

@@ -23,6 +23,22 @@ namespace Leksi_Book_Shop
             InitializeComponent();  
         }
 
+        private void timeTableButton_Click(object sender, EventArgs e)
+        {
+            Employee curemployee = new Employee();
+            foreach (var employees in EmployeesList)
+            {
+                if (employees.Employee_id == int.Parse(eMPLOYEE_IDTextBox.Text))
+                {
+                    curemployee.Copy(employees);
+                    break;
+                }
+            }
+            this.Hide();
+            TimeTableForm time = new TimeTableForm(curemployee);
+            time.ShowDialog();
+        }
+
         void fillGrid()
         {
             conn.Open();
@@ -45,14 +61,8 @@ namespace Leksi_Book_Shop
             this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
-            command.CommandText = "SELECT * FROM CLIENTS";
+            command.CommandText = "SELECT * FROM EMPLOYEES";
             initializeList();
-        }
-
-        private void timeTableButton_Click(object sender, EventArgs e)
-        {
-            int employee_Id=0;
-            TimeTableForm time = new TimeTableForm(employee_Id);
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -69,7 +79,7 @@ namespace Leksi_Book_Shop
         private void deleteButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("DELETE FROM CLIENTS WHERE CLIENT_ID=" + eMPLOYEE_IDTextBox + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM EMPLOYEES WHERE CLIENT_ID=" + eMPLOYEE_IDTextBox + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record DELETED");
@@ -80,7 +90,7 @@ namespace Leksi_Book_Shop
         private void updateButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FIRSTNAME'" + fIRSTNAMETextBox.Text + "',LASTNAME='" + lASTNAMETextBox.Text + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='" + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("UPDATE EMPLOYEES SET FIRSTNAME'" + fIRSTNAMETextBox.Text + "',LASTNAME='" + lASTNAMETextBox.Text + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='" + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record UPDATED");

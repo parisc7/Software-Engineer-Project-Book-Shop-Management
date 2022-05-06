@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using USB_Barcode_Scanner;
 
 namespace Leksi_Book_Shop
 {
@@ -19,6 +20,12 @@ namespace Leksi_Book_Shop
 
         public MainForm(bool admin,Employee employee)
         {
+            customers.Show();
+            customers.Hide();
+            books.Show();
+            books.Hide();
+            employees.Show();
+            employees.Hide();
             InitializeComponent();
             curent.Copy(employee);
             if (admin== false)
@@ -93,15 +100,17 @@ namespace Leksi_Book_Shop
         {
             foreach (var customer in customers.CustomerList)
             {
-                if (customer.Phone == int.Parse(customerTxtBox.ToString()))
+                if (customer.Phone == int.Parse(customerTxtBox.Text))
                 {
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text =$"{customer.Points}";
+                    break;
                 }
-                else if (customer.Customer_id == int.Parse(customerTxtBox.ToString()))
+                else if (customer.Customer_id == int.Parse(customerTxtBox.Text))
                 {
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text = $"{customer.Points}";
+                    break;
                 }
             }
         }

@@ -39,24 +39,27 @@ namespace Leksi_Book_Shop
                     exist = true;
                 }
             }
-           
-            foreach (var employee in employees.EmployeesList)
+            else
             {
-                if (employee.Username == usernameTxt.Text)
+                foreach (var employee in employees.EmployeesList)
                 {
-                    if (employee.Password == passwordTxt.Text)
+                    if (employee.Username == usernameTxt.Text)
                     {
-                        current.Copy(employee);
-                        Admin = false;
-                        exist = true;
-                        break;
+                        if (employee.Password == passwordTxt.Text)
+                        {
+                            current.Copy(employee);
+                            Admin = false;
+                            exist = true;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        exist = false;
                     }
                 }
-                else
-                {
-                    exist = false;
-                }
-            }
+            }          
+            
 
             if (exist)
             {

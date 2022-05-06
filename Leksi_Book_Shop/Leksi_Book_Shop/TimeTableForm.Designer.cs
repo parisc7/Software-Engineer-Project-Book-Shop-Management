@@ -33,8 +33,6 @@
             System.Windows.Forms.Label fNAMELabel;
             System.Windows.Forms.Label lNAMELabel;
             System.Windows.Forms.Label pHONELabel;
-            System.Windows.Forms.Label uSERNAMELabel;
-            System.Windows.Forms.Label pASSWORDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeTableForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
             this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
@@ -43,8 +41,6 @@
             this.fNAMETextBox = new System.Windows.Forms.TextBox();
             this.lNAMETextBox = new System.Windows.Forms.TextBox();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
-            this.uSERNAMETextBox = new System.Windows.Forms.TextBox();
-            this.pASSWORDTextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
             this.lOGINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,8 +53,6 @@
             fNAMELabel = new System.Windows.Forms.Label();
             lNAMELabel = new System.Windows.Forms.Label();
             pHONELabel = new System.Windows.Forms.Label();
-            uSERNAMELabel = new System.Windows.Forms.Label();
-            pASSWORDLabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
@@ -82,7 +76,7 @@
             fNAMELabel.Location = new System.Drawing.Point(25, 229);
             fNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fNAMELabel.Name = "fNAMELabel";
-            fNAMELabel.Size = new System.Drawing.Size(208, 43);
+            fNAMELabel.Size = new System.Drawing.Size(166, 34);
             fNAMELabel.TabIndex = 34;
             fNAMELabel.Text = "FIRSTNAME:";
             // 
@@ -92,7 +86,7 @@
             lNAMELabel.Location = new System.Drawing.Point(25, 299);
             lNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lNAMELabel.Name = "lNAMELabel";
-            lNAMELabel.Size = new System.Drawing.Size(190, 43);
+            lNAMELabel.Size = new System.Drawing.Size(152, 34);
             lNAMELabel.TabIndex = 36;
             lNAMELabel.Text = "SURNAME:";
             // 
@@ -106,26 +100,6 @@
             pHONELabel.TabIndex = 38;
             pHONELabel.Text = "PHONE:";
             // 
-            // uSERNAMELabel
-            // 
-            uSERNAMELabel.AutoSize = true;
-            uSERNAMELabel.Location = new System.Drawing.Point(25, 441);
-            uSERNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            uSERNAMELabel.Name = "uSERNAMELabel";
-            uSERNAMELabel.Size = new System.Drawing.Size(167, 34);
-            uSERNAMELabel.TabIndex = 40;
-            uSERNAMELabel.Text = "USERNAME:";
-            // 
-            // pASSWORDLabel
-            // 
-            pASSWORDLabel.AutoSize = true;
-            pASSWORDLabel.Location = new System.Drawing.Point(25, 522);
-            pASSWORDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            pASSWORDLabel.Name = "pASSWORDLabel";
-            pASSWORDLabel.Size = new System.Drawing.Size(177, 34);
-            pASSWORDLabel.TabIndex = 42;
-            pASSWORDLabel.Text = "PASSWORD:";
-            // 
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
@@ -137,10 +111,6 @@
             this.bookListPanel.Controls.Add(this.lNAMETextBox);
             this.bookListPanel.Controls.Add(pHONELabel);
             this.bookListPanel.Controls.Add(this.pHONETextBox);
-            this.bookListPanel.Controls.Add(uSERNAMELabel);
-            this.bookListPanel.Controls.Add(this.uSERNAMETextBox);
-            this.bookListPanel.Controls.Add(pASSWORDLabel);
-            this.bookListPanel.Controls.Add(this.pASSWORDTextBox);
             this.bookListPanel.Controls.Add(this.closeButton);
             this.bookListPanel.Controls.Add(this.customerDataGridView);
             this.bookListPanel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,28 +173,6 @@
             this.pHONETextBox.ReadOnly = true;
             this.pHONETextBox.Size = new System.Drawing.Size(259, 41);
             this.pHONETextBox.TabIndex = 39;
-            // 
-            // uSERNAMETextBox
-            // 
-            this.uSERNAMETextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
-            this.uSERNAMETextBox.Location = new System.Drawing.Point(244, 438);
-            this.uSERNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.uSERNAMETextBox.Name = "uSERNAMETextBox";
-            this.uSERNAMETextBox.ReadOnly = true;
-            this.uSERNAMETextBox.Size = new System.Drawing.Size(259, 41);
-            this.uSERNAMETextBox.TabIndex = 41;
-            // 
-            // pASSWORDTextBox
-            // 
-            this.pASSWORDTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.pASSWORDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PASSWORD", true));
-            this.pASSWORDTextBox.Location = new System.Drawing.Point(244, 519);
-            this.pASSWORDTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.pASSWORDTextBox.Name = "pASSWORDTextBox";
-            this.pASSWORDTextBox.ReadOnly = true;
-            this.pASSWORDTextBox.Size = new System.Drawing.Size(259, 41);
-            this.pASSWORDTextBox.TabIndex = 43;
             // 
             // closeButton
             // 
@@ -334,8 +282,6 @@
         private System.Windows.Forms.TextBox fNAMETextBox;
         private System.Windows.Forms.TextBox lNAMETextBox;
         private System.Windows.Forms.TextBox pHONETextBox;
-        private System.Windows.Forms.TextBox uSERNAMETextBox;
-        private System.Windows.Forms.TextBox pASSWORDTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn lOGINDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lOGOUTDataGridViewTextBoxColumn;
     }
