@@ -18,8 +18,6 @@ namespace Leksi_Book_Shop
         EmployeesForm employees= new EmployeesForm();
         Employee curent=new Employee();
        
-       
-
         public MainForm(bool admin,Employee employee)
         {
             customers.Show();
@@ -29,23 +27,21 @@ namespace Leksi_Book_Shop
             employees.Show();
             employees.Hide();
             InitializeComponent();
-            BarcodeScanner scanner = new BarcodeScanner(textBox1);
+            BarcodeScanner scanner = new BarcodeScanner(barcodeTxtBox);
             scanner.BarcodeScanned += Scanner_BarcodeScanned;  
             curent.Copy(employee);
             if (admin== false)
             {
                 employeesButton.Visible = false;
             }
-            
-
         }
 
         private void Scanner_BarcodeScanned(object sender, BarcodeScannerEventArgs e)
         {
-            textBox1.Text=e.Barcode;
+            barcodeTxtBox.Text=e.Barcode;
             foreach (var book in books.BooksList)
             {
-                if (book.ISBN == int.Parse(textBox1.Text))
+                if (book.ISBN == int.Parse(barcodeTxtBox.Text))
                 {
                     
                     break;

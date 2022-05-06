@@ -29,40 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.exitButton = new System.Windows.Forms.Button();
             this.sendButton = new System.Windows.Forms.Button();
             this.mailTxtBox = new System.Windows.Forms.TextBox();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // mainPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
-            this.panel1.Controls.Add(this.exitButton);
-            this.panel1.Controls.Add(this.sendButton);
-            this.panel1.Controls.Add(this.mailTxtBox);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(926, 535);
-            this.panel1.TabIndex = 0;
-            // 
-            // sendButton
-            // 
-            this.sendButton.Location = new System.Drawing.Point(751, 446);
-            this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(137, 42);
-            this.sendButton.TabIndex = 3;
-            this.sendButton.Text = "&SEND >";
-            this.sendButton.UseVisualStyleBackColor = true;
-            // 
-            // mailTxtBox
-            // 
-            this.mailTxtBox.Location = new System.Drawing.Point(33, 61);
-            this.mailTxtBox.Multiline = true;
-            this.mailTxtBox.Name = "mailTxtBox";
-            this.mailTxtBox.Size = new System.Drawing.Size(855, 359);
-            this.mailTxtBox.TabIndex = 2;
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.mainPanel.Controls.Add(this.exitButton);
+            this.mainPanel.Controls.Add(this.sendButton);
+            this.mainPanel.Controls.Add(this.mailTxtBox);
+            this.mainPanel.Location = new System.Drawing.Point(13, 13);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(926, 535);
+            this.mainPanel.TabIndex = 0;
             // 
             // exitButton
             // 
@@ -74,28 +57,46 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // sendButton
+            // 
+            this.sendButton.Location = new System.Drawing.Point(751, 446);
+            this.sendButton.Name = "sendButton";
+            this.sendButton.Size = new System.Drawing.Size(137, 42);
+            this.sendButton.TabIndex = 3;
+            this.sendButton.Text = "&SEND >";
+            this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
+            // 
+            // mailTxtBox
+            // 
+            this.mailTxtBox.Location = new System.Drawing.Point(33, 61);
+            this.mailTxtBox.Multiline = true;
+            this.mailTxtBox.Name = "mailTxtBox";
+            this.mailTxtBox.Size = new System.Drawing.Size(855, 359);
+            this.mailTxtBox.TabIndex = 2;
+            // 
             // MailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(29)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(951, 560);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.mainPanel);
             this.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MailForm";
             this.Text = "MailForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.TextBox mailTxtBox;
