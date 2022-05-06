@@ -28,7 +28,7 @@ namespace Leksi_Book_Shop
         private void sendButton_Click(object sender, EventArgs e)
         {
             //sender (onoma pou emfanizi ,mail pou stelni)
-            //message.From.Add(new MailboxAddress("Βιβλιοπωλείο λέξη", "giorgos14kyperounta@gmail.com"));
+            //message.From.Add(new MailboxAddress("Βιβλιοπωλείο λέξη", " "));
             foreach(var customer in customer.CustomerList)
             {
                 message.To.Add(MailboxAddress.Parse(customer.Email));
@@ -43,7 +43,7 @@ namespace Leksi_Book_Shop
                     //gia na boresi na kani enable ton paroxeapou stelni 
                     client.Connect("smtp.gmail.com", 465, true);
                     //authentication of sender (email tou apostolea, o kodikos tou email tou apostolea)
-                    //client.Authenticate("giorgos14kyperounta@gmail.com", "96849547");
+                    //client.Authenticate(" ", " ");
                     client.Send(message);
                     MessageBox.Show("Email sent!", "SUCCESS!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }

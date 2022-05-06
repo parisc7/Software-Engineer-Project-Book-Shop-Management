@@ -50,14 +50,14 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.bookDataGridView = new System.Windows.Forms.DataGridView();
-            this.bOOKSTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.BOOKSTableAdapter();
-            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aUTHORSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pUBLISHERSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pYEARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bOOKSTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.BOOKSTableAdapter();
+            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             iSBNLabel = new System.Windows.Forms.Label();
             aUTHORSLabel = new System.Windows.Forms.Label();
             pUBLISHERSLabel = new System.Windows.Forms.Label();
@@ -258,6 +258,7 @@
             this.deleteButton.TabIndex = 37;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // closeButton
             // 
@@ -292,21 +293,6 @@
             this.bookDataGridView.RowTemplate.Height = 24;
             this.bookDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.bookDataGridView.TabIndex = 31;
-            // 
-            // bOOKSTableAdapter
-            // 
-            this.bOOKSTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BOOKSTableAdapter = this.bOOKSTableAdapter;
-            this.tableAdapterManager.CLIENTSTableAdapter = null;
-            this.tableAdapterManager.EMPLOYEESTableAdapter = null;
-            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
-            this.tableAdapterManager.ORDERTableAdapter = null;
-            this.tableAdapterManager.TIMETABLETableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // iSBNDataGridViewTextBoxColumn
             // 
@@ -355,6 +341,21 @@
             this.pRICEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
             this.pRICEDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bOOKSTableAdapter
+            // 
+            this.bOOKSTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BOOKSTableAdapter = this.bOOKSTableAdapter;
+            this.tableAdapterManager.CLIENTSTableAdapter = null;
+            this.tableAdapterManager.EMPLOYEESTableAdapter = null;
+            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
+            this.tableAdapterManager.ORDERTableAdapter = null;
+            this.tableAdapterManager.TIMETABLETableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // BookForm
             // 

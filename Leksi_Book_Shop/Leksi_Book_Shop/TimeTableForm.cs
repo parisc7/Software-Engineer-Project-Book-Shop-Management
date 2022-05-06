@@ -22,21 +22,21 @@ namespace Leksi_Book_Shop
         }
 
         private void TimeTableForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
-            this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
-            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
-            this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
+        { 
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.TIMETABLE' table. You can move, or remove it, as needed.
             this.tIMETABLETableAdapter.Fill(this.lexi_BookshopDataSet.TIMETABLE);
 
+        }
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public void display()
         {
             eMPLOYEE_IDTextBox.Text = Current.Employee_id.ToString();
-            fNAMETextBox.Text=Current.Firstname.ToString();
-            lNAMETextBox.Text=Current.Lastname.ToString();
+            fIRSTNAMETextBox.Text=Current.Firstname.ToString();
+            
             pHONETextBox.Text=Current.Phone.ToString();
 
         }

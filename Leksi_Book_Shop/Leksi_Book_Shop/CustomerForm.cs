@@ -24,9 +24,6 @@ namespace Leksi_Book_Shop
             InitializeComponent();
         }
 
-
-       
-
         void fillGrid()
         {
             conn.Open();
@@ -55,19 +52,20 @@ namespace Leksi_Book_Shop
         private void updateButton_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer(int.Parse(cLIENT_IDTextBox.ToString()), fIRSTNAMETextBox.Text, lASTNAMETextBox.Text,
-                eMAILTextBox.Text, int.Parse(pHONETextBox.ToString()), aDDRESSTextBox.Text, int.Parse(pOINTSTextBox.ToString()));
-            update(customer);
-            MessageBox.Show("Record UPDATED");
+                                             eMAILTextBox.Text, int.Parse(pHONETextBox.ToString()), 
+                                             aDDRESSTextBox.Text, int.Parse(pOINTSTextBox.ToString()));
+            update(customer); 
+            MessageBox.Show("Record UPDATED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 
          private void addButton_Click(object sender, EventArgs e)
          {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO CLIENTS (FIRSTNAME,LASTNAME,EMAIL,PHONE,ADDRESS,POINTS) values ('" + fIRSTNAMETextBox.Text + "','"   + lASTNAMETextBox.Text + "','" + eMAILTextBox.Text + "','" + pHONETextBox.Text + "','" + aDDRESSTextBox.Text +  "',0)", conn);
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO CLIENTS (FIRSTNAME,LASTNAME,EMAIL,PHONE,ADDRESS,POINTS) VALUES ('" + fIRSTNAMETextBox.Text + "','"   + lASTNAMETextBox.Text + "','" + eMAILTextBox.Text + "','" + pHONETextBox.Text + "','" + aDDRESSTextBox.Text +  "',0)", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Record ADDED");
+            MessageBox.Show("Record ADDED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
             initializeList();
          }
@@ -75,10 +73,10 @@ namespace Leksi_Book_Shop
         private void deleteButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("DELETE FROM CLIENTS WHERE CLIENT_ID=" + cLIENT_IDTextBox+" ", conn);
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM CLIENTS WHERE CLIENT_ID=" + cLIENT_IDTextBox.Text+" ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Record DELETED");
+            MessageBox.Show("Record DELETED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
             initializeList();
         }
@@ -93,7 +91,7 @@ namespace Leksi_Book_Shop
             conn.Open();
             OleDbCommand cmd = new OleDbCommand("UPDATE CLIENTS SET FIRSTNAME='" + customer.Firstname+ "',LASTNAME='" + customer.Lastname
                                                 + "',EMAIL= '" + customer.Email+ "',PHONE=" + customer.Phone + ",ADDRESS='" + customer.Address 
-                                                + ",POINTS=" + customer.Points + "where CLIENT_ID= " + customer.Customer_id+ " ", conn);
+                                                + ",POINTS=" + customer.Points + "WHERE CLIENT_ID= " + customer.Customer_id+ " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             fillGrid();

@@ -30,16 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label eMPLOYEE_IDLabel;
-            System.Windows.Forms.Label fNAMELabel;
-            System.Windows.Forms.Label lNAMELabel;
             System.Windows.Forms.Label pHONELabel;
+            System.Windows.Forms.Label fIRSTNAMELabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeTableForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
-            this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
+            this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
-            this.fNAMETextBox = new System.Windows.Forms.TextBox();
-            this.lNAMETextBox = new System.Windows.Forms.TextBox();
+            this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
@@ -50,9 +48,8 @@
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
-            fNAMELabel = new System.Windows.Forms.Label();
-            lNAMELabel = new System.Windows.Forms.Label();
             pHONELabel = new System.Windows.Forms.Label();
+            fIRSTNAMELabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
@@ -70,26 +67,6 @@
             eMPLOYEE_IDLabel.TabIndex = 32;
             eMPLOYEE_IDLabel.Text = "EMPLOYEE ID:";
             // 
-            // fNAMELabel
-            // 
-            fNAMELabel.AutoSize = true;
-            fNAMELabel.Location = new System.Drawing.Point(25, 229);
-            fNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            fNAMELabel.Name = "fNAMELabel";
-            fNAMELabel.Size = new System.Drawing.Size(166, 34);
-            fNAMELabel.TabIndex = 34;
-            fNAMELabel.Text = "FIRSTNAME:";
-            // 
-            // lNAMELabel
-            // 
-            lNAMELabel.AutoSize = true;
-            lNAMELabel.Location = new System.Drawing.Point(25, 299);
-            lNAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lNAMELabel.Name = "lNAMELabel";
-            lNAMELabel.Size = new System.Drawing.Size(152, 34);
-            lNAMELabel.TabIndex = 36;
-            lNAMELabel.Text = "SURNAME:";
-            // 
             // pHONELabel
             // 
             pHONELabel.AutoSize = true;
@@ -100,15 +77,22 @@
             pHONELabel.TabIndex = 38;
             pHONELabel.Text = "PHONE:";
             // 
+            // fIRSTNAMELabel
+            // 
+            fIRSTNAMELabel.AutoSize = true;
+            fIRSTNAMELabel.Location = new System.Drawing.Point(25, 241);
+            fIRSTNAMELabel.Name = "fIRSTNAMELabel";
+            fIRSTNAMELabel.Size = new System.Drawing.Size(166, 34);
+            fIRSTNAMELabel.TabIndex = 39;
+            fIRSTNAMELabel.Text = "FIRSTNAME:";
+            // 
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.bookListPanel.Controls.Add(fIRSTNAMELabel);
+            this.bookListPanel.Controls.Add(this.fIRSTNAMETextBox);
             this.bookListPanel.Controls.Add(eMPLOYEE_IDLabel);
             this.bookListPanel.Controls.Add(this.eMPLOYEE_IDTextBox);
-            this.bookListPanel.Controls.Add(fNAMELabel);
-            this.bookListPanel.Controls.Add(this.fNAMETextBox);
-            this.bookListPanel.Controls.Add(lNAMELabel);
-            this.bookListPanel.Controls.Add(this.lNAMETextBox);
             this.bookListPanel.Controls.Add(pHONELabel);
             this.bookListPanel.Controls.Add(this.pHONETextBox);
             this.bookListPanel.Controls.Add(this.closeButton);
@@ -117,19 +101,16 @@
             this.bookListPanel.Location = new System.Drawing.Point(12, 11);
             this.bookListPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bookListPanel.Name = "bookListPanel";
-            this.bookListPanel.Size = new System.Drawing.Size(1005, 794);
+            this.bookListPanel.Size = new System.Drawing.Size(1005, 797);
             this.bookListPanel.TabIndex = 4;
             // 
-            // eMPLOYEE_IDTextBox
+            // fIRSTNAMETextBox
             // 
-            this.eMPLOYEE_IDTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.eMPLOYEE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "EMPLOYEE_ID", true));
-            this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(244, 154);
-            this.eMPLOYEE_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.eMPLOYEE_IDTextBox.Name = "eMPLOYEE_IDTextBox";
-            this.eMPLOYEE_IDTextBox.ReadOnly = true;
-            this.eMPLOYEE_IDTextBox.Size = new System.Drawing.Size(259, 41);
-            this.eMPLOYEE_IDTextBox.TabIndex = 33;
+            this.fIRSTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FIRSTNAME", true));
+            this.fIRSTNAMETextBox.Location = new System.Drawing.Point(244, 238);
+            this.fIRSTNAMETextBox.Name = "fIRSTNAMETextBox";
+            this.fIRSTNAMETextBox.Size = new System.Drawing.Size(259, 41);
+            this.fIRSTNAMETextBox.TabIndex = 40;
             // 
             // eMPLOYEESBindingSource
             // 
@@ -141,27 +122,16 @@
             this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
             this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fNAMETextBox
+            // eMPLOYEE_IDTextBox
             // 
-            this.fNAMETextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FNAME", true));
-            this.fNAMETextBox.Location = new System.Drawing.Point(244, 225);
-            this.fNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.fNAMETextBox.Name = "fNAMETextBox";
-            this.fNAMETextBox.ReadOnly = true;
-            this.fNAMETextBox.Size = new System.Drawing.Size(259, 41);
-            this.fNAMETextBox.TabIndex = 35;
-            // 
-            // lNAMETextBox
-            // 
-            this.lNAMETextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.lNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LNAME", true));
-            this.lNAMETextBox.Location = new System.Drawing.Point(244, 295);
-            this.lNAMETextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.lNAMETextBox.Name = "lNAMETextBox";
-            this.lNAMETextBox.ReadOnly = true;
-            this.lNAMETextBox.Size = new System.Drawing.Size(259, 41);
-            this.lNAMETextBox.TabIndex = 37;
+            this.eMPLOYEE_IDTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.eMPLOYEE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "EMPLOYEE_ID", true));
+            this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(244, 154);
+            this.eMPLOYEE_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.eMPLOYEE_IDTextBox.Name = "eMPLOYEE_IDTextBox";
+            this.eMPLOYEE_IDTextBox.ReadOnly = true;
+            this.eMPLOYEE_IDTextBox.Size = new System.Drawing.Size(259, 41);
+            this.eMPLOYEE_IDTextBox.TabIndex = 33;
             // 
             // pHONETextBox
             // 
@@ -185,6 +155,7 @@
             this.closeButton.TabIndex = 32;
             this.closeButton.Text = "&Close";
             this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // customerDataGridView
             // 
@@ -279,10 +250,9 @@
         private Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter eMPLOYEESTableAdapter;
         private System.Windows.Forms.BindingSource eMPLOYEESBindingSource;
         private System.Windows.Forms.TextBox eMPLOYEE_IDTextBox;
-        private System.Windows.Forms.TextBox fNAMETextBox;
-        private System.Windows.Forms.TextBox lNAMETextBox;
         private System.Windows.Forms.TextBox pHONETextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn lOGINDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lOGOUTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox fIRSTNAMETextBox;
     }
 }

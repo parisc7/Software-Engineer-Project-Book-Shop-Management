@@ -37,23 +37,7 @@ namespace Leksi_Book_Shop
             this.Hide();
             TimeTableForm time = new TimeTableForm(curemployee);
             time.ShowDialog();
-        }
-
-        void fillGrid()
-        {
-            conn.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID", conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            eMPLOYEESBindingSource.DataSource = dt; 
-            conn.Close();
-            fIRSTNAMETextBox.Text = "";
-            lASTNAMETextBox.Text = "";
-            pHONETextBox.Text = "";
-            pASSWORDTextBox.Text = "";
-            uSERNAMETextBox.Text = "";
-            eMPLOYEE_IDTextBox.Text = "";
-        }
+        }       
         
         private void EmployeesForm_Load(object sender, EventArgs e)
         {
@@ -68,10 +52,12 @@ namespace Leksi_Book_Shop
         private void addButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (FIRSTNAME,LASTNAME,PHONE,USERNAME,PASSWORD) values ('" + fIRSTNAMETextBox.Text + "','" + lASTNAMETextBox.Text + "'," + pHONETextBox.Text + ",'" + uSERNAMETextBox.Text + "','" + pASSWORDTextBox.Text + "')", conn);
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (FIRSTNAME,LASTNAME,PHONE,USERNAME,PASSWORD) VALUES ('" 
+                                                + fIRSTNAMETextBox.Text + "','" + lASTNAMETextBox.Text + "'," + pHONETextBox.Text 
+                                                + ",'" + uSERNAMETextBox.Text + "','" + pASSWORDTextBox.Text + "')", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Record ADDED");
+            MessageBox.Show("Record ADDED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
             initializeList();
         }
@@ -79,10 +65,10 @@ namespace Leksi_Book_Shop
         private void deleteButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("DELETE FROM EMPLOYEES WHERE CLIENT_ID=" + eMPLOYEE_IDTextBox + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM EMPLOYEES WHERE EMPLOYEE_ID=" + eMPLOYEE_IDTextBox.Text + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Record DELETED");
+            MessageBox.Show("Record DELETED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
             initializeList();
         }
@@ -90,10 +76,12 @@ namespace Leksi_Book_Shop
         private void updateButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE EMPLOYEES SET FIRSTNAME'" + fIRSTNAMETextBox.Text + "',LASTNAME='" + lASTNAMETextBox.Text + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='" + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("UPDATE EMPLOYEES SET FIRSTNAME='" + fIRSTNAMETextBox.Text + "',LASTNAME= '" + lASTNAMETextBox.Text 
+                                                + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='"
+                                                + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Record UPDATED");
+            MessageBox.Show("Record UPDATED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
             initializeList();
         }
@@ -102,7 +90,23 @@ namespace Leksi_Book_Shop
         {
             this.Close();
         }
-        
+
+        void fillGrid()
+        {
+            conn.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM EMPLOYEES ORDER BY EMPLOYEE_ID", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            eMPLOYEESBindingSource.DataSource = dt;
+            conn.Close();
+            fIRSTNAMETextBox.Text = "";
+            lASTNAMETextBox.Text = "";
+            pHONETextBox.Text = "";
+            pASSWORDTextBox.Text = "";
+            uSERNAMETextBox.Text = "";
+            eMPLOYEE_IDTextBox.Text = "";
+        }
+
         public void initializeList()
         {
             EmployeesList.Clear();

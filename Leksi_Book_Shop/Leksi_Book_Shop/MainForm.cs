@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using USB_Barcode_Scanner;
 
+
 namespace Leksi_Book_Shop
 {
     public partial class MainForm : Form
     {
+        
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
         EmployeesForm employees= new EmployeesForm();

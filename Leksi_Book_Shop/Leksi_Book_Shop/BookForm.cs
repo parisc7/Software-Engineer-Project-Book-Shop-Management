@@ -33,6 +33,49 @@ namespace Leksi_Book_Shop
             initializeList();
         }
 
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET AUTHORS'" + aUTHORSTextBox.Text + "',PUBLISHERS='" + pUBLISHERSTextBox.Text +
+                                                "',TITLE= '" + tITLETextBox.Text + "',PYEAR=" + pYEARTextBox.Text + ",PRICE=" + pRICETextBox.Text 
+                                                + "WHERE ISBN= " + iSBNTextBox.Text + " ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record UPDATED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fillGrid();
+            initializeList();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO BOOKS (AUTHORS,PUBLISHERS,TITLE,PYEAR,PRICE) VALUES ('" 
+                                                + aUTHORSTextBox.Text + "','" + pUBLISHERSTextBox.Text + "','" + tITLETextBox.Text 
+                                                + "'," + pYEARTextBox.Text + "," + pRICETextBox.Text + ")", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record ADDED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fillGrid();
+            initializeList();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM BOOKS WHERE ISBN=" + iSBNTextBox.Text + " ", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            MessageBox.Show("Record DELETED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            fillGrid();
+            initializeList();
+        }
+
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         void fillGrid()
         {
             conn.Open();
@@ -47,31 +90,6 @@ namespace Leksi_Book_Shop
             tITLETextBox.Text = "";
             pYEARTextBox.Text = "";
             pRICETextBox.Text = "";
-        }
-        private void updateButton_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-            OleDbCommand cmd = new OleDbCommand("Update BOOKS set  AUTHORS'" + aUTHORSTextBox.Text + ",PUBLISHERS=" + pUBLISHERSTextBox.Text + ",TITLE= " + tITLETextBox.Text + ",PYEAR=" + pUBLISHERSTextBox.Text + ",PRICE=" + pUBLISHERSTextBox.Text + "where ISBN= " + pRICETextBox.Text + " ", conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Record UPDATED");
-            fillGrid();
-            initializeList();
-        }
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-            OleDbCommand cmd = new OleDbCommand("insert into BOOKS (AUTHORS,,PUBLISHERS,TITLE,PYEAR,PRICE) values ('" +aUTHORSTextBox.Text + "','" + pUBLISHERSTextBox.Text + "','" + tITLETextBox.Text + "','" + pUBLISHERSTextBox.Text + "','" + pRICETextBox.Text + ")", conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Record ADDED");
-            fillGrid();
-            initializeList();
         }
 
         public void initializeList()
@@ -89,5 +107,6 @@ namespace Leksi_Book_Shop
                 BooksList.Add(book);
             }
         }
+
     }
 }
