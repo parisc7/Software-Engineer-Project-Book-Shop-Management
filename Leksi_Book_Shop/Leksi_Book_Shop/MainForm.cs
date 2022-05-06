@@ -95,7 +95,7 @@ namespace Leksi_Book_Shop
             {
                 if (book.ISBN == int.Parse(barcodeTxtBox.Text))
                 {
-
+                    //NA BENI DAME STO TABLE TOU ORDER
                     break;
                 }
 
@@ -104,17 +104,23 @@ namespace Leksi_Book_Shop
         }
         private void dailyTotalButton_Click(object sender, EventArgs e)
         {
-
+            //NA TIPONI SE ENAN NEON FORM TA TOTAL TIS IMERAS
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-
+            // NA DIAGRAFI POU TO ORDER TO SELECTED
         }
 
         private void payButton_Click(object sender, EventArgs e)
         {
-
+            orderNoTxtBox.Text = "";
+            customerTxtBox.Text = "";
+            nameSurnameTxttBox.Text = "";
+            pointsTxtBox.Text = "";
+            totalPriceLabel.Text = "";
+            //NA APOTHIKEUETE STO ORDERLIST TO ORDER 
+            // JE META NA KSANA GRAFI PANO TON TREXON ARITHMO TOUY ORDER SE AUKSOUSA SIRA FASI COUNTER
         }
         
         private void Times()
