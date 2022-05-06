@@ -63,6 +63,7 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record ADDED");
             fillGrid();
+            initializeList();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -73,6 +74,7 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record DELETED");
             fillGrid();
+            initializeList();
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -83,6 +85,7 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record UPDATED");
             fillGrid();
+            initializeList();
         }
 
         private void closeButton_Click(object sender, EventArgs e)

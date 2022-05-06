@@ -822,15 +822,17 @@ namespace Leksi_Book_Shop {
             
             private global::System.Data.DataColumn columnCLIENT_ID;
             
-            private global::System.Data.DataColumn columnFNAME;
-            
-            private global::System.Data.DataColumn columnLNAME;
-            
             private global::System.Data.DataColumn columnEMAIL;
             
             private global::System.Data.DataColumn columnPHONE;
             
             private global::System.Data.DataColumn columnADDRESS;
+            
+            private global::System.Data.DataColumn columnFIRSTNAME;
+            
+            private global::System.Data.DataColumn columnLASTNAME;
+            
+            private global::System.Data.DataColumn columnPOINTS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -875,22 +877,6 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FNAMEColumn {
-                get {
-                    return this.columnFNAME;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LNAMEColumn {
-                get {
-                    return this.columnLNAME;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn EMAILColumn {
                 get {
                     return this.columnEMAIL;
@@ -910,6 +896,30 @@ namespace Leksi_Book_Shop {
             public global::System.Data.DataColumn ADDRESSColumn {
                 get {
                     return this.columnADDRESS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FIRSTNAMEColumn {
+                get {
+                    return this.columnFIRSTNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LASTNAMEColumn {
+                get {
+                    return this.columnLASTNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn POINTSColumn {
+                get {
+                    return this.columnPOINTS;
                 }
             }
             
@@ -950,15 +960,16 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTSRow AddCLIENTSRow(string FNAME, string LNAME, string EMAIL, int PHONE, string ADDRESS) {
+            public CLIENTSRow AddCLIENTSRow(string EMAIL, int PHONE, string ADDRESS, string FIRSTNAME, string LASTNAME, int POINTS) {
                 CLIENTSRow rowCLIENTSRow = ((CLIENTSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        FNAME,
-                        LNAME,
                         EMAIL,
                         PHONE,
-                        ADDRESS};
+                        ADDRESS,
+                        FIRSTNAME,
+                        LASTNAME,
+                        POINTS};
                 rowCLIENTSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCLIENTSRow);
                 return rowCLIENTSRow;
@@ -989,11 +1000,12 @@ namespace Leksi_Book_Shop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnCLIENT_ID = base.Columns["CLIENT_ID"];
-                this.columnFNAME = base.Columns["FNAME"];
-                this.columnLNAME = base.Columns["LNAME"];
                 this.columnEMAIL = base.Columns["EMAIL"];
                 this.columnPHONE = base.Columns["PHONE"];
                 this.columnADDRESS = base.Columns["ADDRESS"];
+                this.columnFIRSTNAME = base.Columns["FIRSTNAME"];
+                this.columnLASTNAME = base.Columns["LASTNAME"];
+                this.columnPOINTS = base.Columns["POINTS"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1001,16 +1013,18 @@ namespace Leksi_Book_Shop {
             private void InitClass() {
                 this.columnCLIENT_ID = new global::System.Data.DataColumn("CLIENT_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCLIENT_ID);
-                this.columnFNAME = new global::System.Data.DataColumn("FNAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFNAME);
-                this.columnLNAME = new global::System.Data.DataColumn("LNAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLNAME);
                 this.columnEMAIL = new global::System.Data.DataColumn("EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEMAIL);
                 this.columnPHONE = new global::System.Data.DataColumn("PHONE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPHONE);
                 this.columnADDRESS = new global::System.Data.DataColumn("ADDRESS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnADDRESS);
+                this.columnFIRSTNAME = new global::System.Data.DataColumn("FIRSTNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFIRSTNAME);
+                this.columnLASTNAME = new global::System.Data.DataColumn("LASTNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLASTNAME);
+                this.columnPOINTS = new global::System.Data.DataColumn("POINTS", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOINTS);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCLIENT_ID}, true));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
@@ -1021,12 +1035,12 @@ namespace Leksi_Book_Shop {
                 this.columnCLIENT_ID.AutoIncrementSeed = 1;
                 this.columnCLIENT_ID.AllowDBNull = false;
                 this.columnCLIENT_ID.Unique = true;
-                this.columnFNAME.MaxLength = 20;
-                this.columnLNAME.MaxLength = 50;
                 this.columnEMAIL.Unique = true;
                 this.columnEMAIL.MaxLength = 50;
                 this.columnPHONE.Unique = true;
                 this.columnADDRESS.MaxLength = 50;
+                this.columnFIRSTNAME.MaxLength = 536870910;
+                this.columnLASTNAME.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2604,38 +2618,6 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string FNAME {
-                get {
-                    try {
-                        return ((string)(this[this.tableCLIENTS.FNAMEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FNAME\' in table \'CLIENTS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCLIENTS.FNAMEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LNAME {
-                get {
-                    try {
-                        return ((string)(this[this.tableCLIENTS.LNAMEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LNAME\' in table \'CLIENTS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCLIENTS.LNAMEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string EMAIL {
                 get {
                     try {
@@ -2684,26 +2666,50 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFNAMENull() {
-                return this.IsNull(this.tableCLIENTS.FNAMEColumn);
+            public string FIRSTNAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCLIENTS.FIRSTNAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FIRSTNAME\' in table \'CLIENTS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCLIENTS.FIRSTNAMEColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFNAMENull() {
-                this[this.tableCLIENTS.FNAMEColumn] = global::System.Convert.DBNull;
+            public string LASTNAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCLIENTS.LASTNAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LASTNAME\' in table \'CLIENTS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCLIENTS.LASTNAMEColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsLNAMENull() {
-                return this.IsNull(this.tableCLIENTS.LNAMEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetLNAMENull() {
-                this[this.tableCLIENTS.LNAMEColumn] = global::System.Convert.DBNull;
+            public int POINTS {
+                get {
+                    try {
+                        return ((int)(this[this.tableCLIENTS.POINTSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'POINTS\' in table \'CLIENTS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCLIENTS.POINTSColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2740,6 +2746,42 @@ namespace Leksi_Book_Shop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetADDRESSNull() {
                 this[this.tableCLIENTS.ADDRESSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFIRSTNAMENull() {
+                return this.IsNull(this.tableCLIENTS.FIRSTNAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFIRSTNAMENull() {
+                this[this.tableCLIENTS.FIRSTNAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLASTNAMENull() {
+                return this.IsNull(this.tableCLIENTS.LASTNAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLASTNAMENull() {
+                this[this.tableCLIENTS.LASTNAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPOINTSNull() {
+                return this.IsNull(this.tableCLIENTS.POINTSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPOINTSNull() {
+                this[this.tableCLIENTS.POINTSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4098,59 +4140,54 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "CLIENTS";
             tableMapping.ColumnMappings.Add("CLIENT_ID", "CLIENT_ID");
-            tableMapping.ColumnMappings.Add("FNAME", "FNAME");
-            tableMapping.ColumnMappings.Add("LNAME", "LNAME");
             tableMapping.ColumnMappings.Add("EMAIL", "EMAIL");
             tableMapping.ColumnMappings.Add("PHONE", "PHONE");
             tableMapping.ColumnMappings.Add("ADDRESS", "ADDRESS");
+            tableMapping.ColumnMappings.Add("FIRSTNAME", "FIRSTNAME");
+            tableMapping.ColumnMappings.Add("LASTNAME", "LASTNAME");
+            tableMapping.ColumnMappings.Add("POINTS", "POINTS");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `CLIENTS` WHERE ((`CLIENT_ID` = ?) AND ((? = 1 AND `FNAME` IS NULL) OR (`FNAME` = ?)) AND ((? = 1 AND `LNAME` IS NULL) OR (`LNAME` = ?)) AND ((? = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = ?)) AND ((? = 1 AND `PHONE` IS NULL) OR (`PHONE` = ?)) AND ((? = 1 AND `ADDRESS` IS NULL) OR (`ADDRESS` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `CLIENTS` WHERE ((`CLIENT_ID` = ?) AND ((? = 1 AND `PHONE` IS NULL) O" +
+                "R (`PHONE` = ?)) AND ((? = 1 AND `POINTS` IS NULL) OR (`POINTS` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CLIENT_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CLIENT_ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FNAME", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FNAME", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FNAME", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_LNAME", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LNAME", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_LNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LNAME", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_EMAIL", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_EMAIL", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_PHONE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PHONE", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PHONE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PHONE", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ADDRESS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ADDRESS", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_POINTS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "POINTS", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_POINTS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "POINTS", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `CLIENTS` (`CLIENT_ID`, `FNAME`, `LNAME`, `EMAIL`, `PHONE`, `ADDRESS`" +
-                ") VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `CLIENTS` (`CLIENT_ID`, `FIRSTNAME`, `LASTNAME`, `EMAIL`, `PHONE`, `A" +
+                "DDRESS`, `POINTS`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CLIENT_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CLIENT_ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FNAME", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LNAME", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EMAIL", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FIRSTNAME", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FIRSTNAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LASTNAME", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LASTNAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EMAIL", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PHONE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PHONE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ADDRESS", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ADDRESS", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("POINTS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "POINTS", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `CLIENTS` SET `CLIENT_ID` = ?, `FNAME` = ?, `LNAME` = ?, `EMAIL` = ?, `PHONE` = ?, `ADDRESS` = ? WHERE ((`CLIENT_ID` = ?) AND ((? = 1 AND `FNAME` IS NULL) OR (`FNAME` = ?)) AND ((? = 1 AND `LNAME` IS NULL) OR (`LNAME` = ?)) AND ((? = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = ?)) AND ((? = 1 AND `PHONE` IS NULL) OR (`PHONE` = ?)) AND ((? = 1 AND `ADDRESS` IS NULL) OR (`ADDRESS` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `CLIENTS` SET `CLIENT_ID` = ?, `FIRSTNAME` = ?, `LASTNAME` = ?, `EMAIL` = " +
+                "?, `PHONE` = ?, `ADDRESS` = ?, `POINTS` = ? WHERE ((`CLIENT_ID` = ?) AND ((? = 1" +
+                " AND `PHONE` IS NULL) OR (`PHONE` = ?)) AND ((? = 1 AND `POINTS` IS NULL) OR (`P" +
+                "OINTS` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CLIENT_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CLIENT_ID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FNAME", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LNAME", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EMAIL", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FIRSTNAME", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FIRSTNAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LASTNAME", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LASTNAME", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EMAIL", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PHONE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PHONE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ADDRESS", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ADDRESS", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("POINTS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "POINTS", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CLIENT_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CLIENT_ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FNAME", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FNAME", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FNAME", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_LNAME", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LNAME", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_LNAME", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LNAME", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_EMAIL", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_EMAIL", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EMAIL", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_PHONE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PHONE", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PHONE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PHONE", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ADDRESS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ADDRESS", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ADDRESS", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_POINTS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "POINTS", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_POINTS", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "POINTS", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4166,7 +4203,8 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CLIENT_ID, FNAME, LNAME, EMAIL, PHONE, ADDRESS FROM CLIENTS";
+            this._commandCollection[0].CommandText = "SELECT CLIENT_ID, FIRSTNAME, LASTNAME, EMAIL, PHONE, ADDRESS,  POINTS FROM CLIENT" +
+                "S";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4227,37 +4265,23 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CLIENT_ID, string Original_FNAME, string Original_LNAME, string Original_EMAIL, int Original_PHONE, string Original_ADDRESS) {
+        public virtual int Delete(int Original_CLIENT_ID, global::System.Nullable<int> Original_PHONE, global::System.Nullable<int> Original_POINTS) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CLIENT_ID));
-            if ((Original_FNAME == null)) {
-                throw new global::System.ArgumentNullException("Original_FNAME");
-            }
-            else {
+            if ((Original_PHONE.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FNAME));
-            }
-            if ((Original_LNAME == null)) {
-                throw new global::System.ArgumentNullException("Original_LNAME");
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PHONE.Value));
             }
             else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_POINTS.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_LNAME));
-            }
-            if ((Original_EMAIL == null)) {
-                throw new global::System.ArgumentNullException("Original_EMAIL");
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_POINTS.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_EMAIL));
-            }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_PHONE));
-            if ((Original_ADDRESS == null)) {
-                throw new global::System.ArgumentNullException("Original_ADDRESS");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_ADDRESS));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4279,19 +4303,19 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int CLIENT_ID, string FNAME, string LNAME, string EMAIL, int PHONE, string ADDRESS) {
+        public virtual int Insert(int CLIENT_ID, string FIRSTNAME, string LASTNAME, string EMAIL, global::System.Nullable<int> PHONE, string ADDRESS, global::System.Nullable<int> POINTS) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CLIENT_ID));
-            if ((FNAME == null)) {
-                throw new global::System.ArgumentNullException("FNAME");
+            if ((FIRSTNAME == null)) {
+                throw new global::System.ArgumentNullException("FIRSTNAME");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FNAME));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FIRSTNAME));
             }
-            if ((LNAME == null)) {
-                throw new global::System.ArgumentNullException("LNAME");
+            if ((LASTNAME == null)) {
+                throw new global::System.ArgumentNullException("LASTNAME");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LNAME));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LASTNAME));
             }
             if ((EMAIL == null)) {
                 throw new global::System.ArgumentNullException("EMAIL");
@@ -4299,12 +4323,23 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(EMAIL));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(PHONE));
+            if ((PHONE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(PHONE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((ADDRESS == null)) {
                 throw new global::System.ArgumentNullException("ADDRESS");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ADDRESS));
+            }
+            if ((POINTS.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(POINTS.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4326,19 +4361,19 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CLIENT_ID, string FNAME, string LNAME, string EMAIL, int PHONE, string ADDRESS, int Original_CLIENT_ID, string Original_FNAME, string Original_LNAME, string Original_EMAIL, int Original_PHONE, string Original_ADDRESS) {
+        public virtual int Update(int CLIENT_ID, string FIRSTNAME, string LASTNAME, string EMAIL, global::System.Nullable<int> PHONE, string ADDRESS, global::System.Nullable<int> POINTS, int Original_CLIENT_ID, global::System.Nullable<int> Original_PHONE, global::System.Nullable<int> Original_POINTS) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CLIENT_ID));
-            if ((FNAME == null)) {
-                throw new global::System.ArgumentNullException("FNAME");
+            if ((FIRSTNAME == null)) {
+                throw new global::System.ArgumentNullException("FIRSTNAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FNAME));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FIRSTNAME));
             }
-            if ((LNAME == null)) {
-                throw new global::System.ArgumentNullException("LNAME");
+            if ((LASTNAME == null)) {
+                throw new global::System.ArgumentNullException("LASTNAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LNAME));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LASTNAME));
             }
             if ((EMAIL == null)) {
                 throw new global::System.ArgumentNullException("EMAIL");
@@ -4346,43 +4381,40 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(EMAIL));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(PHONE));
+            if ((PHONE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(PHONE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             if ((ADDRESS == null)) {
                 throw new global::System.ArgumentNullException("ADDRESS");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ADDRESS));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_CLIENT_ID));
-            if ((Original_FNAME == null)) {
-                throw new global::System.ArgumentNullException("Original_FNAME");
+            if ((POINTS.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(POINTS.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_FNAME));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_LNAME == null)) {
-                throw new global::System.ArgumentNullException("Original_LNAME");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_LNAME));
-            }
-            if ((Original_EMAIL == null)) {
-                throw new global::System.ArgumentNullException("Original_EMAIL");
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_CLIENT_ID));
+            if ((Original_PHONE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_PHONE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_EMAIL));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_PHONE));
-            if ((Original_ADDRESS == null)) {
-                throw new global::System.ArgumentNullException("Original_ADDRESS");
+            if ((Original_POINTS.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_POINTS.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_ADDRESS));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4404,8 +4436,8 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FNAME, string LNAME, string EMAIL, int PHONE, string ADDRESS, int Original_CLIENT_ID, string Original_FNAME, string Original_LNAME, string Original_EMAIL, int Original_PHONE, string Original_ADDRESS) {
-            return this.Update(Original_CLIENT_ID, FNAME, LNAME, EMAIL, PHONE, ADDRESS, Original_CLIENT_ID, Original_FNAME, Original_LNAME, Original_EMAIL, Original_PHONE, Original_ADDRESS);
+        public virtual int Update(string FIRSTNAME, string LASTNAME, string EMAIL, global::System.Nullable<int> PHONE, string ADDRESS, global::System.Nullable<int> POINTS, int Original_CLIENT_ID, global::System.Nullable<int> Original_PHONE, global::System.Nullable<int> Original_POINTS) {
+            return this.Update(Original_CLIENT_ID, FIRSTNAME, LASTNAME, EMAIL, PHONE, ADDRESS, POINTS, Original_CLIENT_ID, Original_PHONE, Original_POINTS);
         }
     }
     
