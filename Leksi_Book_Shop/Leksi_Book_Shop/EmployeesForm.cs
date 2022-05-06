@@ -33,8 +33,8 @@ namespace Leksi_Book_Shop
             da.Fill(dt);
             eMPLOYEESBindingSource.DataSource = dt; 
             conn.Close();
-            fNAMETextBox.Text = "";
-            lNAMETextBox.Text = "";
+            fIRSTNAMETextBox.Text = "";
+            lASTNAMETextBox.Text = "";
             pHONETextBox.Text = "";
             pASSWORDTextBox.Text = "";
             uSERNAMETextBox.Text = "";
@@ -60,7 +60,7 @@ namespace Leksi_Book_Shop
         private void addButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (FNAME,LNAME,PHONE,USERNAME,PASSWORD) values ('" + fNAMETextBox.Text + "','" + lNAMETextBox.Text + "'," + pHONETextBox.Text + ",'" + uSERNAMETextBox.Text + "','" + pASSWORDTextBox.Text + "')", conn);
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (FIRSTNAME,LASTNAME,PHONE,USERNAME,PASSWORD) values ('" + fIRSTNAMETextBox.Text + "','" + lASTNAMETextBox.Text + "'," + pHONETextBox.Text + ",'" + uSERNAMETextBox.Text + "','" + pASSWORDTextBox.Text + "')", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record ADDED");
@@ -80,7 +80,7 @@ namespace Leksi_Book_Shop
         private void updateButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FNAME'" + fNAMETextBox.Text + "',LNAME='" + lNAMETextBox.Text + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='" + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET FIRSTNAME'" + fIRSTNAMETextBox.Text + "',LASTNAME='" + lASTNAMETextBox.Text + "',PHONE= " + pHONETextBox.Text + ",USERNAME='" + pHONETextBox.Text + "',PASSWORD='" + pASSWORDTextBox.Text + "'where EMPLOYEE_ID= " + eMPLOYEE_IDTextBox.Text + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record UPDATED");
@@ -102,8 +102,8 @@ namespace Leksi_Book_Shop
                 employee.FName = employeeDataGridView.Rows[i].Cells[1].Value.ToString();
                 employee.LName = employeeDataGridView.Rows[i].Cells[2].Value.ToString();
                 employee.Phone = int.Parse(employeeDataGridView.Rows[i].Cells[3].Value.ToString());
-                employee.Username = employeeDataGridView.Rows[i].Cells[4].Value.ToString();
-                employee.Password = employeeDataGridView.Rows[i].Cells[5].Value.ToString();
+                employee.Password = employeeDataGridView.Rows[i].Cells[4].Value.ToString();
+                employee.Username = employeeDataGridView.Rows[i].Cells[5].Value.ToString();
                 EmployeesList.Add(employee);
             }         
         }

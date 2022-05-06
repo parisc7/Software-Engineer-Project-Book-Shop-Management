@@ -38,12 +38,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
             this.uSERNAMETextBox = new System.Windows.Forms.TextBox();
             this.pASSWORDTextBox = new System.Windows.Forms.TextBox();
-            this.lNAMETextBox = new System.Windows.Forms.TextBox();
-            this.fNAMETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
             this.timeTableButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
@@ -51,14 +47,18 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
+            this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
+            this.lASTNAMETextBox = new System.Windows.Forms.TextBox();
+            this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
             fNAMELabel = new System.Windows.Forms.Label();
             lNAMELabel = new System.Windows.Forms.Label();
@@ -66,9 +66,9 @@
             uSERNAMELabel = new System.Windows.Forms.Label();
             pASSWORDLabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // eMPLOYEE_IDLabel
@@ -92,7 +92,7 @@
             // lNAMELabel
             // 
             lNAMELabel.AutoSize = true;
-            lNAMELabel.Location = new System.Drawing.Point(952, 36);
+            lNAMELabel.Location = new System.Drawing.Point(968, 36);
             lNAMELabel.Name = "lNAMELabel";
             lNAMELabel.Size = new System.Drawing.Size(141, 34);
             lNAMELabel.TabIndex = 39;
@@ -128,11 +128,11 @@
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.bookListPanel.Controls.Add(this.lASTNAMETextBox);
+            this.bookListPanel.Controls.Add(this.fIRSTNAMETextBox);
             this.bookListPanel.Controls.Add(this.pHONETextBox);
             this.bookListPanel.Controls.Add(this.uSERNAMETextBox);
             this.bookListPanel.Controls.Add(this.pASSWORDTextBox);
-            this.bookListPanel.Controls.Add(this.lNAMETextBox);
-            this.bookListPanel.Controls.Add(this.fNAMETextBox);
             this.bookListPanel.Controls.Add(this.eMPLOYEE_IDTextBox);
             this.bookListPanel.Controls.Add(this.timeTableButton);
             this.bookListPanel.Controls.Add(eMPLOYEE_IDLabel);
@@ -163,16 +163,6 @@
             this.pHONETextBox.TabIndex = 42;
             this.pHONETextBox.Text = " ";
             // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.lexi_BookshopDataSet;
-            // 
-            // lexi_BookshopDataSet
-            // 
-            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
-            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // uSERNAMETextBox
             // 
             this.uSERNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "USERNAME", true));
@@ -190,24 +180,6 @@
             this.pASSWORDTextBox.Name = "pASSWORDTextBox";
             this.pASSWORDTextBox.Size = new System.Drawing.Size(231, 41);
             this.pASSWORDTextBox.TabIndex = 46;
-            // 
-            // lNAMETextBox
-            // 
-            this.lNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LNAME", true));
-            this.lNAMETextBox.Location = new System.Drawing.Point(1099, 30);
-            this.lNAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lNAMETextBox.Name = "lNAMETextBox";
-            this.lNAMETextBox.Size = new System.Drawing.Size(328, 41);
-            this.lNAMETextBox.TabIndex = 40;
-            // 
-            // fNAMETextBox
-            // 
-            this.fNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FNAME", true));
-            this.fNAMETextBox.Location = new System.Drawing.Point(640, 33);
-            this.fNAMETextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.fNAMETextBox.Name = "fNAMETextBox";
-            this.fNAMETextBox.Size = new System.Drawing.Size(306, 41);
-            this.fNAMETextBox.TabIndex = 38;
             // 
             // eMPLOYEE_IDTextBox
             // 
@@ -292,11 +264,11 @@
             this.employeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.eMPLOYEEIDDataGridViewTextBoxColumn,
-            this.fNAMEDataGridViewTextBoxColumn,
-            this.lNAMEDataGridViewTextBoxColumn,
+            this.fIRSTNAMEDataGridViewTextBoxColumn,
+            this.lASTNAMEDataGridViewTextBoxColumn,
             this.pHONEDataGridViewTextBoxColumn,
-            this.uSERNAMEDataGridViewTextBoxColumn,
-            this.pASSWORDDataGridViewTextBoxColumn});
+            this.pASSWORDDataGridViewTextBoxColumn,
+            this.uSERNAMEDataGridViewTextBoxColumn});
             this.employeeDataGridView.DataSource = this.eMPLOYEESBindingSource;
             this.employeeDataGridView.Location = new System.Drawing.Point(45, 204);
             this.employeeDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -307,59 +279,15 @@
             this.employeeDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.employeeDataGridView.TabIndex = 30;
             // 
-            // eMPLOYEEIDDataGridViewTextBoxColumn
+            // eMPLOYEESBindingSource
             // 
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.DataPropertyName = "EMPLOYEE_ID";
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.HeaderText = "EMPLOYEE_ID";
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.Name = "eMPLOYEEIDDataGridViewTextBoxColumn";
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.Width = 250;
+            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
+            this.eMPLOYEESBindingSource.DataSource = this.lexi_BookshopDataSet;
             // 
-            // fNAMEDataGridViewTextBoxColumn
+            // lexi_BookshopDataSet
             // 
-            this.fNAMEDataGridViewTextBoxColumn.DataPropertyName = "FNAME";
-            this.fNAMEDataGridViewTextBoxColumn.HeaderText = "FNAME";
-            this.fNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fNAMEDataGridViewTextBoxColumn.Name = "fNAMEDataGridViewTextBoxColumn";
-            this.fNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fNAMEDataGridViewTextBoxColumn.Width = 215;
-            // 
-            // lNAMEDataGridViewTextBoxColumn
-            // 
-            this.lNAMEDataGridViewTextBoxColumn.DataPropertyName = "LNAME";
-            this.lNAMEDataGridViewTextBoxColumn.HeaderText = "LNAME";
-            this.lNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lNAMEDataGridViewTextBoxColumn.Name = "lNAMEDataGridViewTextBoxColumn";
-            this.lNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lNAMEDataGridViewTextBoxColumn.Width = 222;
-            // 
-            // pHONEDataGridViewTextBoxColumn
-            // 
-            this.pHONEDataGridViewTextBoxColumn.DataPropertyName = "PHONE";
-            this.pHONEDataGridViewTextBoxColumn.HeaderText = "PHONE";
-            this.pHONEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pHONEDataGridViewTextBoxColumn.Name = "pHONEDataGridViewTextBoxColumn";
-            this.pHONEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pHONEDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // uSERNAMEDataGridViewTextBoxColumn
-            // 
-            this.uSERNAMEDataGridViewTextBoxColumn.DataPropertyName = "USERNAME";
-            this.uSERNAMEDataGridViewTextBoxColumn.HeaderText = "USERNAME";
-            this.uSERNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.uSERNAMEDataGridViewTextBoxColumn.Name = "uSERNAMEDataGridViewTextBoxColumn";
-            this.uSERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.uSERNAMEDataGridViewTextBoxColumn.Width = 220;
-            // 
-            // pASSWORDDataGridViewTextBoxColumn
-            // 
-            this.pASSWORDDataGridViewTextBoxColumn.DataPropertyName = "PASSWORD";
-            this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
-            this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
-            this.pASSWORDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
+            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
+            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // eMPLOYEESTableAdapter
             // 
@@ -375,6 +303,76 @@
             this.tableAdapterManager.ORDERTableAdapter = null;
             this.tableAdapterManager.TIMETABLETableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // fIRSTNAMETextBox
+            // 
+            this.fIRSTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FIRSTNAME", true));
+            this.fIRSTNAMETextBox.Location = new System.Drawing.Point(640, 33);
+            this.fIRSTNAMETextBox.Name = "fIRSTNAMETextBox";
+            this.fIRSTNAMETextBox.Size = new System.Drawing.Size(308, 41);
+            this.fIRSTNAMETextBox.TabIndex = 48;
+            // 
+            // lASTNAMETextBox
+            // 
+            this.lASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LASTNAME", true));
+            this.lASTNAMETextBox.Location = new System.Drawing.Point(1138, 33);
+            this.lASTNAMETextBox.Name = "lASTNAMETextBox";
+            this.lASTNAMETextBox.Size = new System.Drawing.Size(288, 41);
+            this.lASTNAMETextBox.TabIndex = 49;
+            // 
+            // eMPLOYEEIDDataGridViewTextBoxColumn
+            // 
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.DataPropertyName = "EMPLOYEE_ID";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.HeaderText = "EMPLOYEE_ID";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.Name = "eMPLOYEEIDDataGridViewTextBoxColumn";
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eMPLOYEEIDDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // fIRSTNAMEDataGridViewTextBoxColumn
+            // 
+            this.fIRSTNAMEDataGridViewTextBoxColumn.DataPropertyName = "FIRSTNAME";
+            this.fIRSTNAMEDataGridViewTextBoxColumn.HeaderText = "FIRSTNAME";
+            this.fIRSTNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fIRSTNAMEDataGridViewTextBoxColumn.Name = "fIRSTNAMEDataGridViewTextBoxColumn";
+            this.fIRSTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fIRSTNAMEDataGridViewTextBoxColumn.Width = 225;
+            // 
+            // lASTNAMEDataGridViewTextBoxColumn
+            // 
+            this.lASTNAMEDataGridViewTextBoxColumn.DataPropertyName = "LASTNAME";
+            this.lASTNAMEDataGridViewTextBoxColumn.HeaderText = "LASTNAME";
+            this.lASTNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lASTNAMEDataGridViewTextBoxColumn.Name = "lASTNAMEDataGridViewTextBoxColumn";
+            this.lASTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lASTNAMEDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // pHONEDataGridViewTextBoxColumn
+            // 
+            this.pHONEDataGridViewTextBoxColumn.DataPropertyName = "PHONE";
+            this.pHONEDataGridViewTextBoxColumn.HeaderText = "PHONE";
+            this.pHONEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pHONEDataGridViewTextBoxColumn.Name = "pHONEDataGridViewTextBoxColumn";
+            this.pHONEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pHONEDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // pASSWORDDataGridViewTextBoxColumn
+            // 
+            this.pASSWORDDataGridViewTextBoxColumn.DataPropertyName = "PASSWORD";
+            this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
+            this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
+            this.pASSWORDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
+            // 
+            // uSERNAMEDataGridViewTextBoxColumn
+            // 
+            this.uSERNAMEDataGridViewTextBoxColumn.DataPropertyName = "USERNAME";
+            this.uSERNAMEDataGridViewTextBoxColumn.HeaderText = "USERNAME";
+            this.uSERNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.uSERNAMEDataGridViewTextBoxColumn.Name = "uSERNAMEDataGridViewTextBoxColumn";
+            this.uSERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uSERNAMEDataGridViewTextBoxColumn.Width = 220;
             // 
             // EmployeesForm
             // 
@@ -392,9 +390,9 @@
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
             this.bookListPanel.ResumeLayout(false);
             this.bookListPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,17 +410,17 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.TextBox eMPLOYEE_IDTextBox;
-        private System.Windows.Forms.TextBox fNAMETextBox;
-        private System.Windows.Forms.TextBox lNAMETextBox;
         private System.Windows.Forms.TextBox pHONETextBox;
         private System.Windows.Forms.TextBox uSERNAMETextBox;
         private System.Windows.Forms.TextBox pASSWORDTextBox;
         private System.Windows.Forms.Button timeTableButton;
+        private System.Windows.Forms.TextBox lASTNAMETextBox;
+        private System.Windows.Forms.TextBox fIRSTNAMETextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn eMPLOYEEIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fIRSTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lASTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pHONEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uSERNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pASSWORDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uSERNAMEDataGridViewTextBoxColumn;
     }
 }
