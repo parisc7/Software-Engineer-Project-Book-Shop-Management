@@ -37,7 +37,6 @@
             this.barcodeScannerTextBox.Name = "barcodeScannerTextBox";
             this.barcodeScannerTextBox.Size = new System.Drawing.Size(272, 20);
             this.barcodeScannerTextBox.TabIndex = 0;
-            this.barcodeScannerTextBox.TextChanged += new System.EventHandler(this.barcodeScannerTextBox_TextChanged);
             // 
             // BarcodeForm
             // 

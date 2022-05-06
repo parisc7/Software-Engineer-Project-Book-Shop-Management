@@ -22,11 +22,6 @@ namespace Leksi_Book_Shop
 
         private void BarcodeScanner_BarcodeScanned(object sender, BarcodeScannerEventArgs e)
         {
-            
-        }
-
-        private void barcodeScannerTextBox_TextChanged(object sender, BarcodeScannerEventArgs e)
-        {
             barcodeScannerTextBox.Text = e.Barcode;
         }
     }
