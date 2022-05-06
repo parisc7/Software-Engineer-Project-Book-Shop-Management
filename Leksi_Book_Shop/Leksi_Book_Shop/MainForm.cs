@@ -25,6 +25,8 @@ namespace Leksi_Book_Shop
             {
                 employeesButton.Visible = false;
             }
+            
+
         }
         private void employeesButton_Click(object sender, EventArgs e)
         {
@@ -75,6 +77,33 @@ namespace Leksi_Book_Shop
         private void dailyTotalButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchCustomerButton_Click(object sender, EventArgs e)
+        {
+            foreach (var customer in customers.CustomerList)
+            {
+                if (customer.Phone == int.Parse(customerTxtBox.ToString()))
+                {
+                    nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
+                    pointsTxtBox.Text =$"{customer.Points}";
+                }
+                else if (customer.Customer_id == int.Parse(customerTxtBox.ToString()))
+                {
+                    nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
+                    pointsTxtBox.Text = $"{customer.Points}";
+                }
+            }
         }
     }
 }

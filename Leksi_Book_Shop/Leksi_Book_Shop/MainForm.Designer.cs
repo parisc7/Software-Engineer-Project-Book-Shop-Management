@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pointsTxtBox = new System.Windows.Forms.TextBox();
             this.companieLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.orderNoTxtBox = new System.Windows.Forms.TextBox();
             this.searchCustomerButton = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.pointsTxtBox);
             this.panel2.Controls.Add(this.companieLogoPictureBox);
             this.panel2.Controls.Add(this.orderNoTxtBox);
             this.panel2.Controls.Add(this.searchCustomerButton);
@@ -88,6 +90,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 635);
             this.panel2.TabIndex = 2;
+            // 
+            // pointsTxtBox
+            // 
+            this.pointsTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pointsTxtBox.Enabled = false;
+            this.pointsTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pointsTxtBox.Location = new System.Drawing.Point(664, 94);
+            this.pointsTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pointsTxtBox.Name = "pointsTxtBox";
+            this.pointsTxtBox.Size = new System.Drawing.Size(217, 41);
+            this.pointsTxtBox.TabIndex = 10;
             // 
             // companieLogoPictureBox
             // 
@@ -118,12 +131,13 @@
             this.searchCustomerButton.FlatAppearance.BorderSize = 0;
             this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(832, 30);
+            this.searchCustomerButton.Location = new System.Drawing.Point(830, 29);
             this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchCustomerButton.Name = "searchCustomerButton";
             this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
             this.searchCustomerButton.TabIndex = 7;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
+            this.searchCustomerButton.Click += new System.EventHandler(this.searchCustomerButton_Click);
             // 
             // customerTxtBox
             // 
@@ -157,7 +171,7 @@
             this.nameSurnameTxttBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameSurnameTxttBox.Name = "nameSurnameTxttBox";
             this.nameSurnameTxttBox.ReadOnly = true;
-            this.nameSurnameTxttBox.Size = new System.Drawing.Size(836, 41);
+            this.nameSurnameTxttBox.Size = new System.Drawing.Size(577, 41);
             this.nameSurnameTxttBox.TabIndex = 4;
             // 
             // totalPriceLabel
@@ -166,7 +180,7 @@
             this.totalPriceLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPriceLabel.Location = new System.Drawing.Point(583, 569);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(0, 43);
+            this.totalPriceLabel.Size = new System.Drawing.Size(0, 34);
             this.totalPriceLabel.TabIndex = 3;
             // 
             // payButton
@@ -180,6 +194,7 @@
             this.payButton.TabIndex = 2;
             this.payButton.Text = "&Pay";
             this.payButton.UseVisualStyleBackColor = false;
+            this.payButton.Click += new System.EventHandler(this.payButton_Click);
             // 
             // deleteButton
             // 
@@ -192,6 +207,7 @@
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // currentOrderDataGridView
             // 
@@ -479,5 +495,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tITLEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRICEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTITYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox pointsTxtBox;
     }
 }
