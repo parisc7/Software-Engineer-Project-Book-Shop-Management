@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pointsTxtBox = new System.Windows.Forms.TextBox();
             this.companieLogoPictureBox = new System.Windows.Forms.PictureBox();
             this.orderNoTxtBox = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.pointsTxtBox);
             this.panel2.Controls.Add(this.companieLogoPictureBox);
             this.panel2.Controls.Add(this.orderNoTxtBox);
@@ -90,6 +92,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(909, 635);
             this.panel2.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(505, 539);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(10, 22);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Visible = false;
             // 
             // pointsTxtBox
             // 
@@ -496,5 +508,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pRICEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTITYDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox pointsTxtBox;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

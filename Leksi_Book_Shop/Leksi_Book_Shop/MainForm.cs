@@ -17,6 +17,8 @@ namespace Leksi_Book_Shop
         CustomerForm customers= new CustomerForm();  
         EmployeesForm employees= new EmployeesForm();
         Employee curent=new Employee();
+       
+       
 
         public MainForm(bool admin,Employee employee)
         {
@@ -27,6 +29,8 @@ namespace Leksi_Book_Shop
             employees.Show();
             employees.Hide();
             InitializeComponent();
+            BarcodeScanner scanner = new BarcodeScanner(textBox1);
+            scanner.BarcodeScanned += Scanner_BarcodeScanned;  
             curent.Copy(employee);
             if (admin== false)
             {
@@ -35,6 +39,22 @@ namespace Leksi_Book_Shop
             
 
         }
+
+        private void Scanner_BarcodeScanned(object sender, BarcodeScannerEventArgs e)
+        {
+            textBox1.Text=e.Barcode;
+            foreach (var book in books.BooksList)
+            {
+                if (book.ISBN == int.Parse(textBox1.Text))
+                {
+                    
+                    break;
+                }
+               
+            }
+
+        }
+
         private void employeesButton_Click(object sender, EventArgs e)
         {
             this.Hide();
