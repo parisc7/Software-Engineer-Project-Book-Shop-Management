@@ -300,7 +300,6 @@
             this.employeeDataGridView.Location = new System.Drawing.Point(45, 204);
             this.employeeDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.employeeDataGridView.Name = "employeeDataGridView";
-            this.employeeDataGridView.ReadOnly = true;
             this.employeeDataGridView.RowHeadersWidth = 51;
             this.employeeDataGridView.RowTemplate.Height = 24;
             this.employeeDataGridView.Size = new System.Drawing.Size(1381, 502);
@@ -312,7 +311,6 @@
             this.eMPLOYEEIDDataGridViewTextBoxColumn.HeaderText = "EMPLOYEE_ID";
             this.eMPLOYEEIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.eMPLOYEEIDDataGridViewTextBoxColumn.Name = "eMPLOYEEIDDataGridViewTextBoxColumn";
-            this.eMPLOYEEIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.eMPLOYEEIDDataGridViewTextBoxColumn.Width = 220;
             // 
             // fIRSTNAMEDataGridViewTextBoxColumn
@@ -321,7 +319,6 @@
             this.fIRSTNAMEDataGridViewTextBoxColumn.HeaderText = "FIRSTNAME";
             this.fIRSTNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fIRSTNAMEDataGridViewTextBoxColumn.Name = "fIRSTNAMEDataGridViewTextBoxColumn";
-            this.fIRSTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.fIRSTNAMEDataGridViewTextBoxColumn.Width = 225;
             // 
             // lASTNAMEDataGridViewTextBoxColumn
@@ -330,7 +327,6 @@
             this.lASTNAMEDataGridViewTextBoxColumn.HeaderText = "LASTNAME";
             this.lASTNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lASTNAMEDataGridViewTextBoxColumn.Name = "lASTNAMEDataGridViewTextBoxColumn";
-            this.lASTNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.lASTNAMEDataGridViewTextBoxColumn.Width = 220;
             // 
             // pHONEDataGridViewTextBoxColumn
@@ -339,7 +335,6 @@
             this.pHONEDataGridViewTextBoxColumn.HeaderText = "PHONE";
             this.pHONEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pHONEDataGridViewTextBoxColumn.Name = "pHONEDataGridViewTextBoxColumn";
-            this.pHONEDataGridViewTextBoxColumn.ReadOnly = true;
             this.pHONEDataGridViewTextBoxColumn.Width = 220;
             // 
             // pASSWORDDataGridViewTextBoxColumn
@@ -348,7 +343,6 @@
             this.pASSWORDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
             this.pASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pASSWORDDataGridViewTextBoxColumn.Name = "pASSWORDDataGridViewTextBoxColumn";
-            this.pASSWORDDataGridViewTextBoxColumn.ReadOnly = true;
             this.pASSWORDDataGridViewTextBoxColumn.Width = 220;
             // 
             // uSERNAMEDataGridViewTextBoxColumn
@@ -357,7 +351,6 @@
             this.uSERNAMEDataGridViewTextBoxColumn.HeaderText = "USERNAME";
             this.uSERNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.uSERNAMEDataGridViewTextBoxColumn.Name = "uSERNAMEDataGridViewTextBoxColumn";
-            this.uSERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.uSERNAMEDataGridViewTextBoxColumn.Width = 220;
             // 
             // eMPLOYEESTableAdapter

@@ -14,7 +14,7 @@ namespace Leksi_Book_Shop
 {
     public partial class EmployeesForm : Form
     {
-        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
         public List<Employee> EmployeesList = new List<Employee>(); 
 
@@ -44,7 +44,7 @@ namespace Leksi_Book_Shop
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.EMPLOYEES' table. You can move, or remove it, as needed.
             this.eMPLOYEESTableAdapter.Fill(this.lexi_BookshopDataSet.EMPLOYEES);
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
             command.CommandText = "SELECT * FROM EMPLOYEES";
             initializeList();
@@ -52,8 +52,9 @@ namespace Leksi_Book_Shop
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            int current_id = eMPLOYEESBindingSource.Count;
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (FIRSTNAME,LASTNAME,PHONE,USERNAME,PASSWORD) VALUES ('" 
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO EMPLOYEES (EMPLOYEE_ID,FIRSTNAME,LASTNAME,PHONE,USERNAME,PASSWORD) VALUES ("+ current_id+",'"
                                                 + fIRSTNAMETextBox.Text + "','" + lASTNAMETextBox.Text + "'," + pHONETextBox.Text 
                                                 + ",'" + uSERNAMETextBox.Text + "','" + pASSWORDTextBox.Text + "')", conn);
             cmd.ExecuteNonQuery();

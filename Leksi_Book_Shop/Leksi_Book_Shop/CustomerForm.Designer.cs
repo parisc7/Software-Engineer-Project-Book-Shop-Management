@@ -148,6 +148,7 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
+            this.mainPanel.Controls.Add(this.cLIENT_IDTextBox);
             this.mainPanel.Controls.Add(this.pOINTSTextBox);
             this.mainPanel.Controls.Add(this.lASTNAMETextBox);
             this.mainPanel.Controls.Add(this.fIRSTNAMETextBox);
@@ -162,7 +163,6 @@
             this.mainPanel.Controls.Add(eMAILLabel);
             this.mainPanel.Controls.Add(this.eMAILTextBox);
             this.mainPanel.Controls.Add(cLIENT_IDLabel);
-            this.mainPanel.Controls.Add(this.cLIENT_IDTextBox);
             this.mainPanel.Controls.Add(this.deleteButton);
             this.mainPanel.Controls.Add(this.closeButton);
             this.mainPanel.Controls.Add(this.searchCustomerButton);

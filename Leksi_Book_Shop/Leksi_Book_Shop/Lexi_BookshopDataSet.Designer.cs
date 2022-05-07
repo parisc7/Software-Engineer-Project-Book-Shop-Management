@@ -960,10 +960,10 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTSRow AddCLIENTSRow(string EMAIL, int PHONE, string ADDRESS, string FIRSTNAME, string LASTNAME, int POINTS) {
+            public CLIENTSRow AddCLIENTSRow(int CLIENT_ID, string EMAIL, int PHONE, string ADDRESS, string FIRSTNAME, string LASTNAME, int POINTS) {
                 CLIENTSRow rowCLIENTSRow = ((CLIENTSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        CLIENT_ID,
                         EMAIL,
                         PHONE,
                         ADDRESS,
@@ -1031,7 +1031,6 @@ namespace Leksi_Book_Shop {
                                 this.columnPHONE}, false));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint3", new global::System.Data.DataColumn[] {
                                 this.columnEMAIL}, false));
-                this.columnCLIENT_ID.AutoIncrement = true;
                 this.columnCLIENT_ID.AutoIncrementSeed = 1;
                 this.columnCLIENT_ID.AllowDBNull = false;
                 this.columnCLIENT_ID.Unique = true;
@@ -1304,10 +1303,10 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EMPLOYEESRow AddEMPLOYEESRow(int PHONE, string USERNAME, string PASSWORD, string FIRSTNAME, string LASTNAME) {
+            public EMPLOYEESRow AddEMPLOYEESRow(int EMPLOYEE_ID, int PHONE, string USERNAME, string PASSWORD, string FIRSTNAME, string LASTNAME) {
                 EMPLOYEESRow rowEMPLOYEESRow = ((EMPLOYEESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        EMPLOYEE_ID,
                         PHONE,
                         USERNAME,
                         PASSWORD,
@@ -1373,7 +1372,6 @@ namespace Leksi_Book_Shop {
                                 this.columnUSERNAME}, false));
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint4", new global::System.Data.DataColumn[] {
                                 this.columnPASSWORD}, false));
-                this.columnEMPLOYEE_ID.AutoIncrement = true;
                 this.columnEMPLOYEE_ID.AutoIncrementSeed = 1;
                 this.columnEMPLOYEE_ID.AllowDBNull = false;
                 this.columnEMPLOYEE_ID.Unique = true;
@@ -1930,10 +1928,10 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ORDER_LISTRow AddORDER_LISTRow(int PRICE, int QUANTITY, CLIENTSRow parentCLIENTSRowByORDER_LISTFK1, EMPLOYEESRow parentEMPLOYEESRowByORDER_LISTFK2) {
+            public ORDER_LISTRow AddORDER_LISTRow(int ORDER_ID, int PRICE, int QUANTITY, CLIENTSRow parentCLIENTSRowByORDER_LISTFK1, EMPLOYEESRow parentEMPLOYEESRowByORDER_LISTFK2) {
                 ORDER_LISTRow rowORDER_LISTRow = ((ORDER_LISTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ORDER_ID,
                         PRICE,
                         QUANTITY,
                         null,
@@ -1995,7 +1993,6 @@ namespace Leksi_Book_Shop {
                 base.Columns.Add(this.columnEMPLOYEE_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnORDER_ID}, true));
-                this.columnORDER_ID.AutoIncrement = true;
                 this.columnORDER_ID.AutoIncrementSeed = 1;
                 this.columnORDER_ID.AllowDBNull = false;
                 this.columnORDER_ID.Unique = true;

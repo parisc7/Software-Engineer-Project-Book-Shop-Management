@@ -405,7 +405,7 @@
         <xs:element name="CLIENTS" msprop:Generator_RowEvHandlerName="CLIENTSRowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTSRowDeleted" msprop:Generator_RowDeletingName="CLIENTSRowDeleting" msprop:Generator_RowEvArgName="CLIENTSRowChangeEvent" msprop:Generator_TablePropName="CLIENTS" msprop:Generator_RowChangedName="CLIENTSRowChanged" msprop:Generator_UserTableName="CLIENTS" msprop:Generator_RowChangingName="CLIENTSRowChanging" msprop:Generator_RowClassName="CLIENTSRow" msprop:Generator_TableClassName="CLIENTSDataTable" msprop:Generator_TableVarName="tableCLIENTS">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CLIENT_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="CLIENT_IDColumn" msprop:Generator_ColumnPropNameInRow="CLIENT_ID" msprop:Generator_UserColumnName="CLIENT_ID" msprop:Generator_ColumnVarNameInTable="columnCLIENT_ID" type="xs:int" />
+              <xs:element name="CLIENT_ID" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="CLIENT_IDColumn" msprop:Generator_ColumnPropNameInRow="CLIENT_ID" msprop:Generator_UserColumnName="CLIENT_ID" msprop:Generator_ColumnVarNameInTable="columnCLIENT_ID" type="xs:int" />
               <xs:element name="EMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_ColumnPropNameInRow="EMAIL" msprop:Generator_UserColumnName="EMAIL" msprop:Generator_ColumnVarNameInTable="columnEMAIL" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -421,28 +421,28 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FIRSTNAME" msprop:Generator_UserColumnName="FIRSTNAME" msprop:Generator_ColumnPropNameInTable="FIRSTNAMEColumn" msprop:Generator_ColumnPropNameInRow="FIRSTNAME" msprop:Generator_ColumnVarNameInTable="columnFIRSTNAME" minOccurs="0">
+              <xs:element name="FIRSTNAME" msprop:Generator_ColumnPropNameInTable="FIRSTNAMEColumn" msprop:Generator_ColumnPropNameInRow="FIRSTNAME" msprop:Generator_UserColumnName="FIRSTNAME" msprop:Generator_ColumnVarNameInTable="columnFIRSTNAME" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="536870910" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LASTNAME" msprop:Generator_UserColumnName="LASTNAME" msprop:Generator_ColumnPropNameInTable="LASTNAMEColumn" msprop:Generator_ColumnPropNameInRow="LASTNAME" msprop:Generator_ColumnVarNameInTable="columnLASTNAME" minOccurs="0">
+              <xs:element name="LASTNAME" msprop:Generator_ColumnPropNameInTable="LASTNAMEColumn" msprop:Generator_ColumnPropNameInRow="LASTNAME" msprop:Generator_UserColumnName="LASTNAME" msprop:Generator_ColumnVarNameInTable="columnLASTNAME" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="536870910" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="POINTS" msprop:Generator_UserColumnName="POINTS" msprop:Generator_ColumnPropNameInTable="POINTSColumn" msprop:Generator_ColumnPropNameInRow="POINTS" msprop:Generator_ColumnVarNameInTable="columnPOINTS" type="xs:int" minOccurs="0" />
+              <xs:element name="POINTS" msprop:Generator_ColumnPropNameInTable="POINTSColumn" msprop:Generator_ColumnPropNameInRow="POINTS" msprop:Generator_UserColumnName="POINTS" msprop:Generator_ColumnVarNameInTable="columnPOINTS" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="EMPLOYEES" msprop:Generator_RowEvHandlerName="EMPLOYEESRowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLOYEESRowDeleted" msprop:Generator_RowDeletingName="EMPLOYEESRowDeleting" msprop:Generator_RowEvArgName="EMPLOYEESRowChangeEvent" msprop:Generator_TablePropName="EMPLOYEES" msprop:Generator_RowChangedName="EMPLOYEESRowChanged" msprop:Generator_UserTableName="EMPLOYEES" msprop:Generator_RowChangingName="EMPLOYEESRowChanging" msprop:Generator_RowClassName="EMPLOYEESRow" msprop:Generator_TableClassName="EMPLOYEESDataTable" msprop:Generator_TableVarName="tableEMPLOYEES">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EMPLOYEE_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="EMPLOYEE_IDColumn" msprop:Generator_ColumnPropNameInRow="EMPLOYEE_ID" msprop:Generator_UserColumnName="EMPLOYEE_ID" msprop:Generator_ColumnVarNameInTable="columnEMPLOYEE_ID" type="xs:int" />
+              <xs:element name="EMPLOYEE_ID" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="EMPLOYEE_IDColumn" msprop:Generator_ColumnPropNameInRow="EMPLOYEE_ID" msprop:Generator_UserColumnName="EMPLOYEE_ID" msprop:Generator_ColumnVarNameInTable="columnEMPLOYEE_ID" type="xs:int" />
               <xs:element name="PHONE" msprop:Generator_ColumnPropNameInTable="PHONEColumn" msprop:Generator_ColumnPropNameInRow="PHONE" msprop:Generator_UserColumnName="PHONE" msprop:Generator_ColumnVarNameInTable="columnPHONE" type="xs:int" minOccurs="0" />
               <xs:element name="USERNAME" msprop:Generator_ColumnPropNameInTable="USERNAMEColumn" msprop:Generator_ColumnPropNameInRow="USERNAME" msprop:Generator_UserColumnName="USERNAME" msprop:Generator_ColumnVarNameInTable="columnUSERNAME" minOccurs="0">
                 <xs:simpleType>
@@ -494,7 +494,7 @@
         <xs:element name="ORDER_LIST" msprop:Generator_RowEvHandlerName="ORDER_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="ORDER_LISTRowDeleted" msprop:Generator_RowDeletingName="ORDER_LISTRowDeleting" msprop:Generator_RowEvArgName="ORDER_LISTRowChangeEvent" msprop:Generator_TablePropName="ORDER_LIST" msprop:Generator_RowChangedName="ORDER_LISTRowChanged" msprop:Generator_UserTableName="ORDER_LIST" msprop:Generator_RowChangingName="ORDER_LISTRowChanging" msprop:Generator_RowClassName="ORDER_LISTRow" msprop:Generator_TableClassName="ORDER_LISTDataTable" msprop:Generator_TableVarName="tableORDER_LIST">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ORDER_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="ORDER_IDColumn" msprop:Generator_ColumnPropNameInRow="ORDER_ID" msprop:Generator_UserColumnName="ORDER_ID" msprop:Generator_ColumnVarNameInTable="columnORDER_ID" type="xs:int" />
+              <xs:element name="ORDER_ID" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="ORDER_IDColumn" msprop:Generator_ColumnPropNameInRow="ORDER_ID" msprop:Generator_UserColumnName="ORDER_ID" msprop:Generator_ColumnVarNameInTable="columnORDER_ID" type="xs:int" />
               <xs:element name="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_UserColumnName="PRICE" msprop:Generator_ColumnVarNameInTable="columnPRICE" type="xs:int" minOccurs="0" />
               <xs:element name="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_UserColumnName="QUANTITY" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" type="xs:int" minOccurs="0" />
               <xs:element name="CLIENT_ID" msprop:Generator_ColumnPropNameInTable="CLIENT_IDColumn" msprop:Generator_ColumnPropNameInRow="CLIENT_ID" msprop:Generator_UserColumnName="CLIENT_ID" msprop:Generator_ColumnVarNameInTable="columnCLIENT_ID" type="xs:int" minOccurs="0" />
@@ -556,11 +556,11 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="ORDER_LISTORDER" msdata:parent="ORDER_LIST" msdata:child="ORDER" msdata:parentkey="ORDER_ID" msdata:childkey="ISBN" msprop:Generator_UserParentTable="ORDER_LIST" msprop:Generator_UserChildTable="ORDER" msprop:Generator_RelationVarName="relationORDER_LISTORDER" msprop:Generator_ChildPropName="GetORDERRows" msprop:Generator_ParentPropName="ORDER_LISTRow" msprop:Generator_UserRelationName="ORDER_LISTORDER" />
-      <msdata:Relationship name="ORDERFK1" msdata:parent="BOOKS" msdata:child="ORDER" msdata:parentkey="ISBN" msdata:childkey="ISBN" msprop:Generator_UserParentTable="BOOKS" msprop:Generator_UserChildTable="ORDER" msprop:Generator_RelationVarName="relationORDERFK1" msprop:Generator_ChildPropName="GetORDERRows" msprop:Generator_UserRelationName="ORDERFK1" msprop:Generator_ParentPropName="BOOKSRow" />
-      <msdata:Relationship name="ORDER_LISTFK1" msdata:parent="CLIENTS" msdata:child="ORDER_LIST" msdata:parentkey="CLIENT_ID" msdata:childkey="CLIENT_ID" msprop:Generator_UserParentTable="CLIENTS" msprop:Generator_UserChildTable="ORDER_LIST" msprop:Generator_RelationVarName="relationORDER_LISTFK1" msprop:Generator_ChildPropName="GetORDER_LISTRows" msprop:Generator_UserRelationName="ORDER_LISTFK1" msprop:Generator_ParentPropName="CLIENTSRow" />
-      <msdata:Relationship name="ORDER_LISTFK2" msdata:parent="EMPLOYEES" msdata:child="ORDER_LIST" msdata:parentkey="EMPLOYEE_ID" msdata:childkey="EMPLOYEE_ID" msprop:Generator_UserParentTable="EMPLOYEES" msprop:Generator_UserChildTable="ORDER_LIST" msprop:Generator_RelationVarName="relationORDER_LISTFK2" msprop:Generator_ChildPropName="GetORDER_LISTRows" msprop:Generator_UserRelationName="ORDER_LISTFK2" msprop:Generator_ParentPropName="EMPLOYEESRow" />
-      <msdata:Relationship name="TIMETABLEFK" msdata:parent="EMPLOYEES" msdata:child="TIMETABLE" msdata:parentkey="EMPLOYEE_ID" msdata:childkey="EMPLOYEE_ID" msprop:Generator_UserParentTable="EMPLOYEES" msprop:Generator_UserChildTable="TIMETABLE" msprop:Generator_RelationVarName="relationTIMETABLEFK" msprop:Generator_ChildPropName="GetTIMETABLERows" msprop:Generator_UserRelationName="TIMETABLEFK" msprop:Generator_ParentPropName="EMPLOYEESRow" />
+      <msdata:Relationship name="ORDER_LISTORDER" msdata:parent="ORDER_LIST" msdata:child="ORDER" msdata:parentkey="ORDER_ID" msdata:childkey="ISBN" msprop:Generator_UserParentTable="ORDER_LIST" msprop:Generator_UserChildTable="ORDER" msprop:Generator_RelationVarName="relationORDER_LISTORDER" msprop:Generator_ChildPropName="GetORDERRows" msprop:Generator_UserRelationName="ORDER_LISTORDER" msprop:Generator_ParentPropName="ORDER_LISTRow" />
+      <msdata:Relationship name="ORDERFK1" msdata:parent="BOOKS" msdata:child="ORDER" msdata:parentkey="ISBN" msdata:childkey="ISBN" msprop:Generator_UserParentTable="BOOKS" msprop:Generator_UserChildTable="ORDER" msprop:Generator_RelationVarName="relationORDERFK1" msprop:Generator_ChildPropName="GetORDERRows" msprop:Generator_ParentPropName="BOOKSRow" msprop:Generator_UserRelationName="ORDERFK1" />
+      <msdata:Relationship name="ORDER_LISTFK1" msdata:parent="CLIENTS" msdata:child="ORDER_LIST" msdata:parentkey="CLIENT_ID" msdata:childkey="CLIENT_ID" msprop:Generator_UserParentTable="CLIENTS" msprop:Generator_UserChildTable="ORDER_LIST" msprop:Generator_RelationVarName="relationORDER_LISTFK1" msprop:Generator_ChildPropName="GetORDER_LISTRows" msprop:Generator_ParentPropName="CLIENTSRow" msprop:Generator_UserRelationName="ORDER_LISTFK1" />
+      <msdata:Relationship name="ORDER_LISTFK2" msdata:parent="EMPLOYEES" msdata:child="ORDER_LIST" msdata:parentkey="EMPLOYEE_ID" msdata:childkey="EMPLOYEE_ID" msprop:Generator_UserParentTable="EMPLOYEES" msprop:Generator_UserChildTable="ORDER_LIST" msprop:Generator_RelationVarName="relationORDER_LISTFK2" msprop:Generator_ChildPropName="GetORDER_LISTRows" msprop:Generator_ParentPropName="EMPLOYEESRow" msprop:Generator_UserRelationName="ORDER_LISTFK2" />
+      <msdata:Relationship name="TIMETABLEFK" msdata:parent="EMPLOYEES" msdata:child="TIMETABLE" msdata:parentkey="EMPLOYEE_ID" msdata:childkey="EMPLOYEE_ID" msprop:Generator_UserParentTable="EMPLOYEES" msprop:Generator_UserChildTable="TIMETABLE" msprop:Generator_RelationVarName="relationTIMETABLEFK" msprop:Generator_ChildPropName="GetTIMETABLERows" msprop:Generator_ParentPropName="EMPLOYEESRow" msprop:Generator_UserRelationName="TIMETABLEFK" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
