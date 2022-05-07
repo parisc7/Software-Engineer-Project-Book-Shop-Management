@@ -34,7 +34,7 @@ namespace Leksi_Book_Shop
             {
                 if (passwordTxt.Text == admin.Password)
                 {
-                    current=admin;
+                    current.Copy(admin);
                     Admin = true;
                     exist = true;
                 }

@@ -23,7 +23,8 @@ namespace Leksi_Book_Shop
         Employee curent=new Employee();
         DateTime Login;
         DateTime Logout;
-        
+
+        double TotalPrice = 0;
 
        
         public MainForm(bool admin,Employee employee)
@@ -96,6 +97,8 @@ namespace Leksi_Book_Shop
                 if (book.ISBN == int.Parse(barcodeTxtBox.Text))
                 {
                     //NA BENI DAME STO TABLE TOU ORDER
+                    TotalPrice+=book.Price;
+                    totalPriceLabel.Text=$"€ { TotalPrice.ToString()}";
                     break;
                 }
 

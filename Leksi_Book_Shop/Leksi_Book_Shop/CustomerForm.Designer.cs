@@ -345,6 +345,7 @@
             // cLIENT_IDTextBox
             // 
             this.cLIENT_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cLIENTSBindingSource, "CLIENT_ID", true));
+            this.cLIENT_IDTextBox.Enabled = false;
             this.cLIENT_IDTextBox.Location = new System.Drawing.Point(177, 37);
             this.cLIENT_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cLIENT_IDTextBox.Name = "cLIENT_IDTextBox";

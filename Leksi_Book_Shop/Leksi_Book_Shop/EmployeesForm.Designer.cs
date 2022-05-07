@@ -37,6 +37,10 @@
             System.Windows.Forms.Label pASSWORDLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
+            this.lASTNAMETextBox = new System.Windows.Forms.TextBox();
+            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
+            this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.uSERNAMETextBox = new System.Windows.Forms.TextBox();
             this.pASSWORDTextBox = new System.Windows.Forms.TextBox();
@@ -47,18 +51,14 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.employeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
-            this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
-            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
-            this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
-            this.lASTNAMETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHONEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uSERNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
+            this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
             fNAMELabel = new System.Windows.Forms.Label();
             lNAMELabel = new System.Windows.Forms.Label();
@@ -66,9 +66,9 @@
             uSERNAMELabel = new System.Windows.Forms.Label();
             pASSWORDLabel = new System.Windows.Forms.Label();
             this.bookListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // eMPLOYEE_IDLabel
@@ -153,6 +153,32 @@
             this.bookListPanel.Size = new System.Drawing.Size(1489, 794);
             this.bookListPanel.TabIndex = 3;
             // 
+            // lASTNAMETextBox
+            // 
+            this.lASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LASTNAME", true));
+            this.lASTNAMETextBox.Location = new System.Drawing.Point(1138, 33);
+            this.lASTNAMETextBox.Name = "lASTNAMETextBox";
+            this.lASTNAMETextBox.Size = new System.Drawing.Size(288, 41);
+            this.lASTNAMETextBox.TabIndex = 49;
+            // 
+            // eMPLOYEESBindingSource
+            // 
+            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
+            this.eMPLOYEESBindingSource.DataSource = this.lexi_BookshopDataSet;
+            // 
+            // lexi_BookshopDataSet
+            // 
+            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
+            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fIRSTNAMETextBox
+            // 
+            this.fIRSTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FIRSTNAME", true));
+            this.fIRSTNAMETextBox.Location = new System.Drawing.Point(640, 33);
+            this.fIRSTNAMETextBox.Name = "fIRSTNAMETextBox";
+            this.fIRSTNAMETextBox.Size = new System.Drawing.Size(308, 41);
+            this.fIRSTNAMETextBox.TabIndex = 48;
+            // 
             // pHONETextBox
             // 
             this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PHONE", true));
@@ -184,6 +210,7 @@
             // eMPLOYEE_IDTextBox
             // 
             this.eMPLOYEE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "EMPLOYEE_ID", true));
+            this.eMPLOYEE_IDTextBox.Enabled = false;
             this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(245, 33);
             this.eMPLOYEE_IDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eMPLOYEE_IDTextBox.Name = "eMPLOYEE_IDTextBox";
@@ -279,47 +306,6 @@
             this.employeeDataGridView.Size = new System.Drawing.Size(1381, 502);
             this.employeeDataGridView.TabIndex = 30;
             // 
-            // eMPLOYEESBindingSource
-            // 
-            this.eMPLOYEESBindingSource.DataMember = "EMPLOYEES";
-            this.eMPLOYEESBindingSource.DataSource = this.lexi_BookshopDataSet;
-            // 
-            // lexi_BookshopDataSet
-            // 
-            this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
-            this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eMPLOYEESTableAdapter
-            // 
-            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BOOKSTableAdapter = null;
-            this.tableAdapterManager.CLIENTSTableAdapter = null;
-            this.tableAdapterManager.EMPLOYEESTableAdapter = this.eMPLOYEESTableAdapter;
-            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
-            this.tableAdapterManager.ORDERTableAdapter = null;
-            this.tableAdapterManager.TIMETABLETableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // fIRSTNAMETextBox
-            // 
-            this.fIRSTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FIRSTNAME", true));
-            this.fIRSTNAMETextBox.Location = new System.Drawing.Point(640, 33);
-            this.fIRSTNAMETextBox.Name = "fIRSTNAMETextBox";
-            this.fIRSTNAMETextBox.Size = new System.Drawing.Size(308, 41);
-            this.fIRSTNAMETextBox.TabIndex = 48;
-            // 
-            // lASTNAMETextBox
-            // 
-            this.lASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LASTNAME", true));
-            this.lASTNAMETextBox.Location = new System.Drawing.Point(1138, 33);
-            this.lASTNAMETextBox.Name = "lASTNAMETextBox";
-            this.lASTNAMETextBox.Size = new System.Drawing.Size(288, 41);
-            this.lASTNAMETextBox.TabIndex = 49;
-            // 
             // eMPLOYEEIDDataGridViewTextBoxColumn
             // 
             this.eMPLOYEEIDDataGridViewTextBoxColumn.DataPropertyName = "EMPLOYEE_ID";
@@ -374,6 +360,21 @@
             this.uSERNAMEDataGridViewTextBoxColumn.ReadOnly = true;
             this.uSERNAMEDataGridViewTextBoxColumn.Width = 220;
             // 
+            // eMPLOYEESTableAdapter
+            // 
+            this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BOOKSTableAdapter = null;
+            this.tableAdapterManager.CLIENTSTableAdapter = null;
+            this.tableAdapterManager.EMPLOYEESTableAdapter = this.eMPLOYEESTableAdapter;
+            this.tableAdapterManager.ORDER_LISTTableAdapter = null;
+            this.tableAdapterManager.ORDERTableAdapter = null;
+            this.tableAdapterManager.TIMETABLETableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // EmployeesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,9 +391,9 @@
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
             this.bookListPanel.ResumeLayout(false);
             this.bookListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLOYEESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lexi_BookshopDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
