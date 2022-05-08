@@ -87,19 +87,20 @@
             this.panel2.Controls.Add(this.payButton);
             this.panel2.Controls.Add(this.deleteButton);
             this.panel2.Controls.Add(this.currentOrderDataGridView);
-            this.panel2.Location = new System.Drawing.Point(277, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(208, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(909, 635);
+            this.panel2.Size = new System.Drawing.Size(682, 516);
             this.panel2.TabIndex = 2;
             // 
             // barcodeTxtBox
             // 
             this.barcodeTxtBox.Enabled = false;
-            this.barcodeTxtBox.Location = new System.Drawing.Point(505, 539);
+            this.barcodeTxtBox.Location = new System.Drawing.Point(379, 438);
+            this.barcodeTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.barcodeTxtBox.Name = "barcodeTxtBox";
             this.barcodeTxtBox.ReadOnly = true;
-            this.barcodeTxtBox.Size = new System.Drawing.Size(10, 22);
+            this.barcodeTxtBox.Size = new System.Drawing.Size(8, 20);
             this.barcodeTxtBox.TabIndex = 11;
             this.barcodeTxtBox.Visible = false;
             // 
@@ -108,19 +109,19 @@
             this.pointsTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pointsTxtBox.Enabled = false;
             this.pointsTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pointsTxtBox.Location = new System.Drawing.Point(664, 94);
-            this.pointsTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pointsTxtBox.Location = new System.Drawing.Point(498, 76);
+            this.pointsTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pointsTxtBox.Name = "pointsTxtBox";
-            this.pointsTxtBox.Size = new System.Drawing.Size(217, 41);
+            this.pointsTxtBox.Size = new System.Drawing.Size(164, 34);
             this.pointsTxtBox.TabIndex = 10;
             // 
             // companieLogoPictureBox
             // 
             this.companieLogoPictureBox.Image = global::Leksi_Book_Shop.Properties.Resources.Softtsing;
-            this.companieLogoPictureBox.Location = new System.Drawing.Point(801, 599);
-            this.companieLogoPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.companieLogoPictureBox.Location = new System.Drawing.Point(601, 487);
+            this.companieLogoPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.companieLogoPictureBox.Name = "companieLogoPictureBox";
-            this.companieLogoPictureBox.Size = new System.Drawing.Size(80, 23);
+            this.companieLogoPictureBox.Size = new System.Drawing.Size(60, 19);
             this.companieLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.companieLogoPictureBox.TabIndex = 9;
             this.companieLogoPictureBox.TabStop = false;
@@ -131,10 +132,10 @@
             this.orderNoTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.orderNoTxtBox.Enabled = false;
             this.orderNoTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderNoTxtBox.Location = new System.Drawing.Point(339, 34);
-            this.orderNoTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.orderNoTxtBox.Location = new System.Drawing.Point(254, 28);
+            this.orderNoTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.orderNoTxtBox.Name = "orderNoTxtBox";
-            this.orderNoTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.orderNoTxtBox.Size = new System.Drawing.Size(156, 34);
             this.orderNoTxtBox.TabIndex = 8;
             // 
             // searchCustomerButton
@@ -143,10 +144,10 @@
             this.searchCustomerButton.FlatAppearance.BorderSize = 0;
             this.searchCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchCustomerButton.Image = ((System.Drawing.Image)(resources.GetObject("searchCustomerButton.Image")));
-            this.searchCustomerButton.Location = new System.Drawing.Point(830, 29);
-            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchCustomerButton.Location = new System.Drawing.Point(622, 24);
+            this.searchCustomerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchCustomerButton.Name = "searchCustomerButton";
-            this.searchCustomerButton.Size = new System.Drawing.Size(59, 46);
+            this.searchCustomerButton.Size = new System.Drawing.Size(44, 37);
             this.searchCustomerButton.TabIndex = 7;
             this.searchCustomerButton.UseVisualStyleBackColor = false;
             this.searchCustomerButton.Click += new System.EventHandler(this.searchCustomerButton_Click);
@@ -155,10 +156,10 @@
             // 
             this.customerTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.customerTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerTxtBox.Location = new System.Drawing.Point(617, 34);
-            this.customerTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerTxtBox.Location = new System.Drawing.Point(463, 28);
+            this.customerTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerTxtBox.Name = "customerTxtBox";
-            this.customerTxtBox.Size = new System.Drawing.Size(207, 41);
+            this.customerTxtBox.Size = new System.Drawing.Size(156, 34);
             this.customerTxtBox.TabIndex = 6;
             // 
             // timeMskdTxtBox
@@ -166,11 +167,11 @@
             this.timeMskdTxtBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.timeMskdTxtBox.Enabled = false;
             this.timeMskdTxtBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeMskdTxtBox.Location = new System.Drawing.Point(45, 34);
-            this.timeMskdTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.timeMskdTxtBox.Location = new System.Drawing.Point(34, 28);
+            this.timeMskdTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.timeMskdTxtBox.Mask = "00/00/0000 90:00";
             this.timeMskdTxtBox.Name = "timeMskdTxtBox";
-            this.timeMskdTxtBox.Size = new System.Drawing.Size(218, 41);
+            this.timeMskdTxtBox.Size = new System.Drawing.Size(164, 34);
             this.timeMskdTxtBox.TabIndex = 5;
             this.timeMskdTxtBox.ValidatingType = typeof(System.DateTime);
             // 
@@ -179,30 +180,31 @@
             this.nameSurnameTxttBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.nameSurnameTxttBox.Enabled = false;
             this.nameSurnameTxttBox.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameSurnameTxttBox.Location = new System.Drawing.Point(45, 94);
-            this.nameSurnameTxttBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nameSurnameTxttBox.Location = new System.Drawing.Point(34, 76);
+            this.nameSurnameTxttBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameSurnameTxttBox.Name = "nameSurnameTxttBox";
             this.nameSurnameTxttBox.ReadOnly = true;
-            this.nameSurnameTxttBox.Size = new System.Drawing.Size(577, 41);
+            this.nameSurnameTxttBox.Size = new System.Drawing.Size(434, 34);
             this.nameSurnameTxttBox.TabIndex = 4;
             // 
             // totalPriceLabel
             // 
             this.totalPriceLabel.AutoSize = true;
             this.totalPriceLabel.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalPriceLabel.Location = new System.Drawing.Point(583, 569);
+            this.totalPriceLabel.Location = new System.Drawing.Point(437, 462);
+            this.totalPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(0, 34);
+            this.totalPriceLabel.Size = new System.Drawing.Size(0, 25);
             this.totalPriceLabel.TabIndex = 3;
             // 
             // payButton
             // 
             this.payButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.payButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payButton.Location = new System.Drawing.Point(265, 562);
-            this.payButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.payButton.Location = new System.Drawing.Point(199, 457);
+            this.payButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.payButton.Name = "payButton";
-            this.payButton.Size = new System.Drawing.Size(152, 46);
+            this.payButton.Size = new System.Drawing.Size(114, 37);
             this.payButton.TabIndex = 2;
             this.payButton.Text = "&Pay";
             this.payButton.UseVisualStyleBackColor = false;
@@ -212,10 +214,10 @@
             // 
             this.deleteButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.deleteButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(45, 562);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.deleteButton.Location = new System.Drawing.Point(34, 457);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(152, 46);
+            this.deleteButton.Size = new System.Drawing.Size(114, 37);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
@@ -231,12 +233,12 @@
             this.pRICEDataGridViewTextBoxColumn,
             this.qUANTITYDataGridViewTextBoxColumn});
             this.currentOrderDataGridView.DataSource = this.oRDERBindingSource;
-            this.currentOrderDataGridView.Location = new System.Drawing.Point(45, 151);
-            this.currentOrderDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.currentOrderDataGridView.Location = new System.Drawing.Point(34, 123);
+            this.currentOrderDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentOrderDataGridView.Name = "currentOrderDataGridView";
             this.currentOrderDataGridView.RowHeadersWidth = 51;
             this.currentOrderDataGridView.RowTemplate.Height = 24;
-            this.currentOrderDataGridView.Size = new System.Drawing.Size(836, 382);
+            this.currentOrderDataGridView.Size = new System.Drawing.Size(627, 310);
             this.currentOrderDataGridView.TabIndex = 0;
             // 
             // iSBNDataGridViewTextBoxColumn
@@ -294,10 +296,10 @@
             this.panel1.Controls.Add(this.employeesButton);
             this.panel1.Controls.Add(this.customerButton);
             this.panel1.Controls.Add(this.pictureBox);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 635);
+            this.panel1.Size = new System.Drawing.Size(212, 516);
             this.panel1.TabIndex = 3;
             // 
             // booksButton
@@ -310,10 +312,10 @@
             this.booksButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.booksButton.Image = ((System.Drawing.Image)(resources.GetObject("booksButton.Image")));
             this.booksButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.booksButton.Location = new System.Drawing.Point(20, 310);
-            this.booksButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.booksButton.Location = new System.Drawing.Point(15, 252);
+            this.booksButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.booksButton.Name = "booksButton";
-            this.booksButton.Size = new System.Drawing.Size(239, 70);
+            this.booksButton.Size = new System.Drawing.Size(179, 57);
             this.booksButton.TabIndex = 5;
             this.booksButton.Text = "Books";
             this.booksButton.UseVisualStyleBackColor = false;
@@ -330,10 +332,10 @@
             this.logoutButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.Image = ((System.Drawing.Image)(resources.GetObject("logoutButton.Image")));
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(20, 538);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutButton.Location = new System.Drawing.Point(15, 437);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(239, 70);
+            this.logoutButton.Size = new System.Drawing.Size(179, 57);
             this.logoutButton.TabIndex = 8;
             this.logoutButton.Text = " Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
@@ -350,10 +352,10 @@
             this.dailyTotalButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dailyTotalButton.Image = ((System.Drawing.Image)(resources.GetObject("dailyTotalButton.Image")));
             this.dailyTotalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dailyTotalButton.Location = new System.Drawing.Point(20, 462);
-            this.dailyTotalButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dailyTotalButton.Location = new System.Drawing.Point(15, 375);
+            this.dailyTotalButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dailyTotalButton.Name = "dailyTotalButton";
-            this.dailyTotalButton.Size = new System.Drawing.Size(283, 70);
+            this.dailyTotalButton.Size = new System.Drawing.Size(212, 57);
             this.dailyTotalButton.TabIndex = 7;
             this.dailyTotalButton.Text = "        Daily total";
             this.dailyTotalButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,10 +372,10 @@
             this.mailButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailButton.Image = ((System.Drawing.Image)(resources.GetObject("mailButton.Image")));
             this.mailButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mailButton.Location = new System.Drawing.Point(20, 386);
-            this.mailButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mailButton.Location = new System.Drawing.Point(15, 314);
+            this.mailButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mailButton.Name = "mailButton";
-            this.mailButton.Size = new System.Drawing.Size(239, 70);
+            this.mailButton.Size = new System.Drawing.Size(179, 57);
             this.mailButton.TabIndex = 6;
             this.mailButton.Text = "E-mail";
             this.mailButton.UseVisualStyleBackColor = false;
@@ -389,10 +391,10 @@
             this.employeesButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeesButton.Image = ((System.Drawing.Image)(resources.GetObject("employeesButton.Image")));
             this.employeesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employeesButton.Location = new System.Drawing.Point(20, 234);
-            this.employeesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeesButton.Location = new System.Drawing.Point(15, 190);
+            this.employeesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeesButton.Name = "employeesButton";
-            this.employeesButton.Size = new System.Drawing.Size(239, 70);
+            this.employeesButton.Size = new System.Drawing.Size(179, 57);
             this.employeesButton.TabIndex = 4;
             this.employeesButton.Text = "Employees";
             this.employeesButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -410,10 +412,10 @@
             this.customerButton.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerButton.Image = ((System.Drawing.Image)(resources.GetObject("customerButton.Image")));
             this.customerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customerButton.Location = new System.Drawing.Point(20, 160);
-            this.customerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerButton.Location = new System.Drawing.Point(15, 130);
+            this.customerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerButton.Name = "customerButton";
-            this.customerButton.Size = new System.Drawing.Size(261, 70);
+            this.customerButton.Size = new System.Drawing.Size(196, 57);
             this.customerButton.TabIndex = 3;
             this.customerButton.Text = "     Customer";
             this.customerButton.UseVisualStyleBackColor = false;
@@ -424,10 +426,10 @@
             this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-            this.pictureBox.Location = new System.Drawing.Point(44, 17);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox.Location = new System.Drawing.Point(33, 14);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(191, 124);
+            this.pictureBox.Size = new System.Drawing.Size(143, 101);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
@@ -449,17 +451,17 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(29)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1197, 658);
+            this.ClientSize = new System.Drawing.Size(898, 535);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

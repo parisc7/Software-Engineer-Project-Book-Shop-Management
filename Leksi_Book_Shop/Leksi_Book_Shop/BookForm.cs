@@ -1,4 +1,15 @@
-﻿using System;
+﻿/** \file      BookForm.cs
+*   \brief     Provides the Book Database
+*   \details   This program regards to all the necessary functionalities
+*   \author    SOFTTSING TEAM
+*   \version   0.1
+*   \date      2022-2022
+*   \bug       No bugs Included
+*   \copyright SOFTTSING Ltd.
+*/
+
+// Packets Used
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +23,37 @@ using System.Data.OleDb;
 
 namespace Leksi_Book_Shop
 {
+    /**
+    * Class <code>BookForm</code> is a class that is responsible for
+    * the form's functionalities that are related to the book database
+    * <BR>
+    * @return Returns the corresponding applied changes
+    */
     public partial class BookForm : Form
     {
         OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
+
+        // Book List
         public List<Book> BooksList=new List<Book>();
 
+        // Default Constructor 
+
+        /**
+        * Function <code>BookForm</code> initialises the components
+        * <BR>
+        */
         public BookForm()
         {
             InitializeComponent();
         }
 
+        /**
+        * Function <code>BookForm_Load</code> loads the book's access database
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void BookForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
@@ -30,9 +61,17 @@ namespace Leksi_Book_Shop
             conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
             command.CommandText = "SELECT * FROM BOOKS";
+
+            // Cause database and forms are communicating through a linked list to retrieve and apply new info
             initializeList();
         }
 
+        /**
+        * Function <code>updateButton_Click</code> updates the book's access database records
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void updateButton_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -43,9 +82,17 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record UPDATED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
+
+            // Cause database and forms are communicating through a linked list to retrieve and apply new info
             initializeList();
         }
 
+        /**
+        * Function <code>addButton_Click</code> inserts a new record to the book's access database
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void addButton_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -56,9 +103,17 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record ADDED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
+
+            // Cause database and forms are communicating through a linked list to retrieve and apply new info
             initializeList();
         }
 
+        /**
+        * Function <code>deleteButton_Click</code> deletes a record from the book's access database
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void deleteButton_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -67,15 +122,26 @@ namespace Leksi_Book_Shop
             conn.Close();
             MessageBox.Show("Record DELETED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             fillGrid();
+
+            // Cause database and forms are communicating through a linked list to retrieve and apply new info
             initializeList();
         }
 
-
+        /**
+        * Function <code>closeButton_Click</code> closes book's access database
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /**
+        * Function <code>fillGrid</code> fills book's form gridview
+        * <BR>
+        */
         void fillGrid()
         {
             conn.Open();
@@ -92,6 +158,10 @@ namespace Leksi_Book_Shop
             pRICETextBox.Text = "";
         }
 
+        /**
+        * Function <code>initializeList</code> initialises book's database, through linked list
+        * <BR>
+        */
         public void initializeList()
         {
             BooksList.Clear();

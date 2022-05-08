@@ -1,4 +1,15 @@
-﻿using System;
+﻿/** \file      LoginForm.cs
+*   \brief     Provides the Log In info
+*   \details   This program regards to all the necessary functionalities
+*   \author    SOFTTSING TEAM
+*   \version   0.1
+*   \date      2022-2022
+*   \bug       No bugs Included
+*   \copyright SOFTTSING Ltd.
+*/
+
+// Packets Used
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +21,24 @@ using System.Windows.Forms;
 
 namespace Leksi_Book_Shop
 {
+    /**
+    * Class <code>LoginForm</code> is a class that is responsible for
+    * the form's functionalities that are related to the log in
+    * <BR>
+    * @return Returns the successful or NOT log in
+    */
     public partial class LoginForm : Form
     {
         EmployeesForm employees= new EmployeesForm();
         Employee admin = new Employee(0, null, null, 0, "admin", "admin");
         MainForm main;
 
+        // Default Constructor 
 
+        /**
+        * Function <code>LoginForm</code> initialises the components and runs the corresponding employee's database to acquire data
+        * <BR>
+        */
         public LoginForm()
         {
             InitializeComponent();
@@ -24,12 +46,19 @@ namespace Leksi_Book_Shop
             employees.Hide();
         }
 
+        /**
+        * Function <code>loginButton_Click</code> shows presence of admin or employee
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void loginButton_Click(object sender, EventArgs e)
         {
             bool Admin=true;
             Employee current = new Employee();
             bool exist = false;
 
+            // Indicating person is an Admin 
             if (usernameTxt.Text == admin.Username)
             {
                 if (passwordTxt.Text == admin.Password)
@@ -39,10 +68,13 @@ namespace Leksi_Book_Shop
                     exist = true;
                 }
             }
+
+            // Indicating person is an Employee 
             else
             {
                 foreach (var employee in employees.EmployeesList)
                 {
+                    // if username and password matches with the ones in the database, then proceed
                     if (employee.Username == usernameTxt.Text)
                     {
                         if (employee.Password == passwordTxt.Text)
@@ -53,6 +85,8 @@ namespace Leksi_Book_Shop
                             break;
                         }
                     }
+
+                    // in case of not matching
                     else
                     {
                         exist = false;
@@ -60,7 +94,7 @@ namespace Leksi_Book_Shop
                 }
             }          
             
-
+            // Privileges when 'exist' holds true
             if (exist)
             {
                 this.Hide();
@@ -68,6 +102,8 @@ namespace Leksi_Book_Shop
                 main.ShowDialog();
                 this.Close();
             }
+
+            // Error Message when invalid credentials
             else
             {
                 MessageBox.Show("WRONG USERNAME OR PASSWORD", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);

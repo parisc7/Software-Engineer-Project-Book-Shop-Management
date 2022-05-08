@@ -1,4 +1,15 @@
-﻿using System;
+﻿/** \file      MailForm.cs
+*   \brief     Provides the sending email process
+*   \details   This program regards to all the necessary functionalities
+*   \author    SOFTTSING TEAM
+*   \version   0.1
+*   \date      2022-2022
+*   \bug       No bugs Included
+*   \copyright SOFTTSING Ltd.
+*/
+
+// Packets Used
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +24,25 @@ using MailKit;
 
 namespace Leksi_Book_Shop
 {
+    /**
+    * Class <code>MailForm</code> is a class that is responsible for
+    * the functionalities that are related to the sending email procedure
+    * <BR>
+    * @return Returns that email was successfully sent
+    */
     public partial class MailForm : Form
     {
         MimeMessage message = new MimeMessage();
-        CustomerForm customer=new CustomerForm();
-       
+
+        // Indicating each customer to which email will be sent
+        CustomerForm customer =new CustomerForm();
+
+        // Default Constructor 
+
+        /**
+        * Function <code>MailForm</code> initialises the components and runs the corresponding customer's database to acquire data
+        * <BR>
+        */
         public MailForm()
         {
             InitializeComponent();
@@ -25,9 +50,15 @@ namespace Leksi_Book_Shop
             customer.Hide();    
         }
 
+        /**
+        * Function <code>sendButton_Click</code> sends email to the corresponding customer
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void sendButton_Click(object sender, EventArgs e)
         {
-            //sender (onoma pou emfanizi ,mail pou stelni)
+            //sender (onoma pou emfanizi (Sender's name), mail pou stelni (Sender's email))
             //message.From.Add(new MailboxAddress("Βιβλιοπωλείο λέξη", " "));
             foreach(var customer in customer.CustomerList)
             {
@@ -40,9 +71,9 @@ namespace Leksi_Book_Shop
                 SmtpClient client = new SmtpClient();
                 try
                 {
-                    //gia na boresi na kani enable ton paroxeapou stelni 
+                    //gia na boresi na kani enable ton paroxea pou stelni 
                     client.Connect("smtp.gmail.com", 465, true);
-                    //authentication of sender (email tou apostolea, o kodikos tou email tou apostolea)
+                    //authentication of sender (email of sender, sender's email code)
                     //client.Authenticate(" ", " ");
                     client.Send(message);
                     MessageBox.Show("Email sent!", "SUCCESS!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -59,6 +90,12 @@ namespace Leksi_Book_Shop
             }
         }
 
+        /**
+        * Function <code>exitButton_Click</code> closes email form
+        * <BR>
+        * @param sender Triggers object (Default Parameters)
+        * @param e      Triggers Event (Default Parameters)
+        */
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();

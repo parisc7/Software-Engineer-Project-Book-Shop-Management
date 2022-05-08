@@ -1,4 +1,15 @@
-﻿using System;
+﻿/** \file      Company.cs
+*   \brief     Provides Company's About info
+*   \details   This program regards to the company's information
+*   \author    SOFTTSING TEAM
+*   \version   0.1
+*   \date      2022-2022
+*   \bug       No bugs Included
+*   \copyright SOFTTSING Ltd.
+*/
+
+// Packets Used
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -9,6 +20,12 @@ using System.Windows.Forms;
 
 namespace Leksi_Book_Shop
 {
+    /**
+    * Class <code>Company</code> is a class that is responsible for
+    * the company's "About" information, acquiring the elements from "AssemblyInfo.cs" script
+    * <BR>
+    * @return Returns the company's information
+    */
     partial class Company : Form
     {
         public Company()

@@ -1,4 +1,15 @@
-﻿using System.Reflection;
+﻿/** \file      AssemblyInfo.cs
+*   \brief     Project's Info
+*   \details   This program regards to the information of the project conducted
+*   \author    SOFTTSING TEAM
+*   \version   0.1
+*   \date      2022-2022
+*   \bug       No bugs Included
+*   \copyright SOFTTSING Ltd.
+*/
+
+// Packets Used
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
