@@ -39,6 +39,8 @@ namespace Leksi_Book_Shop
         EmployeesForm employees= new EmployeesForm();
         Employee curent=new Employee();
 
+        public List<Order> curentOrder= new List<Order>();
+
         // Timetable Info
         DateTime Login;
         DateTime Logout;
@@ -161,6 +163,8 @@ namespace Leksi_Book_Shop
         */
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'lexi_BookshopDataSet.ORDER_LIST' table. You can move, or remove it, as needed.
+            this.oRDER_LISTTableAdapter.Fill(this.lexi_BookshopDataSet.ORDER_LIST);
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.ORDER' table. You can move, or remove it, as needed.
             this.oRDERTableAdapter.Fill(this.lexi_BookshopDataSet.ORDER);
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C: \Users\Paris Costa\Documents\GitHub\sussy - Softsing - 69 - BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
@@ -178,18 +182,37 @@ namespace Leksi_Book_Shop
         {
             // Saves scanned isbn into a txt file
             barcodeTxtBox.Text = e.Barcode;
+            Order order = new Order();
+            bool newBook = true;
             foreach (var book in books.BooksList)
             {
                 if (book.ISBN == int.Parse(barcodeTxtBox.Text))
                 {
-                    //NA BENI DAME STO TABLE TOU ORDER
-                    TotalPrice+=book.Price;
-                    totalPriceLabel.Text=$"€ { TotalPrice.ToString()}";
+                    //checking if is existing in the list
+                    foreach(var bookofList in curentOrder)
+                    {
+                        if (bookofList.ISBN==book.ISBN)
+                        {
+                            bookofList.Quantity++;
+                            TotalPrice += bookofList.Price;
+                            bookofList.Price+=book.Price;
+                            newBook = false;
+                        }
+                        break;
+                    }
+                    if (newBook == true)
+                    {
+                        order.ISBN = book.ISBN;
+                        order.Title = book.Title;
+                        order.Quantity = 1;
+                        order.Price = book.Price;
+                        TotalPrice += order.Price;
+                    }
                     break;
                 }
-
             }
-
+            totalPriceLabel.Text = $"€ { TotalPrice.ToString()}";
+            curentOrder.Add(order);
         }
 
         /**
@@ -268,5 +291,7 @@ namespace Leksi_Book_Shop
                 }
             }
         }
+
+       
     }
 }
