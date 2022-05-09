@@ -9,7 +9,7 @@ namespace Leksi_Book_Shop
     public class OrderList
     {
         public int OrderID { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public double Quantity { get; set; }
 
         public OrderList()
