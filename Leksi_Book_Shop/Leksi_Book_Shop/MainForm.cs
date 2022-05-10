@@ -34,30 +34,31 @@ namespace Leksi_Book_Shop
     {
         OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
+
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
         EmployeesForm employees= new EmployeesForm();
         Employee curent=new Employee();
-
+        
         public List<Order> curentOrder= new List<Order>();
 
-        // Timetable Info
+        //  Employee timetable Info 
         DateTime Login;
         DateTime Logout;
-
+        bool Admin = false;
         double TotalPrice = 0;
 
-        // Default Constructor 
 
         /**
-        * Function <code>MainForm</code> initialises ALL components / forms / isbn scanner
+        * Function <code>MainForm</code> initialises ALL components / isbn scanner
         * <BR>
         * @param admin    Indicates Admin 
         * @param employee Indicates Employee 
         */
+
+        // Constructor for the form
         public MainForm(bool admin,Employee employee)
         {
-            Login= DateTime.Now;
             customers.Show();
             customers.Hide();
             books.Show();
@@ -70,10 +71,13 @@ namespace Leksi_Book_Shop
             BarcodeScanner scanner = new BarcodeScanner(barcodeTxtBox);
             scanner.BarcodeScanned += Scanner_BarcodeScanned;
 
-            // Employee Access
             curent.Copy(employee);
+            Admin = admin;
+
+            // Employee Access
             if (admin== false)
             {
+                Login = DateTime.Now;
                 employeesButton.Visible = false;
             }
         }
@@ -245,11 +249,15 @@ namespace Leksi_Book_Shop
         */
         private void payButton_Click(object sender, EventArgs e)
         {
+            int curentOrder = oRDER_LISTBindingSource.Count + 1;
+
             orderNoTxtBox.Text = "";
             customerTxtBox.Text = "";
             nameSurnameTxttBox.Text = "";
             pointsTxtBox.Text = "";
             totalPriceLabel.Text = "";
+
+
             //NA APOTHIKEUETE STO ORDERLIST TO ORDER 
             // JE META NA KSANA GRAFI PANO TON TREXON ARITHMO TOUY ORDER SE AUKSOUSA SIRA FASI COUNTER
         }
@@ -260,11 +268,14 @@ namespace Leksi_Book_Shop
         */
         private void Times()
         {
-            Logout= DateTime.Now;
-            conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO TIMETABLE (LOG_IN,LOG_OUT,EMPLOYEE_ID) VALUES ('" + Login.TimeOfDay+ "','" +Logout.TimeOfDay + "'," + curent.Employee_id+")", conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (Admin == false)
+            {
+                Logout = DateTime.Now;
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand("INSERT INTO TIMETABLE (LOG_IN,LOG_OUT,EMPLOYEE_ID) VALUES ('" + Login.TimeOfDay + "','" + Logout.TimeOfDay + "'," + curent.Employee_id + ")", conn);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
 
         /**
@@ -291,7 +302,5 @@ namespace Leksi_Book_Shop
                 }
             }
         }
-
-       
     }
 }
