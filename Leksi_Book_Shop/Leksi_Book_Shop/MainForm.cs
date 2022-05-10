@@ -250,13 +250,13 @@ namespace Leksi_Book_Shop
         private void payButton_Click(object sender, EventArgs e)
         {
             int curentOrder = oRDER_LISTBindingSource.Count + 1;
-
+            int totalPrice = 0;
             orderNoTxtBox.Text = "";
             customerTxtBox.Text = "";
             nameSurnameTxttBox.Text = "";
             pointsTxtBox.Text = "";
             totalPriceLabel.Text = "";
-
+            
 
             //NA APOTHIKEUETE STO ORDERLIST TO ORDER 
             // JE META NA KSANA GRAFI PANO TON TREXON ARITHMO TOUY ORDER SE AUKSOUSA SIRA FASI COUNTER
