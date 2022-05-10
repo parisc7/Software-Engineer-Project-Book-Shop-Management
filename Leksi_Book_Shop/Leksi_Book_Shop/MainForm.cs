@@ -217,28 +217,6 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>dailyTotalButton_Click</code> shows the total payment amount
-        * <BR>
-        * @param sender Triggers object (Default Parameters)
-        * @param e      Triggers Event (Default Parameters)
-        */
-        private void dailyTotalButton_Click(object sender, EventArgs e)
-        {
-            //NA TIPONI SE ENAN NEON FORM TA TOTAL TIS IMERAS
-        }
-
-        /**
-        * Function <code>deleteButton_Click</code> deletes a record from the order's database, in case of a mistake
-        * <BR>
-        * @param sender Triggers object (Default Parameters)
-        * @param e      Triggers Event (Default Parameters)
-        */
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            // NA DIAGRAFI POU TO ORDER TO SELECTED
-        }
-
-        /**
         * Function <code>payButton_Click</code> adds the amount of money for each purchase in the order list database
         * <BR>
         * @param sender Triggers object (Default Parameters)
@@ -289,8 +267,6 @@ namespace Leksi_Book_Shop
         */
         private void searchCustomerButton_Click(object sender, EventArgs e)
         {
-            var orderTime = DateTime.Now;
-
             foreach (var customer in customers.CustomerList)
             {
                 if (customer.Phone == int.Parse(customerTxtBox.Text))
@@ -298,6 +274,7 @@ namespace Leksi_Book_Shop
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text =$"{customer.Points}";
                     orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count + 1}";
+                    curentCustomer.copy(customer);
                     break;
                 }
                 else if (customer.Customer_id == int.Parse(customerTxtBox.Text))
@@ -305,11 +282,7 @@ namespace Leksi_Book_Shop
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text = $"{customer.Points}";
                     orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count + 1}";
-
-                    var date = new DateTime(orderTime.Year, orderTime.Month, orderTime.Day, orderTime.Hour, orderTime.Minute, orderTime.Second);
-
-
-                    timeMskdTxtBox.Text = date.ToString();
+                    curentCustomer.copy(customer);
                     break;
                 }
             }
