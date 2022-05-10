@@ -11,15 +11,9 @@
 // Packets Used
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.OleDb;
 using System.Windows.Forms;
 using USB_Barcode_Scanner;
-using System.Data.OleDb;
 
 
 namespace Leksi_Book_Shop
@@ -38,8 +32,11 @@ namespace Leksi_Book_Shop
         BookForm books= new BookForm();
         CustomerForm customers= new CustomerForm();  
         EmployeesForm employees= new EmployeesForm();
-        Employee curent=new Employee();
-        
+
+        Employee curentEmployee=new Employee();
+        Customer curentCustomer = new Customer();
+
+
         public List<Order> curentOrder= new List<Order>();
 
         //  Employee timetable Info 
@@ -71,7 +68,7 @@ namespace Leksi_Book_Shop
             BarcodeScanner scanner = new BarcodeScanner(barcodeTxtBox);
             scanner.BarcodeScanned += Scanner_BarcodeScanned;
 
-            curent.Copy(employee);
+            curentEmployee.Copy(employee);
             Admin = admin;
 
             // Employee Access
@@ -249,16 +246,23 @@ namespace Leksi_Book_Shop
         */
         private void payButton_Click(object sender, EventArgs e)
         {
-            int curentOrder = oRDER_LISTBindingSource.Count + 1;
+            int sumPrice = 0, sumQuantity = 0;
+            for (int i = 0; i < currentOrderDataGridView.RowCount; i++)
+            {
+                sumPrice += int.Parse(currentOrderDataGridView.Rows[i].Cells[0].Value.ToString());
+                sumQuantity += int.Parse(currentOrderDataGridView.Rows[i].Cells[1].Value.ToString());
+            }
+            conn.Open();
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO ORDER_LIST (ORDER_ID, PRICE, QUANTITY, CLIENT_ID, EMPPLOYEE_ID) VALUES (" +
+                                                orderNoTxtBox.Text + "," + sumPrice + "," + sumQuantity + "," + curentCustomer.Customer_id + "," +
+                                                curentEmployee.Employee_id + ")", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
             orderNoTxtBox.Text = "";
             customerTxtBox.Text = "";
             nameSurnameTxttBox.Text = "";
             pointsTxtBox.Text = "";
             totalPriceLabel.Text = "";
-            
-
-            //NA APOTHIKEUETE STO ORDERLIST TO ORDER 
-            // JE META NA KSANA GRAFI PANO TON TREXON ARITHMO TOUY ORDER SE AUKSOUSA SIRA FASI COUNTER
         }
 
         /**
@@ -271,7 +275,7 @@ namespace Leksi_Book_Shop
             {
                 Logout = DateTime.Now;
                 conn.Open();
-                OleDbCommand cmd = new OleDbCommand("INSERT INTO TIMETABLE (LOG_IN,LOG_OUT,EMPLOYEE_ID) VALUES ('" + Login.TimeOfDay + "','" + Logout.TimeOfDay + "'," + curent.Employee_id + ")", conn);
+                OleDbCommand cmd = new OleDbCommand("INSERT INTO TIMETABLE (LOG_IN,LOG_OUT,EMPLOYEE_ID) VALUES ('" + Login.TimeOfDay + "','" + Logout.TimeOfDay + "'," + curentEmployee.Employee_id + ")", conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -285,18 +289,27 @@ namespace Leksi_Book_Shop
         */
         private void searchCustomerButton_Click(object sender, EventArgs e)
         {
+            var orderTime = DateTime.Now;
+
             foreach (var customer in customers.CustomerList)
             {
                 if (customer.Phone == int.Parse(customerTxtBox.Text))
                 {
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text =$"{customer.Points}";
+                    orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count + 1}";
                     break;
                 }
                 else if (customer.Customer_id == int.Parse(customerTxtBox.Text))
                 {
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text = $"{customer.Points}";
+                    orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count + 1}";
+
+                    var date = new DateTime(orderTime.Year, orderTime.Month, orderTime.Day, orderTime.Hour, orderTime.Minute, orderTime.Second);
+
+
+                    timeMskdTxtBox.Text = date.ToString();
                     break;
                 }
             }

@@ -59,5 +59,21 @@ namespace Leksi_Book_Shop
 
         // Default
         public Customer() { }
+
+
+
+        
+        public void copy(Customer now)
+        {
+
+            Customer_id = now.Customer_id;
+            Firstname = now.Firstname;
+            Lastname = now.Lastname;
+            Phone = now.Phone;
+            Email = now.Email;
+            Address = now.Address;
+            Points = now.Points;
+        }
+
     }
 }
