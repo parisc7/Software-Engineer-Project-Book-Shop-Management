@@ -46,8 +46,6 @@ namespace Leksi_Book_Shop {
         
         private global::System.Data.DataRelation relationTIMETABLEFK;
         
-        private global::System.Data.DataRelation relationORDERFK2;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -331,7 +329,6 @@ namespace Leksi_Book_Shop {
             this.relationORDER_LISTFK1 = this.Relations["ORDER_LISTFK1"];
             this.relationORDER_LISTFK2 = this.Relations["ORDER_LISTFK2"];
             this.relationTIMETABLEFK = this.Relations["TIMETABLEFK"];
-            this.relationORDERFK2 = this.Relations["ORDERFK2"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -374,10 +371,6 @@ namespace Leksi_Book_Shop {
                         this.tableEMPLOYEES.EMPLOYEE_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableTIMETABLE.EMPLOYEE_IDColumn}, false);
             this.Relations.Add(this.relationTIMETABLEFK);
-            this.relationORDERFK2 = new global::System.Data.DataRelation("ORDERFK2", new global::System.Data.DataColumn[] {
-                        this.tableORDER_LIST.ORDER_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableORDER.ORDER_IDColumn}, false);
-            this.Relations.Add(this.relationORDERFK2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1530,8 +1523,6 @@ namespace Leksi_Book_Shop {
             
             private global::System.Data.DataColumn columnQUANTITY;
             
-            private global::System.Data.DataColumn columnORDER_ID;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ORDERDataTable() {
@@ -1599,14 +1590,6 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ORDER_IDColumn {
-                get {
-                    return this.columnORDER_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1642,19 +1625,15 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ORDERRow AddORDERRow(ORDER_LISTRow parentORDER_LISTRowByORDER_LISTORDER, string TITLE, int PRICE, int QUANTITY, ORDER_LISTRow parentORDER_LISTRowByORDERFK2) {
+            public ORDERRow AddORDERRow(ORDER_LISTRow parentORDER_LISTRowByORDER_LISTORDER, string TITLE, int PRICE, int QUANTITY) {
                 ORDERRow rowORDERRow = ((ORDERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TITLE,
                         PRICE,
-                        QUANTITY,
-                        null};
+                        QUANTITY};
                 if ((parentORDER_LISTRowByORDER_LISTORDER != null)) {
                     columnValuesArray[0] = parentORDER_LISTRowByORDER_LISTORDER[0];
-                }
-                if ((parentORDER_LISTRowByORDERFK2 != null)) {
-                    columnValuesArray[4] = parentORDER_LISTRowByORDERFK2[0];
                 }
                 rowORDERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowORDERRow);
@@ -1682,7 +1661,6 @@ namespace Leksi_Book_Shop {
                 this.columnTITLE = base.Columns["TITLE"];
                 this.columnPRICE = base.Columns["PRICE"];
                 this.columnQUANTITY = base.Columns["QUANTITY"];
-                this.columnORDER_ID = base.Columns["ORDER_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1696,8 +1674,6 @@ namespace Leksi_Book_Shop {
                 base.Columns.Add(this.columnPRICE);
                 this.columnQUANTITY = new global::System.Data.DataColumn("QUANTITY", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQUANTITY);
-                this.columnORDER_ID = new global::System.Data.DataColumn("ORDER_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnORDER_ID);
                 this.columnTITLE.MaxLength = 70;
             }
             
@@ -3085,22 +3061,6 @@ namespace Leksi_Book_Shop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ORDER_ID {
-                get {
-                    try {
-                        return ((int)(this[this.tableORDER.ORDER_IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ORDER_ID\' in table \'ORDER\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableORDER.ORDER_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ORDER_LISTRow ORDER_LISTRow {
                 get {
                     return ((ORDER_LISTRow)(this.GetParentRow(this.Table.ParentRelations["ORDER_LISTORDER"])));
@@ -3118,17 +3078,6 @@ namespace Leksi_Book_Shop {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["ORDERFK1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ORDER_LISTRow ORDER_LISTRowByORDERFK2 {
-                get {
-                    return ((ORDER_LISTRow)(this.GetParentRow(this.Table.ParentRelations["ORDERFK2"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ORDERFK2"]);
                 }
             }
             
@@ -3178,18 +3127,6 @@ namespace Leksi_Book_Shop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetQUANTITYNull() {
                 this[this.tableORDER.QUANTITYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsORDER_IDNull() {
-                return this.IsNull(this.tableORDER.ORDER_IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetORDER_IDNull() {
-                this[this.tableORDER.ORDER_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3360,17 +3297,6 @@ namespace Leksi_Book_Shop {
                 }
                 else {
                     return ((ORDERRow[])(base.GetChildRows(this.Table.ChildRelations["ORDER_LISTORDER"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ORDERRow[] GetORDERRowsByORDERFK2() {
-                if ((this.Table.ChildRelations["ORDERFK2"] == null)) {
-                    return new ORDERRow[0];
-                }
-                else {
-                    return ((ORDERRow[])(base.GetChildRows(this.Table.ChildRelations["ORDERFK2"])));
                 }
             }
         }
@@ -5002,18 +4928,15 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TITLE", "TITLE");
             tableMapping.ColumnMappings.Add("PRICE", "PRICE");
             tableMapping.ColumnMappings.Add("QUANTITY", "QUANTITY");
-            tableMapping.ColumnMappings.Add("ORDER_ID", "ORDER_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `ORDER` (`ISBN`, `TITLE`, `PRICE`, `QUANTITY`, `ORDER_ID`) VALUES (?," +
-                " ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `ORDER` (`ISBN`, `TITLE`, `PRICE`, `QUANTITY`) VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ISBN", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ISBN", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TITLE", global::System.Data.OleDb.OleDbType.WChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TITLE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PRICE", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PRICE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("QUANTITY", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "QUANTITY", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ORDER_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ORDER_ID", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5029,7 +4952,7 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ISBN, TITLE, PRICE, QUANTITY, ORDER_ID FROM [ORDER]";
+            this._commandCollection[0].CommandText = "SELECT ISBN, TITLE, PRICE, QUANTITY FROM [ORDER]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5090,7 +5013,7 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ISBN, string TITLE, int PRICE, int QUANTITY, int ORDER_ID) {
+        public virtual int Insert(int ISBN, string TITLE, int PRICE, int QUANTITY) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ISBN));
             if ((TITLE == null)) {
                 throw new global::System.ArgumentNullException("TITLE");
@@ -5100,7 +5023,6 @@ namespace Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters {
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PRICE));
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(QUANTITY));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ORDER_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
