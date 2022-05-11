@@ -2,7 +2,7 @@
 *   \brief     Provides the Book Database
 *   \details   This program regards to all the necessary information of books
 *   \author    SOFTTSING TEAM
-*   \version   0.1
+*   \version   0.2
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.

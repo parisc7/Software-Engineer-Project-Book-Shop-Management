@@ -1,4 +1,15 @@
-﻿using System;
+﻿/** \file      OrderList.cs
+*   \brief     Provides the OrderList Database
+*   \details   This program regards to all the necessary information of orders
+*   \author    SOFTTSING TEAM
+*   \version   0.2
+*   \date      2022-2022
+*   \bug       No bugs Included
+*   \copyright SOFTTSING Ltd.
+*/
+
+// Packets Used
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +17,39 @@ using System.Threading.Tasks;
 
 namespace Leksi_Book_Shop
 {
+    /**
+    * Class <code>OrderList</code> is a class that is responsible for
+    * the attribute elements that are related to the order list
+    * <BR>
+    * @return Returns the filled up elements (attributes) of each order (in the order list) in the database through a linked list between forms created, to retrieve and apply changes
+    */
     public class OrderList
     {
+        // Attributes of each order in the order list
         public int OrderID { get; set; }
         public double Price { get; set; }
         public double Quantity { get; set; }
 
+        // Default
         public OrderList()
         {
             
         }
+
+        // Default Constructor 
+
+        /**
+        * Function <code>OrderList</code> initialises the order list attributes
+        * <BR>
+        * @param orderID    The order's unique ID code
+        * @param price      The order's Price
+        * @param quatity    The order's Quantity
+        */
         public OrderList(int orderID, double price,int quatity)
         {
             this.OrderID = orderID;
             this.Price = price;
-            this.Quantity = quatity;
+            this.Quantity = quatity; //mistypo, meant quantity
         }
     }
 }

@@ -2,7 +2,7 @@
 *   \brief     Provides Company's About info
 *   \details   This program regards to the company's information
 *   \author    SOFTTSING TEAM
-*   \version   0.1
+*   \version   0.2
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -28,6 +28,7 @@ namespace Leksi_Book_Shop
     */
     partial class Company : Form
     {
+        // Default Constructor
         public Company()
         {
             InitializeComponent();

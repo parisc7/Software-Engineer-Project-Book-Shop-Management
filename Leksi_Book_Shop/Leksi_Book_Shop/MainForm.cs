@@ -2,7 +2,7 @@
 *   \brief     Provides the Main Screen from where everything can be accessed and are connected
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.1
+*   \version   0.2
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -189,7 +189,7 @@ namespace Leksi_Book_Shop
             {
                 if (book.ISBN == int.Parse(barcodeTxtBox.Text))
                 {
-                    //checking if is existing in the list
+                    //checking if it is existing in the list
                     foreach(var bookofList in curentOrder)
                     {
                         if (bookofList.ISBN==book.ISBN)

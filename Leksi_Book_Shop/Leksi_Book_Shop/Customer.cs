@@ -2,7 +2,7 @@
 *   \brief     Provides the Customer Database
 *   \details   This program regards to all the necessary information of Customers
 *   \author    SOFTTSING TEAM
-*   \version   0.1
+*   \version   0.2
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -60,9 +60,11 @@ namespace Leksi_Book_Shop
         // Default
         public Customer() { }
 
-
-
-        
+        /**
+        * Function <code>copy</code> copies Customer attributes to current customer attributes
+        * <BR>
+        * @param now Represents every current customer on the system
+        */
         public void copy(Customer now)
         {
 
