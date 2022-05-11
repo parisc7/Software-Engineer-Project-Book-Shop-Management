@@ -1,5 +1,5 @@
 ﻿/** \file      OrderList.cs
-*   \brief     Provides the OrderList Database
+*   \brief     Provides the OrderList Database, which includes the order database for linking purposes
 *   \details   This program regards to all the necessary information of orders
 *   \author    SOFTTSING TEAM
 *   \version   0.2
@@ -19,7 +19,7 @@ namespace Leksi_Book_Shop
 {
     /**
     * Class <code>OrderList</code> is a class that is responsible for
-    * the attribute elements that are related to the order list
+    * the attribute elements that are related to every order which is then linked to order list as a unique order ID for the specific Client ID buyer
     * <BR>
     * @return Returns the filled up elements (attributes) of each order (in the order list) in the database through a linked list between forms created, to retrieve and apply changes
     */
