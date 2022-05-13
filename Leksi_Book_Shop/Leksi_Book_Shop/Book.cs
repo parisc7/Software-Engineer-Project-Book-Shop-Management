@@ -2,7 +2,7 @@
 *   \brief     Provides the Book Database
 *   \details   This program regards to all the necessary information of books
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -32,9 +32,7 @@ namespace Leksi_Book_Shop
         public string Title { get; set; }
         public int Pyear { get; set; }
         public double Price { get; set; }
-
-        // Default Constructor 
-
+             
         /**
         * Function <code>Book</code> initialises the book attributes
         * <BR>
@@ -55,8 +53,7 @@ namespace Leksi_Book_Shop
             Price = price;
         }
 
-
-        // Default
+        // Default Constructor 
         public Book() { }
     }
 }

@@ -2,7 +2,7 @@
 *   \brief     Provides the full functioning system
 *   \details   This program regards to all the necessary forms needed to run the application
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -37,9 +37,8 @@ namespace Leksi_Book_Shop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splash_Screen());
+            //Application.Run(new Splash_Screen());
             Application.Run(new LoginForm());
-            //Application.Run(new EmployeesForm());
         }
     }
 }

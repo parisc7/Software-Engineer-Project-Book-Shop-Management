@@ -2,7 +2,7 @@
 *   \brief     Provides the Order Database
 *   \details   This program regards to all the necessary information of orders
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -31,13 +31,10 @@ namespace Leksi_Book_Shop
         public double Price { get; set; }
         public int Quantity { get; set; }
 
-        // Default
-        public Order()
-        {
-
-        }
-
         // Default Constructor 
+        public Order(){}
+
+        // Constructor 
 
         /**
         * Function <code>Order</code> initialises the order attributes, which orders are the books
@@ -47,6 +44,7 @@ namespace Leksi_Book_Shop
         * @param price      The book's price
         * @param quantity   The book's quantity
         */
+        // Constructor 
         public Order(int isbn,string title,double price,int quantity)
         {
             this.ISBN = isbn;

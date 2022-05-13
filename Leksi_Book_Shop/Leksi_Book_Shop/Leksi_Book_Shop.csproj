@@ -182,6 +182,9 @@
     <EmbeddedResource Include="Company.resx">
       <DependentUpon>Company.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.aa.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>

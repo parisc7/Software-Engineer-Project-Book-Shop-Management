@@ -368,6 +368,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BookForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Book_List";
             this.Load += new System.EventHandler(this.BookForm_Load);
             this.bookListPanel.ResumeLayout(false);

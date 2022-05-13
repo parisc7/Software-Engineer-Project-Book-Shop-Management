@@ -2,7 +2,7 @@
 *   \brief     Provides the Customer Database
 *   \details   This program regards to all the necessary information of Customers
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -34,8 +34,6 @@ namespace Leksi_Book_Shop
         public string Address { get; set; }
         public int Points { get; set; }
 
-        // Default Constructor 
-
         /**
         * Function <code>Customer</code> initialises the Customer attributes
         * <BR>
@@ -46,6 +44,7 @@ namespace Leksi_Book_Shop
         * @param address     The Customer's Address
         * @param points      The Customer's Loyalty Points
         */
+        // Constructor 
         public Customer(int customer_id, string fName, string lName, string email, int phone, string address,int points)
         {
             Customer_id = customer_id;
@@ -57,7 +56,8 @@ namespace Leksi_Book_Shop
             Points = points;
         }
 
-        // Default
+
+        // Default Constructor 
         public Customer() { }
 
         /**

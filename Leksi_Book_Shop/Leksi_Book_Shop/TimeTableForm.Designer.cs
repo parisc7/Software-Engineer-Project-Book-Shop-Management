@@ -35,9 +35,10 @@
             System.Windows.Forms.Label lASTNAMELabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeTableForm));
             this.bookListPanel = new System.Windows.Forms.Panel();
-            this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
+            this.lASTNAMETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lexi_BookshopDataSet = new Leksi_Book_Shop.Lexi_BookshopDataSet();
+            this.fIRSTNAMETextBox = new System.Windows.Forms.TextBox();
             this.eMPLOYEE_IDTextBox = new System.Windows.Forms.TextBox();
             this.pHONETextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.tIMETABLETableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TIMETABLETableAdapter();
             this.tableAdapterManager = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager();
             this.eMPLOYEESTableAdapter = new Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter();
-            this.lASTNAMETextBox = new System.Windows.Forms.TextBox();
             eMPLOYEE_IDLabel = new System.Windows.Forms.Label();
             pHONELabel = new System.Windows.Forms.Label();
             fIRSTNAMELabel = new System.Windows.Forms.Label();
@@ -89,6 +89,15 @@
             fIRSTNAMELabel.TabIndex = 39;
             fIRSTNAMELabel.Text = "FIRSTNAME:";
             // 
+            // lASTNAMELabel
+            // 
+            lASTNAMELabel.AutoSize = true;
+            lASTNAMELabel.Location = new System.Drawing.Point(25, 313);
+            lASTNAMELabel.Name = "lASTNAMELabel";
+            lASTNAMELabel.Size = new System.Drawing.Size(163, 34);
+            lASTNAMELabel.TabIndex = 40;
+            lASTNAMELabel.Text = "LASTNAME:";
+            // 
             // bookListPanel
             // 
             this.bookListPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
@@ -109,13 +118,14 @@
             this.bookListPanel.Size = new System.Drawing.Size(1005, 797);
             this.bookListPanel.TabIndex = 4;
             // 
-            // fIRSTNAMETextBox
+            // lASTNAMETextBox
             // 
-            this.fIRSTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FIRSTNAME", true));
-            this.fIRSTNAMETextBox.Location = new System.Drawing.Point(244, 238);
-            this.fIRSTNAMETextBox.Name = "fIRSTNAMETextBox";
-            this.fIRSTNAMETextBox.Size = new System.Drawing.Size(259, 41);
-            this.fIRSTNAMETextBox.TabIndex = 40;
+            this.lASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LASTNAME", true));
+            this.lASTNAMETextBox.Enabled = false;
+            this.lASTNAMETextBox.Location = new System.Drawing.Point(244, 306);
+            this.lASTNAMETextBox.Name = "lASTNAMETextBox";
+            this.lASTNAMETextBox.Size = new System.Drawing.Size(259, 41);
+            this.lASTNAMETextBox.TabIndex = 41;
             // 
             // eMPLOYEESBindingSource
             // 
@@ -127,10 +137,20 @@
             this.lexi_BookshopDataSet.DataSetName = "Lexi_BookshopDataSet";
             this.lexi_BookshopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // fIRSTNAMETextBox
+            // 
+            this.fIRSTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "FIRSTNAME", true));
+            this.fIRSTNAMETextBox.Enabled = false;
+            this.fIRSTNAMETextBox.Location = new System.Drawing.Point(244, 238);
+            this.fIRSTNAMETextBox.Name = "fIRSTNAMETextBox";
+            this.fIRSTNAMETextBox.Size = new System.Drawing.Size(259, 41);
+            this.fIRSTNAMETextBox.TabIndex = 40;
+            // 
             // eMPLOYEE_IDTextBox
             // 
             this.eMPLOYEE_IDTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.eMPLOYEE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "EMPLOYEE_ID", true));
+            this.eMPLOYEE_IDTextBox.Enabled = false;
             this.eMPLOYEE_IDTextBox.Location = new System.Drawing.Point(244, 154);
             this.eMPLOYEE_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.eMPLOYEE_IDTextBox.Name = "eMPLOYEE_IDTextBox";
@@ -142,6 +162,7 @@
             // 
             this.pHONETextBox.BackColor = System.Drawing.SystemColors.Window;
             this.pHONETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "PHONE", true));
+            this.pHONETextBox.Enabled = false;
             this.pHONETextBox.Location = new System.Drawing.Point(244, 388);
             this.pHONETextBox.Margin = new System.Windows.Forms.Padding(4);
             this.pHONETextBox.Name = "pHONETextBox";
@@ -164,6 +185,7 @@
             // 
             // timeTableDataGridView
             // 
+            this.timeTableDataGridView.AllowUserToAddRows = false;
             this.timeTableDataGridView.AutoGenerateColumns = false;
             this.timeTableDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(113)))), ((int)(((byte)(108)))));
             this.timeTableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -218,23 +240,6 @@
             // eMPLOYEESTableAdapter
             // 
             this.eMPLOYEESTableAdapter.ClearBeforeFill = true;
-            // 
-            // lASTNAMELabel
-            // 
-            lASTNAMELabel.AutoSize = true;
-            lASTNAMELabel.Location = new System.Drawing.Point(25, 313);
-            lASTNAMELabel.Name = "lASTNAMELabel";
-            lASTNAMELabel.Size = new System.Drawing.Size(163, 34);
-            lASTNAMELabel.TabIndex = 40;
-            lASTNAMELabel.Text = "LASTNAME:";
-            // 
-            // lASTNAMETextBox
-            // 
-            this.lASTNAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEESBindingSource, "LASTNAME", true));
-            this.lASTNAMETextBox.Location = new System.Drawing.Point(244, 306);
-            this.lASTNAMETextBox.Name = "lASTNAMETextBox";
-            this.lASTNAMETextBox.Size = new System.Drawing.Size(259, 41);
-            this.lASTNAMETextBox.TabIndex = 41;
             // 
             // TimeTableForm
             // 

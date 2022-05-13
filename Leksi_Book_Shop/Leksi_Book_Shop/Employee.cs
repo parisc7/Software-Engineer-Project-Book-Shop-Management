@@ -2,7 +2,7 @@
 *   \brief     Provides the Employee Database
 *   \details   This program regards to all the necessary information of Employees
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -33,8 +33,6 @@ namespace Leksi_Book_Shop
         public string Username { get; set; }
         public string Password { get; set; }
 
-        // Default Constructor 
-
         /**
         * Function <code>Employee</code> initialises the Employee attributes
         * <BR>
@@ -45,6 +43,7 @@ namespace Leksi_Book_Shop
         * @param username     The Employee's Login Username
         * @param password     The Employee's Login Passcode
         */
+        //Constructor 
         public Employee(int employee_id, string fName, string lName, int phone, string username, string password)
         {
             Employee_id= employee_id;
@@ -55,8 +54,7 @@ namespace Leksi_Book_Shop
             Password= password;
         }
 
-
-        // Default
+        // Default Constructor 
         public Employee() { }
 
         /**

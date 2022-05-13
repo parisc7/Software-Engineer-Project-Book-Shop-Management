@@ -2,7 +2,7 @@
 *   \brief     Provides the Log in/out timetable database
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -26,14 +26,13 @@ namespace Leksi_Book_Shop
    * Class <code>TimeTableForm</code> is a class that is responsible for
    * the form's functionalities that are related to the log in/out timing database
    * <BR>
-   * @return Returns the corresponding results
    */
     public partial class TimeTableForm : Form
     {
-        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
 
-        // Indicating each employee loggin' in the system
+        //It initializes the current employee where want to see their login timetable
         Employee Current =new Employee();
 
         // Default Constructor 
@@ -48,11 +47,10 @@ namespace Leksi_Book_Shop
             InitializeComponent();
             Current .Copy(employee);
             display();
-
         }
 
         /**
-        * Function <code>TimeTableForm_Load</code> loads the timetable's access database
+        * Function <code>TimeTableForm_Load</code> loads the timetable database
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -61,14 +59,14 @@ namespace Leksi_Book_Shop
         { 
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.TIMETABLE' table. You can move, or remove it, as needed.
             this.tIMETABLETableAdapter.Fill(this.lexi_BookshopDataSet.TIMETABLE);
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
-            command.CommandText = "SELECT * FROM TIMETABLE WHERE EMPLOYE_ID ="+Current.Employee_id;
+            command.CommandText = "SELECT * FROM TIMETABLE WHERE EMPLOYE_ID = "+Current.Employee_id+" " ;
             
         }
 
         /**
-        * Function <code>closeButton_Click</code> closes timetable's access database
+        * Function <code>closeButton_Click</code> closes timetable form
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -85,9 +83,9 @@ namespace Leksi_Book_Shop
         public void display()
         {
             eMPLOYEE_IDTextBox.Text = Current.Employee_id.ToString();
-            fIRSTNAMETextBox.Text=Current.Firstname.ToString();
-            lASTNAMETextBox.Text= Current.Lastname.ToString();
-            pHONETextBox.Text=Current.Phone.ToString();
+            fIRSTNAMETextBox.Text = Current.Firstname.ToString();
+            lASTNAMETextBox.Text = Current.Lastname.ToString();
+            pHONETextBox.Text = Current.Phone.ToString();
         }
     }
 }

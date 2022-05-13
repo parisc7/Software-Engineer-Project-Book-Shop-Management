@@ -2,7 +2,7 @@
 *   \brief     Provides the Main Screen from where everything can be accessed and are connected
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
 using USB_Barcode_Scanner;
+using System.Data;
 
 
 namespace Leksi_Book_Shop
@@ -26,7 +27,7 @@ namespace Leksi_Book_Shop
     */
     public partial class MainForm : Form
     {
-        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
 
         BookForm books= new BookForm();
@@ -70,6 +71,7 @@ namespace Leksi_Book_Shop
 
             curentEmployee.Copy(employee);
             Admin = admin;
+            currentOrderDataGridView.Visible = false;
 
             // Employee Access
             if (admin== false)
@@ -80,7 +82,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>employeesButton_Click</code> loads the employee's form
+        * Function <code>employeesButton_Click</code> navigate to the employees form
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -105,7 +107,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>customerButton_Click</code> loads the customer's form
+        * Function <code>customerButton_Click</code> navigate to the customers form
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -118,7 +120,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>booksButton_Click</code> loads the books's form
+        * Function <code>booksButton_Click</code>navigate to the books form
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -131,7 +133,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>mailButton_Click</code> loads the mail's form
+        * Function <code>mailButton_Click</code>navigate to the mail form
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -145,7 +147,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>logoutButton_Click</code> closes whole system (exit)
+        * Function <code>logoutButton_Click</code> closes whole system
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -157,7 +159,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>MainForm_Load</code> loads the order's access database
+        * Function <code>MainForm_Load</code> loads the order and orderlist database
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -168,13 +170,13 @@ namespace Leksi_Book_Shop
             this.oRDER_LISTTableAdapter.Fill(this.lexi_BookshopDataSet.ORDER_LIST);
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.ORDER' table. You can move, or remove it, as needed.
             this.oRDERTableAdapter.Fill(this.lexi_BookshopDataSet.ORDER);
-            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
             command.CommandText = "SELECT * FROM ORDER ";
         }
 
         /**
-        * Function <code>Scanner_BarcodeScanned</code> inserts scanned isbn to the order's access database
+        * Function <code>Scanner_BarcodeScanned</code> inserts scanned isbn to the order database
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Barcode Scanner Event (Default Parameters)
@@ -217,25 +219,27 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>payButton_Click</code> adds the amount of money for each purchase in the order list database
+        * Function <code>payButton_Click</code> adds the amount of money for each purchase in the orderlist database
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
         */
         private void payButton_Click(object sender, EventArgs e)
         {
-            int sumPrice = 0, sumQuantity = 0;
-            for (int i = 0; i < currentOrderDataGridView.RowCount; i++)
+            double sumPrice = 0;
+            int sumQuantity = 0;
+            for (int i = 0; i < currentOrderDataGridView.RowCount-1; i++)
             {
-                sumPrice += int.Parse(currentOrderDataGridView.Rows[i].Cells[0].Value.ToString());
+                sumPrice += double.Parse(currentOrderDataGridView.Rows[i].Cells[0].Value.ToString());
                 sumQuantity += int.Parse(currentOrderDataGridView.Rows[i].Cells[1].Value.ToString());
             }
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO ORDER_LIST (ORDER_ID, PRICE, QUANTITY, CLIENT_ID, EMPPLOYEE_ID) VALUES (" +
-                                                orderNoTxtBox.Text + "," + sumPrice + "," + sumQuantity + "," + curentCustomer.Customer_id + "," +
-                                                curentEmployee.Employee_id + ")", conn);
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO ORDER_LIST (ORDER_ID, PRICE, QUANTITY, CLIENT_ID, EMPLOYEE_ID) VALUES (" +
+                                                int.Parse(orderNoTxtBox.Text) + " , " + sumPrice + " , " + sumQuantity + " , " + curentCustomer.Customer_id + " , " +
+                                                curentEmployee.Employee_id + " )", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
+            fillGrid();
             orderNoTxtBox.Text = "";
             customerTxtBox.Text = "";
             nameSurnameTxttBox.Text = "";
@@ -244,7 +248,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>Times</code> total time where employee was logged in
+        * Function <code>Times</code> saving to the timetable new times for the log in and log out of the user
         * <BR>
         */
         private void Times()
@@ -273,7 +277,8 @@ namespace Leksi_Book_Shop
                 {
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text =$"{customer.Points}";
-                    orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count + 1}";
+                    orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count +1}";
+                    currentOrderDataGridView.Visible = true;
                     curentCustomer.copy(customer);
                     break;
                 }
@@ -282,10 +287,22 @@ namespace Leksi_Book_Shop
                     nameSurnameTxttBox.Text = $"{customer.Firstname} {customer.Lastname}";
                     pointsTxtBox.Text = $"{customer.Points}";
                     orderNoTxtBox.Text = $"{oRDER_LISTBindingSource.Count + 1}";
+                    currentOrderDataGridView.Visible = true;
                     curentCustomer.copy(customer);
                     break;
                 }
             }
+        }
+
+        void fillGrid()
+        {
+            int order_id = oRDER_LISTBindingSource.Count+1;
+            conn.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM ORDER WHERE ORDER_ID = "+order_id+" " , conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            currentOrderDataGridView.DataSource = dt;
+            conn.Close();
         }
     }
 }

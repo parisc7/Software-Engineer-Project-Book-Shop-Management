@@ -2,7 +2,7 @@
 *   \brief     Provides the sending email process
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0 
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -33,8 +33,6 @@ namespace Leksi_Book_Shop
     public partial class MailForm : Form
     {
         MimeMessage message = new MimeMessage();
-
-        // Indicating each customer to which email will be sent
         CustomerForm customer =new CustomerForm();
 
         // Default Constructor 
@@ -60,6 +58,7 @@ namespace Leksi_Book_Shop
         {
             //sender (onoma pou emfanizi (Sender's name), mail pou stelni (Sender's email))
             //message.From.Add(new MailboxAddress("Βιβλιοπωλείο λέξη", " "));
+
             foreach(var customer in customer.CustomerList)
             {
                 message.To.Add(MailboxAddress.Parse(customer.Email));
@@ -71,10 +70,12 @@ namespace Leksi_Book_Shop
                 SmtpClient client = new SmtpClient();
                 try
                 {
-                    //gia na boresi na kani enable ton paroxea pou stelni 
+                    //to be able to enable the provider it sends
                     client.Connect("smtp.gmail.com", 465, true);
+                    
                     //authentication of sender (email of sender, sender's email code)
                     //client.Authenticate(" ", " ");
+
                     client.Send(message);
                     MessageBox.Show("Email sent!", "SUCCESS!!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }

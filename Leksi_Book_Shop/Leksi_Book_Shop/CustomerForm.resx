@@ -120,58 +120,644 @@
   <metadata name="aDDRESSLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="aDDRESSLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="aDDRESSLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>922, 101</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="aDDRESSLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="aDDRESSLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 34</value>
+  </data>
+  <data name="aDDRESSLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="aDDRESSLabel.Text" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSLabel.Name" xml:space="preserve">
+    <value>aDDRESSLabel</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSLabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <metadata name="pHONELabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="pHONELabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pHONELabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 101</value>
+  </data>
+  <data name="pHONELabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="pHONELabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 34</value>
+  </data>
+  <data name="pHONELabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pHONELabel.Text" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="&gt;&gt;pHONELabel.Name" xml:space="preserve">
+    <value>pHONELabel</value>
+  </data>
+  <data name="&gt;&gt;pHONELabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pHONELabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;pHONELabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <metadata name="eMAILLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="eMAILLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="eMAILLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 101</value>
+  </data>
+  <data name="eMAILLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="eMAILLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 34</value>
+  </data>
+  <data name="eMAILLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="eMAILLabel.Text" xml:space="preserve">
+    <value>E-Mail:</value>
+  </data>
+  <data name="&gt;&gt;eMAILLabel.Name" xml:space="preserve">
+    <value>eMAILLabel</value>
+  </data>
+  <data name="&gt;&gt;eMAILLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eMAILLabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;eMAILLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <metadata name="cLIENT_IDLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="cLIENT_IDLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cLIENT_IDLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 39</value>
+  </data>
+  <data name="cLIENT_IDLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="cLIENT_IDLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 34</value>
+  </data>
+  <data name="cLIENT_IDLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cLIENT_IDLabel.Text" xml:space="preserve">
+    <value>CLIENT ID:</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDLabel.Name" xml:space="preserve">
+    <value>cLIENT_IDLabel</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDLabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <metadata name="fIRSTNAMELabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="fIRSTNAMELabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fIRSTNAMELabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 39</value>
+  </data>
+  <data name="fIRSTNAMELabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 34</value>
+  </data>
+  <data name="fIRSTNAMELabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="fIRSTNAMELabel.Text" xml:space="preserve">
+    <value>FIRSTNAME:</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMELabel.Name" xml:space="preserve">
+    <value>fIRSTNAMELabel</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMELabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMELabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMELabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
   <metadata name="lASTNAMELabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="lASTNAMELabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lASTNAMELabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>773, 39</value>
+  </data>
+  <data name="lASTNAMELabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 34</value>
+  </data>
+  <data name="lASTNAMELabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lASTNAMELabel.Text" xml:space="preserve">
+    <value>LASTNAME:</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMELabel.Name" xml:space="preserve">
+    <value>lASTNAMELabel</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMELabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMELabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMELabel.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
   <metadata name="pOINTSLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="pOINTSLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pOINTSLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1238, 31</value>
+  </data>
+  <data name="pOINTSLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 34</value>
+  </data>
+  <data name="pOINTSLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pOINTSLabel.Text" xml:space="preserve">
+    <value>POINTS:</value>
+  </data>
+  <data name="&gt;&gt;pOINTSLabel.Name" xml:space="preserve">
+    <value>pOINTSLabel</value>
+  </data>
+  <data name="&gt;&gt;pOINTSLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOINTSLabel.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;pOINTSLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="cLIENTSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>958, 16</value>
   </metadata>
   <metadata name="lexi_BookshopDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 16</value>
   </metadata>
+  <data name="cLIENT_IDTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cLIENT_IDTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 37</value>
+  </data>
+  <data name="cLIENT_IDTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cLIENT_IDTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 41</value>
+  </data>
+  <data name="cLIENT_IDTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDTextBox.Name" xml:space="preserve">
+    <value>cLIENT_IDTextBox</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDTextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;cLIENT_IDTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pOINTSTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pOINTSTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1350, 28</value>
+  </data>
+  <data name="pOINTSTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 41</value>
+  </data>
+  <data name="pOINTSTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pOINTSTextBox.Name" xml:space="preserve">
+    <value>pOINTSTextBox</value>
+  </data>
+  <data name="&gt;&gt;pOINTSTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pOINTSTextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;pOINTSTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lASTNAMETextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>933, 34</value>
+  </data>
+  <data name="lASTNAMETextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 41</value>
+  </data>
+  <data name="lASTNAMETextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMETextBox.Name" xml:space="preserve">
+    <value>lASTNAMETextBox</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMETextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMETextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;lASTNAMETextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="fIRSTNAMETextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 34</value>
+  </data>
+  <data name="fIRSTNAMETextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 41</value>
+  </data>
+  <data name="fIRSTNAMETextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMETextBox.Name" xml:space="preserve">
+    <value>fIRSTNAMETextBox</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMETextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMETextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;fIRSTNAMETextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="addButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="addButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 709</value>
+  </data>
+  <data name="addButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="addButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 55</value>
+  </data>
+  <data name="addButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="addButton.Text" xml:space="preserve">
+    <value>&amp;Add</value>
+  </data>
+  <data name="&gt;&gt;addButton.Name" xml:space="preserve">
+    <value>addButton</value>
+  </data>
+  <data name="&gt;&gt;addButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addButton.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;addButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="updateButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="updateButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>855, 709</value>
+  </data>
+  <data name="updateButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="updateButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 55</value>
+  </data>
+  <data name="updateButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="updateButton.Text" xml:space="preserve">
+    <value>&amp;Update</value>
+  </data>
+  <data name="&gt;&gt;updateButton.Name" xml:space="preserve">
+    <value>updateButton</value>
+  </data>
+  <data name="&gt;&gt;updateButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateButton.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;updateButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pHONETextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 101</value>
+  </data>
+  <data name="pHONETextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pHONETextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 41</value>
+  </data>
+  <data name="pHONETextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pHONETextBox.Name" xml:space="preserve">
+    <value>pHONETextBox</value>
+  </data>
+  <data name="&gt;&gt;pHONETextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pHONETextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;pHONETextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="aDDRESSTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1059, 98</value>
+  </data>
+  <data name="aDDRESSTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="aDDRESSTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 41</value>
+  </data>
+  <data name="aDDRESSTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSTextBox.Name" xml:space="preserve">
+    <value>aDDRESSTextBox</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSTextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cLIENTIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>CLIENT_ID</value>
+  </data>
+  <data name="cLIENTIDDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cLIENTIDDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
   <metadata name="FIRSTNAME.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="FIRSTNAME.HeaderText" xml:space="preserve">
+    <value>FIRSTNAME</value>
+  </data>
+  <data name="FIRSTNAME.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="FIRSTNAME.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
   <metadata name="LASTNAME.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="LASTNAME.HeaderText" xml:space="preserve">
+    <value>LASTNAME</value>
+  </data>
+  <data name="LASTNAME.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LASTNAME.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="eMAILDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>EMAIL</value>
+  </data>
+  <data name="eMAILDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="eMAILDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>210</value>
+  </data>
   <metadata name="POINTS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="searchCustomerButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALlSURBVFhH7ZdP
-        aM9xGMd//g2zKYU47DAy7eBPDkNy4MIO1MiOitQo4jC7LK62uaBWu0gprHHYXDhgHKzFTlNErBww+VfI
-        NoTXy/atH832+X62/drBu171+/1q3+f5PJ/neT/fZQK1EMpgO2yCUpgOE6oCqIH78AN+wnvoH/r8Ds7D
-        Ohh37YZeeAa1sALyINF82AUt8B2ugFUas6bBGeiDI2DQtdAAt+ERWJHLsBfmwkq4C89hFYxJBn8NBi2G
-        a+AJb8Jx2AeHoQlewhuoAhM9N/R9CUTJsntyg3uvPuw6LIfhNAMOwmc4CzblVXgA2dcVJBvOO7fsntzg
-        jTAVRtNqeAsnwCt5BT4nlex2G87MLbsnDwmeaDN4VWtgP3iAmRCsLrDbLf83+FfZR9IlaIPZ4LVshSA5
-        Ps653XwSbkCMNCg9ohBM5DQESYczAcvfDscgRjal17AB6sCGDNI20NXUQ3DUYuVo7gSb8J4/hMgGsnRT
-        QJNxzmP1CbaAVbSaQXKx6O3aq9aqycSoCHxOCfiMixAkDcQ5roQ98AK8z7Syck8HP2Yew6HBj2Fyq3l6
-        jcQZ1uHSaA6YeDW4D2zqpRAsrdcOdhT1dudYhwuRvdMMnnoWtELwBGTLDedWcxz1dq/FBh1JntzgH8Be
-        qoCvEJr8H9KQXKluNftCb7cqOpyJZL8B2XDeuWX35AY36EfQ1qPl/dkDltB+0Nt1NcfUZAzoqNntNpx3
-        btk9ucH93fcE94F/5zNSy33uSnU7HoB80F51uB1QDstAmbB3btmPgsHdJX53uXVAVBL2gW5mNb6AFakH
-        y67JOOdPwG73pMmde3KDO9ILoBuik1AmorOdApPoBF/NLoCj+vfbj8n0gMHVuCSRRk7FHfDdcZE/oCQJ
-        V/48f5ho/U8i0aRIwsazAR1rg6skiVuQ5r0zWsMlYUU0t42/v+VA2UksBsd3ANZDzmQSlt3AmpX/T7pJ
-        cyrv3LJ7coJnMr8AgyK1Z6qlpCsAAAAASUVORK5CYII=
-</value>
+  <data name="POINTS.HeaderText" xml:space="preserve">
+    <value>POINTS</value>
+  </data>
+  <data name="POINTS.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="POINTS.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="pHONEDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>PHONE</value>
+  </data>
+  <data name="pHONEDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="pHONEDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>190</value>
+  </data>
+  <data name="aDDRESSDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ADDRESS</value>
+  </data>
+  <data name="aDDRESSDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="aDDRESSDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>342</value>
+  </data>
+  <data name="customerDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 169</value>
+  </data>
+  <data name="customerDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="customerDataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="customerDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1436, 512</value>
+  </data>
+  <data name="customerDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;customerDataGridView.Name" xml:space="preserve">
+    <value>customerDataGridView</value>
+  </data>
+  <data name="&gt;&gt;customerDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;customerDataGridView.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;customerDataGridView.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="eMAILTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>509, 98</value>
+  </data>
+  <data name="eMAILTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="eMAILTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 41</value>
+  </data>
+  <data name="eMAILTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;eMAILTextBox.Name" xml:space="preserve">
+    <value>eMAILTextBox</value>
+  </data>
+  <data name="&gt;&gt;eMAILTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eMAILTextBox.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;eMAILTextBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="deleteButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="deleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 709</value>
+  </data>
+  <data name="deleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="deleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 55</value>
+  </data>
+  <data name="deleteButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="deleteButton.Text" xml:space="preserve">
+    <value>&amp;Delete</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.Name" xml:space="preserve">
+    <value>deleteButton</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="closeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1274, 709</value>
+  </data>
+  <data name="closeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 55</value>
+  </data>
+  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
+    <value>closeButton</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="mainPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 16.2pt</value>
+  </data>
+  <data name="mainPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="mainPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="mainPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1485, 794</value>
+  </data>
+  <data name="mainPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.Name" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="eMPLOYEESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>189, 16</value>
@@ -185,9 +771,18 @@
   <metadata name="cLIENTSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1132, 16</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1509, 817</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABgLAAAYCwAAAAAAAAAA
@@ -263,5 +858,98 @@
         AAPAAAAB4AAAAfAAAAD+AAAA/4ADgP///8D////gwAAAAcAAAAfAAAAHwAAAB8AAAAfAAAAHwAAAD+AA
         AA/gAAAf4AAAD+AAAA/gAAAf8BAAH/AwMD8=
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CustomerForm</value>
+  </data>
+  <data name="&gt;&gt;cLIENTSBindingSource.Name" xml:space="preserve">
+    <value>cLIENTSBindingSource</value>
+  </data>
+  <data name="&gt;&gt;cLIENTSBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lexi_BookshopDataSet.Name" xml:space="preserve">
+    <value>lexi_BookshopDataSet</value>
+  </data>
+  <data name="&gt;&gt;lexi_BookshopDataSet.Type" xml:space="preserve">
+    <value>Leksi_Book_Shop.Lexi_BookshopDataSet, Lexi_BookshopDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cLIENTIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>cLIENTIDDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;cLIENTIDDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FIRSTNAME.Name" xml:space="preserve">
+    <value>FIRSTNAME</value>
+  </data>
+  <data name="&gt;&gt;FIRSTNAME.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LASTNAME.Name" xml:space="preserve">
+    <value>LASTNAME</value>
+  </data>
+  <data name="&gt;&gt;LASTNAME.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eMAILDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>eMAILDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;eMAILDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;POINTS.Name" xml:space="preserve">
+    <value>POINTS</value>
+  </data>
+  <data name="&gt;&gt;POINTS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pHONEDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>pHONEDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;pHONEDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>aDDRESSDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;aDDRESSDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eMPLOYEESBindingSource.Name" xml:space="preserve">
+    <value>eMPLOYEESBindingSource</value>
+  </data>
+  <data name="&gt;&gt;eMPLOYEESBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eMPLOYEESTableAdapter.Name" xml:space="preserve">
+    <value>eMPLOYEESTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;eMPLOYEESTableAdapter.Type" xml:space="preserve">
+    <value>Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.EMPLOYEESTableAdapter, Lexi_BookshopDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Name" xml:space="preserve">
+    <value>tableAdapterManager</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
+    <value>Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.TableAdapterManager, Lexi_BookshopDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cLIENTSTableAdapter.Name" xml:space="preserve">
+    <value>cLIENTSTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;cLIENTSTableAdapter.Type" xml:space="preserve">
+    <value>Leksi_Book_Shop.Lexi_BookshopDataSetTableAdapters.CLIENTSTableAdapter, Lexi_BookshopDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CustomerForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

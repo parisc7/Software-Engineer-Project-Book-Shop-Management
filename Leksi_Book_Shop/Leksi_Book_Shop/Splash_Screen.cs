@@ -2,7 +2,7 @@
 *   \brief     Provides the Waiting Pop-Up Screen 
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -25,7 +25,6 @@ namespace Leksi_Book_Shop
     * Class <code>Splash_Screen</code> is a class that is responsible for
     * the functionalities that are related to the waiting pop up screen
     * <BR>
-    * @return Returns the successful or NOT log in
     */
     public partial class Splash_Screen : Form
     {

@@ -2,7 +2,7 @@
 *   \brief     Provides the Book Database
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -31,7 +31,7 @@ namespace Leksi_Book_Shop
     */
     public partial class BookForm : Form
     {
-        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
+        OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb");
         OleDbCommand command = new OleDbCommand();
 
         // Book List
@@ -58,7 +58,7 @@ namespace Leksi_Book_Shop
         {
             // TODO: This line of code loads data into the 'lexi_BookshopDataSet.BOOKS' table. You can move, or remove it, as needed.
             this.bOOKSTableAdapter.Fill(this.lexi_BookshopDataSet.BOOKS);
-            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
+            conn.ConnectionString = @"Provider = Microsoft.ACE.OLEDB.12.0;Data Source = D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\Lexi_Bookshop.accdb";
             command.Connection = conn;
             command.CommandText = "SELECT * FROM BOOKS";
 
@@ -67,7 +67,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>updateButton_Click</code> updates the book's access database records
+        * Function <code>updateButton_Click</code> updates the book database records
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -75,9 +75,9 @@ namespace Leksi_Book_Shop
         private void updateButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET AUTHORS'" + aUTHORSTextBox.Text + "',PUBLISHERS='" + pUBLISHERSTextBox.Text +
-                                                "',TITLE= '" + tITLETextBox.Text + "',PYEAR=" + pYEARTextBox.Text + ",PRICE=" + pRICETextBox.Text 
-                                                + "WHERE ISBN= " + iSBNTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("UPDATE BOOKS SET AUTHORS ='" + aUTHORSTextBox.Text + "',PUBLISHERS='" + pUBLISHERSTextBox.Text +
+                                                "',TITLE= '" + tITLETextBox.Text + "',PYEAR= " +int.Parse(pYEARTextBox.Text) + " ,PRICE= " + double.Parse(pRICETextBox.Text) 
+                                                + " WHERE ISBN= " + int.Parse(iSBNTextBox.Text) + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record UPDATED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -88,7 +88,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>addButton_Click</code> inserts a new record to the book's access database
+        * Function <code>addButton_Click</code> inserts a new record to the book database
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -96,9 +96,9 @@ namespace Leksi_Book_Shop
         private void addButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("INSERT INTO BOOKS (AUTHORS,PUBLISHERS,TITLE,PYEAR,PRICE) VALUES ('" 
+            OleDbCommand cmd = new OleDbCommand("INSERT INTO BOOKS (ISBN,AUTHORS,PUBLISHERS,TITLE,PYEAR,PRICE) VALUES ("+ int.Parse(iSBNTextBox.Text) + ",'" 
                                                 + aUTHORSTextBox.Text + "','" + pUBLISHERSTextBox.Text + "','" + tITLETextBox.Text 
-                                                + "'," + pYEARTextBox.Text + "," + pRICETextBox.Text + ")", conn);
+                                                + "'," + int.Parse(pYEARTextBox.Text) + "," + double.Parse(pRICETextBox.Text) + ")", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record ADDED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,7 +109,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>deleteButton_Click</code> deletes a record from the book's access database
+        * Function <code>deleteButton_Click</code> deletes a record from the book database
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -117,7 +117,7 @@ namespace Leksi_Book_Shop
         private void deleteButton_Click(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("DELETE FROM BOOKS WHERE ISBN=" + iSBNTextBox.Text + " ", conn);
+            OleDbCommand cmd = new OleDbCommand("DELETE FROM BOOKS WHERE ISBN= " + int.Parse(iSBNTextBox.Text) + " ", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Record DELETED", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -128,7 +128,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>closeButton_Click</code> closes book's access database
+        * Function <code>closeButton_Click</code> closes book form
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -139,7 +139,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>fillGrid</code> fills book's form gridview
+        * Function <code>fillGrid</code> fills datagridview from the book database
         * <BR>
         */
         void fillGrid()
@@ -159,7 +159,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>initializeList</code> initialises book's database, through linked list
+        * Function <code>initializeList</code> generate linked list with the books from the database 
         * <BR>
         */
         public void initializeList()

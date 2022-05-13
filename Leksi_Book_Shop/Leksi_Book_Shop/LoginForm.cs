@@ -2,7 +2,7 @@
 *   \brief     Provides the Log In info
 *   \details   This program regards to all the necessary functionalities
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -30,13 +30,16 @@ namespace Leksi_Book_Shop
     public partial class LoginForm : Form
     {
         EmployeesForm employees= new EmployeesForm();
+
+        // generate the admin user 
         Employee admin = new Employee(0, null, null, 0, "admin", "admin");
         MainForm main;
 
         // Default Constructor 
 
         /**
-        * Function <code>LoginForm</code> initialises the components and runs the corresponding employee's database to acquire data
+        * Function <code>LoginForm</code> initialises the components and runs the employee 
+        *                                 form to acquire the link list of the employees
         * <BR>
         */
         public LoginForm()
@@ -47,7 +50,7 @@ namespace Leksi_Book_Shop
         }
 
         /**
-        * Function <code>loginButton_Click</code> shows presence of admin or employee
+        * Function <code>loginButton_Click</code> Is checking which is trying to log in to the software
         * <BR>
         * @param sender Triggers object (Default Parameters)
         * @param e      Triggers Event (Default Parameters)
@@ -58,7 +61,7 @@ namespace Leksi_Book_Shop
             Employee current = new Employee();
             bool exist = false;
 
-            // Indicating person is an Admin 
+            // Indicating person is the Admin 
             if (usernameTxt.Text == admin.Username)
             {
                 if (passwordTxt.Text == admin.Password)
@@ -92,9 +95,9 @@ namespace Leksi_Book_Shop
                         exist = false;
                     }
                 }
-            }          
-            
-            // Privileges when 'exist' holds true
+            }
+
+            // If the 'exist' parameter is true then they proceed to the main
             if (exist)
             {
                 this.Hide();

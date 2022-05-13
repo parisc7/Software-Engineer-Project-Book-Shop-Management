@@ -132,3 +132,6 @@ D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi
 D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.exe
 D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.pdb
 C:\Users\Paris Costa\Documents\GitHub\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.LoginForm.resources
+D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\bin\Debug\aa\Leksi_Book_Shop.resources.dll
+D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\Leksi_Book_Shop.CustomerForm.aa.resources
+D:\GITHUB\sussy-Softsing-69-BAKA\Leksi_Book_Shop\Leksi_Book_Shop\obj\Debug\aa\Leksi_Book_Shop.resources.dll

@@ -2,7 +2,7 @@
 *   \brief     Provides the OrderList Database, which includes the order database for linking purposes
 *   \details   This program regards to all the necessary information of orders
 *   \author    SOFTTSING TEAM
-*   \version   0.2
+*   \version   2.0
 *   \date      2022-2022
 *   \bug       No bugs Included
 *   \copyright SOFTTSING Ltd.
@@ -30,26 +30,26 @@ namespace Leksi_Book_Shop
         public double Price { get; set; }
         public double Quantity { get; set; }
 
-        // Default
+        // Default Constructor
         public OrderList()
         {
             
         }
-
-        // Default Constructor 
 
         /**
         * Function <code>OrderList</code> initialises the order list attributes
         * <BR>
         * @param orderID    The order's unique ID code
         * @param price      The order's Price
-        * @param quatity    The order's Quantity
+        * @param quantity    The order's Quantity
         */
-        public OrderList(int orderID, double price,int quatity)
+
+        // Constructor 
+        public OrderList(int orderID, double price,int quantity)
         {
             this.OrderID = orderID;
             this.Price = price;
-            this.Quantity = quatity; //mistypo, meant quantity
+            this.Quantity = quantity; 
         }
     }
 }
